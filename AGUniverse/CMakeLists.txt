@@ -8,9 +8,9 @@ qt_standard_project_setup()
 qt_add_executable(AGUniverse
     WIN32 MACOSX_BUNDLE
     main.cpp
-    mainwindow.cpp
-    mainwindow.h
-    mainwindow.ui
+    login.cpp
+    login.h
+    login.ui
 )
 
 target_link_libraries(AGUniverse

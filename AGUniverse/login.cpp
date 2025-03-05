@@ -54,7 +54,7 @@ void MainWindow::loginButtonClicked()
 
 
     bool found = false;
-    if(username == un && userPassword == pw)
+    if(username.toStdString() == un && userPassword.toStdString() == pw)
     {
         found = true;
     }

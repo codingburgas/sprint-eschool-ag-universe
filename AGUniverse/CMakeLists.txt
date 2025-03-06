@@ -11,6 +11,7 @@ qt_add_executable(AGUniverse
     login.cpp
     login.h
     login.ui
+    main_menu.ui
 )
 
 target_link_libraries(AGUniverse

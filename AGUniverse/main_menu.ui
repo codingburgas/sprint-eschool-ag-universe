@@ -10,6 +10,9 @@
     <height>655</height>
    </rect>
   </property>
+  <property name="cursor">
+   <cursorShape>WaitCursor</cursorShape>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -33,13 +36,19 @@
      <string notr="true">background-color: #4486c3;</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Shape::NoFrame</enum>
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Shadow::Raised</enum>
+     <enum>QFrame::Raised</enum>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QFrame" name="frame_2">
@@ -47,30 +56,32 @@
      <rect>
       <x>-10</x>
       <y>-60</y>
-      <width>151</width>
+      <width>211</width>
       <height>721</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(155, 192, 226)</string>
+     <string notr="true">background-color:rgb(155, 192, 226);
+border:0px;</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Shape::StyledPanel</enum>
+     <enum>QFrame::StyledPanel</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Shadow::Raised</enum>
+     <enum>QFrame::Raised</enum>
     </property>
     <widget class="QTextEdit" name="textEdit">
      <property name="geometry">
       <rect>
-       <x>50</x>
+       <x>70</x>
        <y>650</y>
-       <width>81</width>
+       <width>141</width>
        <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:rgb(252, 252, 252)
+      <string notr="true">color:rgb(252, 252, 252);
+border:0px;
 </string>
      </property>
      <property name="html">
@@ -87,14 +98,15 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <widget class="QTextEdit" name="textEdit_2">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>610</y>
-       <width>81</width>
+       <x>70</x>
+       <y>590</y>
+       <width>131</width>
        <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:rgb(252, 252, 252)
+      <string notr="true">color:rgb(252, 252, 252);
+border:0px
 </string>
      </property>
      <property name="html">
@@ -111,14 +123,15 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <widget class="QTextEdit" name="textEdit_3">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>180</y>
-       <width>81</width>
+       <x>100</x>
+       <y>230</y>
+       <width>101</width>
        <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:rgb(252, 252, 252)
+      <string notr="true">color:rgb(252, 252, 252);
+border:0px;
 </string>
      </property>
      <property name="html">
@@ -129,21 +142,25 @@ hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;Results&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;Results&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QTextEdit" name="textEdit_4">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>140</y>
-       <width>81</width>
-       <height>41</height>
+       <x>90</x>
+       <y>170</y>
+       <width>111</width>
+       <height>51</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:rgb(252, 252, 252)
+      <string notr="true">color:rgb(252, 252, 252);
+border:0px
 </string>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
      </property>
      <property name="html">
       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -153,20 +170,21 @@ hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;Exams&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;Exams&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QTextEdit" name="textEdit_5">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>220</y>
-       <width>81</width>
-       <height>41</height>
+       <x>90</x>
+       <y>290</y>
+       <width>131</width>
+       <height>51</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:rgb(252, 252, 252)
+      <string notr="true">color:rgb(252, 252, 252);
+border:0px;
 </string>
      </property>
      <property name="html">
@@ -177,20 +195,21 @@ hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;Program&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;Program&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QTextEdit" name="textEdit_6">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>260</y>
-       <width>81</width>
+       <x>100</x>
+       <y>370</y>
+       <width>101</width>
        <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:rgb(252, 252, 252)
+      <string notr="true">color:rgb(252, 252, 252);
+border:0px;
 </string>
      </property>
      <property name="html">
@@ -201,31 +220,121 @@ hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;Inbox&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;Inbox&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="textEdit_7">
+    <widget class="QLabel" name="Logou_photo">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>110</y>
-       <width>81</width>
-       <height>31</height>
+       <x>20</x>
+       <y>650</y>
+       <width>41</width>
+       <height>41</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">color:rgb(252, 252, 252)
-</string>
+     <property name="text">
+      <string/>
      </property>
-     <property name="html">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Navigation&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <property name="pixmap">
+      <pixmap>../photo/main menu/logout.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>160</y>
+       <width>51</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../photo/main menu/2exam.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Prolife_photo">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>580</y>
+       <width>61</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../photo/main menu/account-removebg-preview.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Results_photo">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>210</y>
+       <width>71</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../photo/main menu/results-removebg-preview.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Results_photo_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>280</y>
+       <width>71</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../photo/main menu/programlogo.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Results_photo_3">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>360</y>
+       <width>61</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../photo/main menu/inboxlogo-removebg-preview.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
     </widget>
    </widget>

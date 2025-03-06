@@ -33,10 +33,10 @@
      <string notr="true">background-color: #4486c3;</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Shape::NoFrame</enum>
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Shadow::Raised</enum>
+     <enum>QFrame::Raised</enum>
     </property>
     <property name="text">
      <string/>
@@ -57,10 +57,10 @@ border-radius: 70px;
 </string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Shape::Box</enum>
+     <enum>QFrame::Box</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Shadow::Plain</enum>
+     <enum>QFrame::Plain</enum>
     </property>
     <property name="text">
      <string/>
@@ -82,13 +82,13 @@ color:white;
 font-weight:bold;</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Shape::Panel</enum>
+     <enum>QFrame::Panel</enum>
     </property>
     <property name="text">
      <string>LOGIN</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QTextBrowser" name="textBrowser">
@@ -147,8 +147,9 @@ font:20px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font:12pt &quot;Allerta&quot;;
-color:white;</string>
+     <string notr="true">font:15pt &quot;Allerta&quot;;
+color:white;
+font-weight: 575;</string>
     </property>
     <property name="text">
      <string>Username</string>
@@ -184,8 +185,9 @@ font:20px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font:12pt &quot;Allerta&quot;;
-color:white;</string>
+     <string notr="true">font:15pt &quot;Allerta&quot;;
+color:white;
+font-weight: 600;</string>
     </property>
     <property name="text">
      <string>Password</string>

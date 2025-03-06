@@ -209,7 +209,7 @@ color:white;
 font-weight:bold;</string>
     </property>
     <property name="text">
-     <string>Login now</string>
+     <string>Login</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">
@@ -231,8 +231,8 @@ font-weight:bold;</string>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>568</y>
+      <x>380</x>
+      <y>570</y>
       <width>80</width>
       <height>24</height>
      </rect>
@@ -259,7 +259,7 @@ color:#9bc0e2;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>C:/Users/GamingPC/Downloads/logo_2.png</pixmap>
+     <pixmap>../../../../GamingPC/Downloads/logo_2.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -268,9 +268,9 @@ color:#9bc0e2;</string>
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>700</x>
+      <x>690</x>
       <y>430</y>
-      <width>321</width>
+      <width>351</width>
       <height>61</height>
      </rect>
     </property>

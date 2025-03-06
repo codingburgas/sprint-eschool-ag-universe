@@ -12,3 +12,9 @@ registerPage::~registerPage()
 {
     delete ui;
 }
+
+void registerPage::on_pushButton_2_clicked()
+{
+
+}
+

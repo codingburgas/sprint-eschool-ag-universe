@@ -1,5 +1,6 @@
 #include "login.h"
 #include "ui_login.h"
+#include "registerpage.h"  // Include RegisterPage
 #include <QLabel>
 #include <QGraphicsDropShadowEffect>
 #include <QMessageBox>
@@ -7,62 +8,56 @@
 #include <string>
 
 using namespace std;
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Login Page");
 
-    QLabel* label = ui->label_2;  // Access the label by its name
-
+    QLabel* label = ui->label_2;
 
     // Create a shadow effect
     QGraphicsDropShadowEffect* shadow = new QGraphicsDropShadowEffect(this);
-    shadow->setBlurRadius(200);  // Increased the blur radius for a more blurred shadow effect
-    shadow->setOffset(7, 7);    // Set the shadow offset (horizontal, vertical)
-    shadow->setColor(Qt::black); // Set the shadow color (can be any color)
-
-    // Apply the shadow effect to label_2
+    shadow->setBlurRadius(200);
+    shadow->setOffset(7, 7);
+    shadow->setColor(Qt::black);
     label->setGraphicsEffect(shadow);
 
+    // Initialize RegisterPage
+    registerPage = new class registerPage();
 
-    connect(ui->pushButton,SIGNAL(clicked()),
-            this,SLOT(loginButtonClicked()));
+    // Connect buttons to slots
+    connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(loginButtonClicked()));
+    connect(ui->pushButton_2, SIGNAL(clicked()), this, SLOT(on_pushButton_2_clicked()));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete registerPage;  // Cleanup
 }
-
-
-
 
 void MainWindow::loginButtonClicked()
 {
-    //QString name[]={"abc","def"};
-    //QString password[]={"gosho", "vanio"};
-
     QString username = ui->lineEdit->text();
     QString userPassword = ui->lineEdit_2->text();
     string un, pw;
 
     ifstream read(username.toStdString() + ".txt");
     getline(read, un);
-    getline(read, un);
+    getline(read, pw);
 
+    bool found = (username.toStdString() == un && userPassword.toStdString() == pw);
 
-
-    bool found = false;
-    if(username.toStdString() == un && userPassword.toStdString() == pw)
-    {
-        found = true;
-    }
-    if(!found)
-    {
-
+    if (!found) {
+        QMessageBox::warning(this, "Login Failed", "Invalid username or password.");
     }
 }
 
-
-
+void MainWindow::on_pushButton_2_clicked()
+{
+    registerPage->show();  // Show the register page
+    this->close();  // Close login window (optional)
+}

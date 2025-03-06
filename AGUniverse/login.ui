@@ -25,18 +25,18 @@
      <rect>
       <x>-16</x>
       <y>0</y>
-      <width>1131</width>
-      <height>751</height>
+      <width>1130</width>
+      <height>750</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #4486c3;</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::NoFrame</enum>
+     <enum>QFrame::Shape::NoFrame</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+     <enum>QFrame::Shadow::Raised</enum>
     </property>
     <property name="text">
      <string/>
@@ -57,10 +57,10 @@ border-radius: 70px;
 </string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Box</enum>
+     <enum>QFrame::Shape::Box</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
+     <enum>QFrame::Shadow::Plain</enum>
     </property>
     <property name="text">
      <string/>
@@ -82,13 +82,13 @@ color:white;
 font-weight:bold;</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Panel</enum>
+     <enum>QFrame::Shape::Panel</enum>
     </property>
     <property name="text">
      <string>LOGIN</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QTextBrowser" name="textBrowser">
@@ -147,9 +147,8 @@ font:20px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font:15pt &quot;Allerta&quot;;
-color:white;
-font-weight: 575;</string>
+     <string notr="true">font:12pt &quot;Allerta&quot;;
+color:white;</string>
     </property>
     <property name="text">
      <string>Username</string>
@@ -185,9 +184,8 @@ font:20px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font:15pt &quot;Allerta&quot;;
-color:white;
-font-weight: 600;</string>
+     <string notr="true">font:12pt &quot;Allerta&quot;;
+color:white;</string>
     </property>
     <property name="text">
      <string>Password</string>
@@ -227,7 +225,77 @@ font-weight:bold;</string>
      <string notr="true">font:12pt &quot;Allerta&quot;;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Don't have an account? &lt;/span&gt;&lt;span style=&quot; color:#9bc0e2;&quot;&gt;Sign up&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Don't have an account?&lt;/span&gt;&lt;span style=&quot; color:#9bc0e2;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>568</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:0px;
+font:12pt &quot;Allerta&quot;;
+color:#9bc0e2;</string>
+    </property>
+    <property name="text">
+     <string>Sign up</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>100</y>
+      <width>461</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>C:/Users/GamingPC/Downloads/logo_2.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>430</y>
+      <width>321</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Crimson Text Semibold</family>
+      <pointsize>40</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 40pt &quot;Crimson Text Semibold&quot;;
+border:0px;
+color:white;
+font-weight:bold;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::Panel</enum>
+    </property>
+    <property name="text">
+     <string>UNIVERSE</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
   </widget>

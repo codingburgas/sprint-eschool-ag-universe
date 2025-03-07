@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     this->setWindowTitle("Login Page");
 
-    QLabel* label = ui->label_2;
+    QLabel* label = ui->label_3; //have to fix this, it's not label_3
 
     // Create a shadow effect
     QGraphicsDropShadowEffect* shadow = new QGraphicsDropShadowEffect(this);

@@ -26,10 +26,10 @@
     <string notr="true">background-color: #4486c3;</string>
    </property>
    <property name="frameShape">
-    <enum>QFrame::Shape::NoFrame</enum>
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="frameShadow">
-    <enum>QFrame::Shadow::Raised</enum>
+    <enum>QFrame::Raised</enum>
    </property>
    <property name="text">
     <string/>
@@ -50,10 +50,10 @@ border-radius: 70px;
 </string>
    </property>
    <property name="frameShape">
-    <enum>QFrame::Shape::Box</enum>
+    <enum>QFrame::Box</enum>
    </property>
    <property name="frameShadow">
-    <enum>QFrame::Shadow::Plain</enum>
+    <enum>QFrame::Plain</enum>
    </property>
    <property name="text">
     <string/>
@@ -75,22 +75,22 @@ color:white;
 font-weight:bold;</string>
    </property>
    <property name="frameShape">
-    <enum>QFrame::Shape::Panel</enum>
+    <enum>QFrame::Panel</enum>
    </property>
    <property name="text">
     <string>REGISTER</string>
    </property>
    <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignCenter</set>
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>190</y>
+     <y>180</y>
      <width>111</width>
-     <height>20</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -98,7 +98,7 @@ font-weight:bold;</string>
 color:white;</string>
    </property>
    <property name="text">
-    <string>Username</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;Username&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit">
@@ -186,9 +186,9 @@ font-weight:bold;</string>
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>280</y>
+     <y>270</y>
      <width>111</width>
-     <height>20</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -196,16 +196,16 @@ font-weight:bold;</string>
 color:white;</string>
    </property>
    <property name="text">
-    <string>Password</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;Password&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>370</y>
+     <y>360</y>
      <width>341</width>
-     <height>20</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -213,7 +213,7 @@ color:white;</string>
 color:white;</string>
    </property>
    <property name="text">
-    <string>Confirm Password</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;Confirm Password&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_7">
@@ -230,22 +230,22 @@ color:white;</string>
 color:white;</string>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Already have an account?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Already have an account?&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>570</y>
-     <width>80</width>
-     <height>24</height>
+     <x>240</x>
+     <y>600</y>
+     <width>191</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">border:0px;
-font:12pt &quot;Allerta&quot;;
-color:#9bc0e2;</string>
+font:17pt &quot;Allerta&quot;;
+color:#4d6378;</string>
    </property>
    <property name="text">
     <string>Log In</string>

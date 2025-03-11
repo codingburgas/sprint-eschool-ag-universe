@@ -1,11 +1,13 @@
 #include "login.h"
 #include "ui_login.h"
-#include "registerpage.h"  // Include RegisterPage
+#include "registerpage.h"
+#include "main_menu.h" // Include RegisterPage
 #include <QLabel>
 #include <QGraphicsDropShadowEffect>
 #include <QMessageBox>
 #include <fstream>
 #include <string>
+
 
 using namespace std;
 
@@ -16,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     this->setWindowTitle("Login Page");
 
-    QLabel* label = ui->label_3; //have to fix this, it's not label_3
+    QLabel* label = ui->label_2;
 
     // Create a shadow effect
     QGraphicsDropShadowEffect* shadow = new QGraphicsDropShadowEffect(this);
@@ -27,6 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Initialize RegisterPage
     registerPage = new class registerPage();
+    main_Menu = new main_menu();
 
     // Connect buttons to slots
     connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(loginButtonClicked()));
@@ -36,7 +39,8 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
-    delete registerPage;  // Cleanup
+    delete registerPage;
+    delete main_Menu;    // Cleanup
 }
 
 void MainWindow::loginButtonClicked()

@@ -33,10 +33,10 @@
      <string notr="true">background-color: #4486c3;</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::NoFrame</enum>
+     <enum>QFrame::Shape::NoFrame</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+     <enum>QFrame::Shadow::Raised</enum>
     </property>
     <property name="text">
      <string/>
@@ -57,10 +57,10 @@ border-radius: 70px;
 </string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Box</enum>
+     <enum>QFrame::Shape::Box</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
+     <enum>QFrame::Shadow::Plain</enum>
     </property>
     <property name="text">
      <string/>
@@ -82,13 +82,13 @@ color:white;
 font-weight:bold;</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Panel</enum>
+     <enum>QFrame::Shape::Panel</enum>
     </property>
     <property name="text">
      <string>LOGIN</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QTextBrowser" name="textBrowser">
@@ -215,7 +215,7 @@ font-weight:bold;</string>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>100</x>
       <y>560</y>
       <width>411</width>
       <height>51</height>
@@ -231,16 +231,16 @@ font-weight:bold;</string>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>580</y>
-      <width>201</width>
-      <height>51</height>
+      <x>410</x>
+      <y>560</y>
+      <width>91</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">border:0px;
 font:17pt &quot;Allerta&quot;;
-color:#4d6378;
+color:#9bc0e2;
 </string>
     </property>
     <property name="text">
@@ -260,7 +260,7 @@ color:#4d6378;
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../../GamingPC/Downloads/logo_2.png</pixmap>
+     <pixmap>../../../GamingPC/Downloads/logo_2.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -290,13 +290,13 @@ color:white;
 font-weight:bold;</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Panel</enum>
+     <enum>QFrame::Shape::Panel</enum>
     </property>
     <property name="text">
      <string>UNIVERSE</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
   </widget>

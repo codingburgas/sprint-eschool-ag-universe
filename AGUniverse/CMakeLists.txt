@@ -13,7 +13,9 @@ qt_add_executable(AGUniverse
     login.ui
 
     registerpage.h registerpage.cpp registerpage.ui
-    main_menu.ui
+    main_menu.h main_menu.cpp main_menu.ui
+
+
 )
 
 target_link_libraries(AGUniverse

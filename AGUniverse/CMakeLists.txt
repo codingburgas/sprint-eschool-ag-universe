@@ -7,16 +7,30 @@ qt_standard_project_setup()
 
 qt_add_executable(AGUniverse
     WIN32 MACOSX_BUNDLE
+
+    # Source files in the root folder
     main.cpp
-    login.cpp
-    login.h
-    login.ui
 
-    registerpage.h registerpage.cpp registerpage.ui
-    main_menu.h main_menu.cpp main_menu.ui
+    # Presentation Layer
+    presentationLayer/login.cpp
+    presentationLayer/login.h
+    presentationLayer/login.ui
 
+    presentationLayer/registerpage.cpp
+    presentationLayer/registerpage.h
+    presentationLayer/registerpage.ui
 
+    presentationLayer/main_menu.cpp
+    presentationLayer/main_menu.h
+    presentationLayer/main_menu.ui
+
+    # Data Access Layer
+    dataAccessLayer/database.cpp
+    dataAccessLayer/database.h
+    dataAccessLayer/users.txt
 )
+
+install(FILES dataAccessLayer/users.txt DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 target_link_libraries(AGUniverse
     PRIVATE

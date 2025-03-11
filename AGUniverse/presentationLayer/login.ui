@@ -173,6 +173,9 @@ font:20px;</string>
     <property name="text">
      <string/>
     </property>
+    <property name="echoMode">
+     <enum>QLineEdit::EchoMode::Password</enum>
+    </property>
    </widget>
    <widget class="QLabel" name="label_5">
     <property name="geometry">

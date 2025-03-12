@@ -2,6 +2,7 @@
 #define MAIN_MENU_H
 
 #include <QWidget>
+#include <QPushButton>
 
 namespace Ui {
 class main_menu;
@@ -15,8 +16,11 @@ public:
     explicit main_menu(QWidget *parent = nullptr);
     ~main_menu();
 
+private slots:
+    void on_logoutButton_clicked();
+
 private:
     Ui::main_menu *ui;
 };
 
-#endif // MAIN_MENU_H
+#endif

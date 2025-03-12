@@ -33,10 +33,10 @@
      <string notr="true">background-color: #4486c3;</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Shape::NoFrame</enum>
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Shadow::Raised</enum>
+     <enum>QFrame::Raised</enum>
     </property>
     <property name="text">
      <string/>
@@ -57,10 +57,10 @@ border-radius: 70px;
 </string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Shape::Box</enum>
+     <enum>QFrame::Box</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Shadow::Plain</enum>
+     <enum>QFrame::Plain</enum>
     </property>
     <property name="text">
      <string/>
@@ -82,13 +82,13 @@ color:white;
 font-weight:bold;</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Shape::Panel</enum>
+     <enum>QFrame::Panel</enum>
     </property>
     <property name="text">
      <string>LOGIN</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QTextBrowser" name="textBrowser">
@@ -174,7 +174,7 @@ font:20px;</string>
      <string/>
     </property>
     <property name="echoMode">
-     <enum>QLineEdit::EchoMode::Password</enum>
+     <enum>QLineEdit::Password</enum>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
@@ -220,7 +220,7 @@ font-weight:bold;</string>
      <rect>
       <x>100</x>
       <y>560</y>
-      <width>411</width>
+      <width>461</width>
       <height>51</height>
      </rect>
     </property>
@@ -234,9 +234,9 @@ font-weight:bold;</string>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>560</y>
-      <width>91</width>
+      <x>240</x>
+      <y>600</y>
+      <width>171</width>
       <height>31</height>
      </rect>
     </property>
@@ -293,13 +293,13 @@ color:white;
 font-weight:bold;</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Shape::Panel</enum>
+     <enum>QFrame::Panel</enum>
     </property>
     <property name="text">
      <string>UNIVERSE</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

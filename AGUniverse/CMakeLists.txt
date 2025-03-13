@@ -41,6 +41,24 @@ target_link_libraries(AGUniverse
 
 include(GNUInstallDirs)
 
+set(AGUniverse_resource_files
+    "assets/images/exams_icon.png"
+    "assets/images/results_icon.png"
+    "assets/images/program_icon.png"
+    "assets/images/inbox_icon.png"
+    "assets/images/profile.icon.png"
+    "assets/images/log_out_icon.png"
+    "assets/images/Test_logo_2.png"
+    "assets/images/Logo1.png"
+)
+
+qt_add_resources(AGUniverse "AGUniverse"
+    PREFIX
+        "/"
+    FILES
+        ${AGUniverse_resource_files}
+)
+
 install(TARGETS AGUniverse
     BUNDLE  DESTINATION .
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}

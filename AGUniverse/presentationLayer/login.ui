@@ -33,10 +33,10 @@
      <string notr="true">background-color: #4486c3;</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::NoFrame</enum>
+     <enum>QFrame::Shape::NoFrame</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+     <enum>QFrame::Shadow::Raised</enum>
     </property>
     <property name="text">
      <string/>
@@ -57,10 +57,10 @@ border-radius: 70px;
 </string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Box</enum>
+     <enum>QFrame::Shape::Box</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
+     <enum>QFrame::Shadow::Plain</enum>
     </property>
     <property name="text">
      <string/>
@@ -82,22 +82,22 @@ color:white;
 font-weight:bold;</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Panel</enum>
+     <enum>QFrame::Shape::Panel</enum>
     </property>
     <property name="text">
      <string>LOGIN</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QTextBrowser" name="textBrowser">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>120</x>
       <y>190</y>
-      <width>391</width>
-      <height>61</height>
+      <width>411</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -174,7 +174,7 @@ font:20px;</string>
      <string/>
     </property>
     <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
+     <enum>QLineEdit::EchoMode::Password</enum>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
@@ -254,7 +254,7 @@ color:#9bc0e2;
     <property name="geometry">
      <rect>
       <x>630</x>
-      <y>100</y>
+      <y>80</y>
       <width>461</width>
       <height>421</height>
      </rect>
@@ -263,7 +263,7 @@ color:#9bc0e2;
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../GamingPC/Downloads/logo_2.png</pixmap>
+     <pixmap>../assets/images/Test_logo_2.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -272,34 +272,35 @@ color:#9bc0e2;
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>690</x>
-      <y>430</y>
-      <width>351</width>
-      <height>61</height>
+      <x>670</x>
+      <y>405</y>
+      <width>381</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Crimson Text Semibold</family>
-      <pointsize>40</pointsize>
+      <family>Poor Richard</family>
+      <pointsize>42</pointsize>
       <italic>false</italic>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 40pt &quot;Crimson Text Semibold&quot;;
+     <string notr="true">letter-spacing:5px;
+font: 42pt &quot;Poor Richard&quot;;
 border:0px;
 color:white;
 font-weight:bold;</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::Panel</enum>
+     <enum>QFrame::Shape::Panel</enum>
     </property>
     <property name="text">
-     <string>UNIVERSE</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;UNIVERSE&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
   </widget>

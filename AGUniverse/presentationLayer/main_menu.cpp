@@ -8,9 +8,22 @@ main_menu::main_menu(QWidget *parent)
     , ui(new Ui::main_menu)
 {
     ui->setupUi(this);
-    QPixmap logout(":/assets/images/log_out_icon.png");
-    ui->label_4->setPixmap(logout);
-    connect(ui->pushButton, &QPushButton::clicked, this, &main_menu::on_logoutButton_clicked);
+    QPixmap logoIcon(":/assets/images/Logo1.png");
+    QPixmap examIcon(":/assets/images/exams_icon.png");
+    QPixmap programIcon(":/assets/images/program_icon.png");
+    QPixmap resultsIcon(":/assets/images/results_icon.png");
+    QPixmap inboxIcon(":/assets/images/inbox_icon.png");
+    QPixmap profileIcon(":/assets/images/profile.icon.png");
+    QPixmap logoutIcon(":/assets/images/log_out_icon.png");
+
+    ui->logoIcon->setPixmap(logoIcon);
+    ui->exams_Icon->setPixmap(examIcon);
+    ui->program_Icon->setPixmap(programIcon);
+    ui->results_Icon->setPixmap(resultsIcon);
+    ui->inbox_Icon->setPixmap(inboxIcon);
+    ui->profile_Icon->setPixmap(profileIcon);
+    ui->logout_Icon->setPixmap(logoutIcon);
+    connect(ui->logoutButton, &QPushButton::clicked, this, &main_menu::on_logoutButton_clicked);
 }
 
 main_menu::~main_menu()

@@ -3,6 +3,7 @@
 #include "registerpage.h"
 #include "main_menu.h"
 #include <QLabel>
+#include <QPixmap>
 #include <QGraphicsDropShadowEffect>
 #include <QMessageBox>
 #include <QFile>
@@ -13,6 +14,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    QPixmap logo(":/assets/images/Test_logo_2.png");
+    ui->label_7->setPixmap(logo);
     this->setWindowTitle("Login Page");
 
     QLabel* label = ui->label_2;

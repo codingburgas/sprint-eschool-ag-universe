@@ -1,5 +1,5 @@
 #include "registerpage.h"
-#include "ui_registerpage.h"
+#include "presentationLayer/ui_registerpage.h"
 #include <QMessageBox>
 #include <QFile>
 #include <QTextStream>
@@ -10,6 +10,7 @@ registerPage::registerPage(QWidget *parent)
     , db(new Database("../../dataAccessLayer/users.txt"))  // Path to the users.txt file
 {
     ui->setupUi(this);
+    this->setWindowTitle("Register Page");
 }
 
 registerPage::~registerPage()

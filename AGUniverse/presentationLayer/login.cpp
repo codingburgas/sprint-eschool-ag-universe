@@ -1,5 +1,5 @@
 #include "login.h"
-#include "ui_login.h"
+#include "presentationLayer/ui_login.h"
 #include "registerpage.h"
 #include "main_menu.h"
 #include <QLabel>
@@ -91,6 +91,7 @@ void MainWindow::loginButtonClicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
+
     registerPage->show();  // Show register page
     this->close();  // Close login window (optional)
 }

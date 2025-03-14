@@ -24,6 +24,10 @@ qt_add_executable(AGUniverse
     presentationLayer/main_menu.h
     presentationLayer/main_menu.ui
 
+    presentationLayer/profile.cpp
+    presentationLayer/profile.h
+    presentationLayer/profile.ui
+
     # Data Access Layer
     dataAccessLayer/database.cpp
     dataAccessLayer/database.h

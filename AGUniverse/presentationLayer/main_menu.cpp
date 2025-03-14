@@ -1,6 +1,7 @@
 #include "main_menu.h"
-#include "ui_main_menu.h"
+#include "presentationLayer/ui_main_menu.h"
 #include "login.h"
+#include "profile.h"
 #include <QPixmap>
 
 main_menu::main_menu(QWidget *parent)
@@ -8,6 +9,7 @@ main_menu::main_menu(QWidget *parent)
     , ui(new Ui::main_menu)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Main Menu Page");
     QPixmap logoIcon(":/assets/images/Logo1.png");
     QPixmap examIcon(":/assets/images/exams_icon.png");
     QPixmap programIcon(":/assets/images/program_icon.png");
@@ -24,6 +26,7 @@ main_menu::main_menu(QWidget *parent)
     ui->profile_Icon->setPixmap(profileIcon);
     ui->logout_Icon->setPixmap(logoutIcon);
     connect(ui->logoutButton, &QPushButton::clicked, this, &main_menu::on_logoutButton_clicked);
+    connect(ui->profileButton, &QPushButton::clicked, this, &main_menu::on_profileButton_clicked);
 }
 
 main_menu::~main_menu()
@@ -37,4 +40,12 @@ void main_menu::on_logoutButton_clicked()
 
     MainWindow *loginWindow = new MainWindow();
     loginWindow->show();
+}
+
+void main_menu::on_profileButton_clicked()
+{
+    this->close();
+
+    profile *profileWindow = new profile();
+    profileWindow->show();
 }

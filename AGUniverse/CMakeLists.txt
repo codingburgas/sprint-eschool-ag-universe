@@ -29,6 +29,8 @@ qt_add_executable(AGUniverse
     dataAccessLayer/database.h
     dataAccessLayer/users.txt
     resources.qrc
+    presentationLayer/exams.ui
+    presentationLayer/exams.cpp
 )
 
 install(FILES dataAccessLayer/users.txt DESTINATION ${CMAKE_INSTALL_BINDIR})

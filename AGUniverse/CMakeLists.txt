@@ -56,6 +56,7 @@ set(AGUniverse_resource_files
     "assets/images/log_out_icon.png"
     "assets/images/Test_logo_2.png"
     "assets/images/Logo1.png"
+    "assets/images/profile_picture.png"
 )
 
 qt_add_resources(AGUniverse "AGUniverse"

@@ -2,6 +2,7 @@
 #define LOGIN_H
 
 #include <QMainWindow>
+#include "profile.h"
 #include "registerpage.h"
 #include "main_menu.h"// Include RegisterPage header
 
@@ -26,7 +27,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
     registerPage *registerPage;
-    main_menu *main_Menu;    // Pointer to RegisterPage
+    main_menu *main_Menu;
+    profile *profile;    // Pointer to RegisterPage
 };
 
 #endif // LOGIN_H

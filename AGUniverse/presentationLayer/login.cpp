@@ -31,6 +31,7 @@ MainWindow::MainWindow(QWidget *parent)
     // Initialize RegisterPage & Main Menu
     registerPage = new class registerPage();
     main_Menu = new main_menu();
+    profile = new class profile();
 
     // Connect buttons to slots
     connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::loginButtonClicked);
@@ -82,8 +83,9 @@ void MainWindow::loginButtonClicked()
 
     if (found) {
         QMessageBox::information(this, "Login Successful", "Welcome " + username + "!");
+
         this->hide();
-        main_Menu->show();  // Open main menu
+        main_Menu->show();       // Open main menu
     } else {
         QMessageBox::warning(this, "Login Failed", "Invalid username or password.");
     }

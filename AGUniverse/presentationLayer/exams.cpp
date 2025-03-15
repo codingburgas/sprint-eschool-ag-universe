@@ -1,5 +1,5 @@
 #include "exams.h"
-#include "ui_exams.h"
+#include "presentationLayer/ui_exams.h"
 #include "fontutils.h"
 
 exams::exams(QWidget *parent)

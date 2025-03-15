@@ -78,6 +78,7 @@ set(AGUniverse_resource_files
     "assets/images/profile_picture.png"
     "assets/fonts/Aura Regular.ttf"
     "assets/fonts/CrimsonText-SemiBold.ttf"
+    "assets/fonts/Allerta-Regular.ttf"
 )
 
 qt_add_resources(AGUniverse "AGUniverse"

@@ -11,5 +11,6 @@
         <file>assets/images/profile_picture.png</file>
         <file>assets/fonts/Aura Regular.ttf</file>
         <file>assets/fonts/CrimsonText-SemiBold.ttf</file>
+        <file>assets/fonts/Allerta-Regular.ttf</file>
     </qresource>
 </RCC>

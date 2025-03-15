@@ -1,5 +1,5 @@
 #include "inbox.h"
-#include "ui_inbox.h"
+#include "presentationLayer/ui_inbox.h"
 
 inbox::inbox(QWidget *parent)
     : QDialog(parent)

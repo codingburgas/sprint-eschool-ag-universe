@@ -7,5 +7,6 @@
 
 void setCustomFontAura(QWidget* widget, int fontSize = 12);
 void setCustomFontCT(QWidget* widget, int fontSize = 12);
+void setCustomFontAllerta(QWidget* widget, int fontSize = 12);
 
 #endif // FONTUTILS_H

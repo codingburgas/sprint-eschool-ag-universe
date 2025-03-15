@@ -1,5 +1,6 @@
 #include "profile.h"
 #include "presentationLayer/ui_profile.h"
+#include "fontutils.h"
 
 profile::profile(QWidget *parent)
     : QWidget(parent)
@@ -23,6 +24,14 @@ profile::profile(QWidget *parent)
     ui->profile_Icon->setPixmap(profileIcon);
     ui->logout_Icon->setPixmap(logoutIcon);
 
+    setCustomFontCT(ui->label, 12);
+    setCustomFontAllerta(ui->navigationLabel, 17);
+    setCustomFontAllerta(ui->examsButton, 14);
+    setCustomFontAllerta(ui->programButton, 15);
+    setCustomFontAllerta(ui->resultsButton, 15);
+    setCustomFontAllerta(ui->inboxButton, 15);
+    setCustomFontAllerta(ui->profileButton, 15);
+    setCustomFontAllerta(ui->logoutButton, 15);
 }
 
 profile::~profile()

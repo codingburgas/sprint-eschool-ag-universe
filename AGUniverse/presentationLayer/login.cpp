@@ -2,6 +2,7 @@
 #include "presentationLayer/ui_login.h"
 #include "registerpage.h"
 #include "main_menu.h"
+#include "fontutils.h"
 #include <QLabel>
 #include <QPixmap>
 #include <QGraphicsDropShadowEffect>
@@ -15,11 +16,11 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QPixmap logo(":/assets/images/Test_logo_2.png");
-    ui->label_7->setPixmap(logo);
+    QPixmap Logo(":/assets/images/Test_logo_2.png");
+    ui->logoAG->setPixmap(Logo);
     this->setWindowTitle("Login Page");
 
-    QLabel* label = ui->label_2;
+    QLabel* label = ui->loginBox;
 
     // Create a shadow effect
     QGraphicsDropShadowEffect* shadow = new QGraphicsDropShadowEffect(this);
@@ -36,6 +37,16 @@ MainWindow::MainWindow(QWidget *parent)
     // Connect buttons to slots
     connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::loginButtonClicked);
     connect(ui->pushButton_2, &QPushButton::clicked, this, &MainWindow::on_pushButton_2_clicked);
+
+    setCustomFontAllerta(ui->loginTitle, 40);
+    setCustomFontAllerta(ui->textBrowser, 20);
+    setCustomFontAllerta(ui->labelUsername, 12);
+    setCustomFontAllerta(ui->lineEdit, 20);
+    setCustomFontAllerta(ui->labelPassword, 12);
+    setCustomFontAllerta(ui->lineEdit_2, 20);
+    setCustomFontAllerta(ui->pushButton, 15);
+    setCustomFontAllerta(ui->labelText, 12);
+    setCustomFontAllerta(ui->pushButton_2, 17);
 }
 
 MainWindow::~MainWindow()

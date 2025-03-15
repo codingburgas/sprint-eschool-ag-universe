@@ -42,7 +42,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="loginBox">
     <property name="geometry">
      <rect>
       <x>70</x>
@@ -66,7 +66,7 @@ border-radius: 70px;
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="loginTitle">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -131,13 +131,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
 border-radius:15px;
 border:0px;
 color:white;
-font:20px;</string>
+font:20px &quot;Allerta&quot;;</string>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="labelUsername">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -168,7 +168,7 @@ color:white;</string>
 border-radius:15px;
 border:0px;
 color:white;
-font:20px;</string>
+font:20px &quot;Allerta&quot;;</string>
     </property>
     <property name="text">
      <string/>
@@ -177,7 +177,7 @@ font:20px;</string>
      <enum>QLineEdit::EchoMode::Password</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="labelPassword">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -215,7 +215,7 @@ font-weight:bold;</string>
      <string>Login</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="labelText">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -250,7 +250,7 @@ color:#9bc0e2;
      <string>Sign up</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="logoAG">
     <property name="geometry">
      <rect>
       <x>630</x>
@@ -269,7 +269,7 @@ color:#9bc0e2;
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
+   <widget class="QLabel" name="logoTitle">
     <property name="geometry">
      <rect>
       <x>670</x>

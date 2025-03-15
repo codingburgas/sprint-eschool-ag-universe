@@ -1,5 +1,5 @@
 #include "program.h"
-#include "ui_program.h"
+#include "presentationLayer/ui_program.h"
 
 program::program(QWidget *parent)
     : QDialog(parent)

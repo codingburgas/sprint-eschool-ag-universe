@@ -1,8 +1,12 @@
 #include "registerpage.h"
 #include "presentationLayer/ui_registerpage.h"
+#include "fontutils.h"
+#include "login.h"
 #include <QMessageBox>
 #include <QFile>
 #include <QTextStream>
+#include <QGraphicsDropShadowEffect>
+#include <QPixmap>
 
 registerPage::registerPage(QWidget *parent)
     : QWidget(parent)
@@ -11,6 +15,30 @@ registerPage::registerPage(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowTitle("Register Page");
+    QPixmap logo(":/assets/images/Test_logo_2.png");
+    ui->logoAG->setPixmap(logo);
+
+    QLabel* label = ui->loginBox;
+
+    // Create a shadow effect
+    QGraphicsDropShadowEffect* shadow = new QGraphicsDropShadowEffect(this);
+    shadow->setBlurRadius(200);
+    shadow->setOffset(7, 7);
+    shadow->setColor(Qt::black);
+    label->setGraphicsEffect(shadow);
+    connect(ui->pushButton_2, &QPushButton::clicked, this, &registerPage::on_pushButton_2_clicked);
+
+    setCustomFontAllerta(ui->registerTitle, 40);
+    setCustomFontAllerta(ui->labelUsername, 12);
+    setCustomFontAllerta(ui->lineEdit, 20);
+    setCustomFontAllerta(ui->labelPassword, 12);
+    setCustomFontAllerta(ui->lineEdit_2, 20);
+    setCustomFontAllerta(ui->labelConfirmPassword, 12);
+    setCustomFontAllerta(ui->lineEdit_3, 20);
+    setCustomFontAllerta(ui->pushButton, 15);
+    setCustomFontAllerta(ui->labelText, 12);
+    setCustomFontAllerta(ui->pushButton_2, 17);
+
 }
 
 registerPage::~registerPage()
@@ -80,4 +108,11 @@ void registerPage::on_pushButton_clicked()
     } else {
         QMessageBox::critical(this, "Error", "Failed to save user data.");
     }
+}
+
+void registerPage::on_pushButton_2_clicked()
+{
+
+    (new MainWindow)->show();  // Show register page
+    this->close();
 }

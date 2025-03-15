@@ -31,6 +31,13 @@ main_menu::main_menu(QWidget *parent)
     connect(ui->profileButton, &QPushButton::clicked, this, &main_menu::on_profileButton_clicked);
 
     setCustomFontCT(ui->label, 12);
+    setCustomFontAllerta(ui->navigationLabel, 17);
+    setCustomFontAllerta(ui->examsButton, 14);
+    setCustomFontAllerta(ui->programButton, 15);
+    setCustomFontAllerta(ui->resultsButton, 15);
+    setCustomFontAllerta(ui->inboxButton, 15);
+    setCustomFontAllerta(ui->profileButton, 15);
+    setCustomFontAllerta(ui->logoutButton, 15);
 }
 
 main_menu::~main_menu()

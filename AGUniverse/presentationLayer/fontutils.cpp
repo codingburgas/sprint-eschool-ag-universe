@@ -15,3 +15,10 @@ void setCustomFontCT(QWidget* widget, int fontSize) {
     QFont customFontCT(familyCT, fontSize);
     widget->setFont(customFontCT);
 }
+void setCustomFontAllerta(QWidget* widget, int fontSize) {
+    int fontIdAllerta = QFontDatabase::addApplicationFont(":/assets/fonts/Allerta-Regular.ttf");
+
+    QString familyAllerta = QFontDatabase::applicationFontFamilies(fontIdAllerta).at(0);
+    QFont customFontAllerta(familyAllerta, fontSize);
+    widget->setFont(customFontAllerta);
+}

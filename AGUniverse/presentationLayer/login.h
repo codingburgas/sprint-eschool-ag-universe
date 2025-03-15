@@ -2,9 +2,13 @@
 #define LOGIN_H
 
 #include <QMainWindow>
-#include "profile.h"
 #include "registerpage.h"
-#include "main_menu.h"// Include RegisterPage header
+#include "main_menu.h"
+#include "exams.h"
+#include "results.h"
+#include "program.h"
+#include "inbox.h"
+#include "profile.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -22,13 +26,17 @@ public:
 
 private slots:
     void loginButtonClicked();
-    void on_pushButton_2_clicked();    // Slot for Register button
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;
     registerPage *registerPage;
     main_menu *main_Menu;
-    profile *profile;    // Pointer to RegisterPage
+    exams *exams;
+    results *results;
+    program *program;
+    inbox *inbox;
+    profile *profile;
 };
 
 #endif // LOGIN_H

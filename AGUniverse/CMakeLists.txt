@@ -28,13 +28,29 @@ qt_add_executable(AGUniverse
     presentationLayer/profile.h
     presentationLayer/profile.ui
 
+    presentationLayer/exams.cpp
+    presentationLayer/exams.h
+    presentationLayer/exams.ui
+
+    presentationLayer/results.cpp
+    presentationLayer/results.h
+    presentationLayer/results.ui
+
+    presentationLayer/program.cpp
+    presentationLayer/program.h
+    presentationLayer/program.ui
+
+    presentationLayer/inbox.cpp
+    presentationLayer/inbox.h
+    presentationLayer/inbox.ui
+
     # Data Access Layer
     dataAccessLayer/database.cpp
     dataAccessLayer/database.h
     dataAccessLayer/users.txt
     resources.qrc
-    presentationLayer/exams.ui
-    presentationLayer/exams.cpp
+
+
 )
 
 install(FILES dataAccessLayer/users.txt DESTINATION ${CMAKE_INSTALL_BINDIR})

@@ -25,6 +25,7 @@ main_menu::main_menu(QWidget *parent)
     ui->inbox_Icon->setPixmap(inboxIcon);
     ui->profile_Icon->setPixmap(profileIcon);
     ui->logout_Icon->setPixmap(logoutIcon);
+    connect(ui->examsButton, &QPushButton::clicked, this, &main_menu::on_examsButton_clicked);
     connect(ui->logoutButton, &QPushButton::clicked, this, &main_menu::on_logoutButton_clicked);
     connect(ui->profileButton, &QPushButton::clicked, this, &main_menu::on_profileButton_clicked);
 }
@@ -32,6 +33,46 @@ main_menu::main_menu(QWidget *parent)
 main_menu::~main_menu()
 {
     delete ui;
+}
+
+void main_menu::on_examsButton_clicked()
+{
+    this->close();
+
+    exams *examsWindow = new exams();
+    examsWindow->show();
+}
+
+void main_menu::on_resultsButton_clicked()
+{
+    this->close();
+
+    results *resultsWindow = new results();
+    resultsWindow->show();
+}
+
+void main_menu::on_programButton_clicked()
+{
+    this->close();
+
+    program *programWindow = new program();
+    programWindow->show();
+}
+
+void main_menu::on_inboxButton_clicked()
+{
+    this->close();
+
+    inbox *inboxWindow = new inbox();
+    inboxWindow->show();
+}
+
+void main_menu::on_profileButton_clicked()
+{
+    this->close();
+
+    profile *profileWindow = new profile();
+    profileWindow->show();
 }
 
 void main_menu::on_logoutButton_clicked()
@@ -42,10 +83,4 @@ void main_menu::on_logoutButton_clicked()
     loginWindow->show();
 }
 
-void main_menu::on_profileButton_clicked()
-{
-    this->close();
 
-    profile *profileWindow = new profile();
-    profileWindow->show();
-}

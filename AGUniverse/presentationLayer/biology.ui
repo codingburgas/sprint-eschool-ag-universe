@@ -329,8 +329,64 @@ font: 600 12pt &quot;Crimson Text Semibold&quot;;</string>
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="mathsTitle">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>20</y>
+     <width>271</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font: 50pt &quot;Aura&quot;;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;BIOLOGY&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="section1_Box">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>140</y>
+     <width>381</width>
+     <height>491</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(155, 192, 226);
+border:7px solid #3F7DB5;
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="section1_Box_2">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>140</y>
+     <width>381</width>
+     <height>491</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(155, 192, 226);
+border:7px solid #3F7DB5;
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <zorder>background</zorder>
   <zorder>frame_2</zorder>
+  <zorder>mathsTitle</zorder>
+  <zorder>section1_Box</zorder>
+  <zorder>section1_Box_2</zorder>
  </widget>
  <resources>
   <include location="../resources.qrc"/>

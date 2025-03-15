@@ -37,6 +37,9 @@ private:
     program *program;
     inbox *inbox;
     profile *profile;
+    maths *maths;
+    english *english;
+    biology *biology;
 };
 
 #endif // LOGIN_H

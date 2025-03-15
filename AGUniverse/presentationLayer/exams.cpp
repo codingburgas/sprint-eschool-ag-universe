@@ -1,6 +1,7 @@
 #include "exams.h"
 #include "presentationLayer/ui_exams.h"
 #include "fontutils.h"
+#include "login.h"
 
 exams::exams(QWidget *parent)
     : QWidget(parent)
@@ -40,3 +41,28 @@ exams::~exams()
 {
     delete ui;
 }
+
+void exams::on_mathsButton_clicked()
+{
+    this->close();
+
+    maths *mathsWindow = new maths();
+    mathsWindow->show();
+}
+
+void exams::on_englishButton_clicked()
+{
+    this->close();
+
+    english *englishWindow = new english();
+    englishWindow->show();
+}
+
+void exams::on_biologyButton_clicked()
+{
+    this->close();
+
+    biology *biologyWindow = new biology();
+    biologyWindow->show();
+}
+

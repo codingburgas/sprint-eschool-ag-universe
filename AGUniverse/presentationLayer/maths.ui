@@ -332,8 +332,8 @@ font: 600 12pt &quot;Crimson Text Semibold&quot;;</string>
   <widget class="QLabel" name="mathsTitle">
    <property name="geometry">
     <rect>
-     <x>560</x>
-     <y>10</y>
+     <x>580</x>
+     <y>20</y>
      <width>211</width>
      <height>91</height>
     </rect>
@@ -346,49 +346,13 @@ font: 50pt &quot;Aura&quot;;</string>
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;MATHS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QLabel" name="section1_Box">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>110</y>
-     <width>301</width>
-     <height>401</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(155, 192, 226);
-border:7px solid #3F7DB5;
-border-radius:35px;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QLabel" name="section2_Box">
    <property name="geometry">
     <rect>
-     <x>740</x>
-     <y>110</y>
-     <width>301</width>
-     <height>401</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(155, 192, 226);
-border:7px solid #3F7DB5;
-border-radius:35px;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="section3_Box">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>520</y>
-     <width>521</width>
-     <height>191</height>
+     <x>700</x>
+     <y>140</y>
+     <width>381</width>
+     <height>491</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -403,8 +367,8 @@ border-radius:35px;</string>
   <widget class="QLabel" name="section1_Title">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>130</y>
+     <x>320</x>
+     <y>160</y>
      <width>321</width>
      <height>91</height>
     </rect>
@@ -414,14 +378,14 @@ border-radius:35px;</string>
 font: 40pt &quot;Aura&quot;;</string>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;SECTION 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;GEOMETRY&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="section2_Title">
    <property name="geometry">
     <rect>
-     <x>740</x>
-     <y>130</y>
+     <x>730</x>
+     <y>160</y>
      <width>321</width>
      <height>91</height>
     </rect>
@@ -431,35 +395,74 @@ font: 40pt &quot;Aura&quot;;</string>
 font: 40pt &quot;Aura&quot;;</string>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;SECTION 2&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;ALGEBRA&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QLabel" name="section3_Title">
+  <widget class="QLabel" name="section1_Box">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>530</y>
-     <width>321</width>
-     <height>91</height>
+     <x>280</x>
+     <y>140</y>
+     <width>381</width>
+     <height>491</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white;
-font: 40pt &quot;Aura&quot;;</string>
+    <string notr="true">background-color:rgb(155, 192, 226);
+border:7px solid #3F7DB5;
+border-radius:35px;</string>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;SECTION 3&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>300</y>
+     <width>241</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../resources.qrc">:/assets/images/geometry_icon.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>300</y>
+     <width>241</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../resources.qrc">:/assets/images/algebra_icon.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
   <zorder>background</zorder>
   <zorder>frame_2</zorder>
   <zorder>mathsTitle</zorder>
-  <zorder>section1_Box</zorder>
   <zorder>section2_Box</zorder>
-  <zorder>section3_Box</zorder>
-  <zorder>section1_Title</zorder>
   <zorder>section2_Title</zorder>
-  <zorder>section3_Title</zorder>
+  <zorder>section1_Box</zorder>
+  <zorder>section1_Title</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
  </widget>
  <resources>
   <include location="../resources.qrc"/>

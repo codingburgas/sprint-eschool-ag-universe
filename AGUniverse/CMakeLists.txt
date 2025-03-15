@@ -24,13 +24,13 @@ qt_add_executable(AGUniverse
     presentationLayer/main_menu.h
     presentationLayer/main_menu.ui
 
-    presentationLayer/profile.cpp
-    presentationLayer/profile.h
-    presentationLayer/profile.ui
-
     presentationLayer/exams.cpp
     presentationLayer/exams.h
     presentationLayer/exams.ui
+
+    presentationLayer/profile.cpp
+    presentationLayer/profile.h
+    presentationLayer/profile.ui
 
     presentationLayer/results.cpp
     presentationLayer/results.h
@@ -43,6 +43,9 @@ qt_add_executable(AGUniverse
     presentationLayer/inbox.cpp
     presentationLayer/inbox.h
     presentationLayer/inbox.ui
+
+    presentationLayer/fontutils.cpp
+    presentationLayer/fontutils.h
 
     # Data Access Layer
     dataAccessLayer/database.cpp
@@ -73,6 +76,8 @@ set(AGUniverse_resource_files
     "assets/images/Test_logo_2.png"
     "assets/images/Logo1.png"
     "assets/images/profile_picture.png"
+    "assets/fonts/Aura Regular.ttf"
+    "assets/fonts/CrimsonText-SemiBold.ttf"
 )
 
 qt_add_resources(AGUniverse "AGUniverse"

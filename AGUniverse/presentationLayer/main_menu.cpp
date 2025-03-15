@@ -2,6 +2,7 @@
 #include "presentationLayer/ui_main_menu.h"
 #include "login.h"
 #include "profile.h"
+#include "fontutils.h"
 #include <QPixmap>
 
 main_menu::main_menu(QWidget *parent)
@@ -28,6 +29,8 @@ main_menu::main_menu(QWidget *parent)
     connect(ui->examsButton, &QPushButton::clicked, this, &main_menu::on_examsButton_clicked);
     connect(ui->logoutButton, &QPushButton::clicked, this, &main_menu::on_logoutButton_clicked);
     connect(ui->profileButton, &QPushButton::clicked, this, &main_menu::on_profileButton_clicked);
+
+    setCustomFontCT(ui->label, 12);
 }
 
 main_menu::~main_menu()

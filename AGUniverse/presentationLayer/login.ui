@@ -280,7 +280,7 @@ color:#9bc0e2;
     </property>
     <property name="font">
      <font>
-      <family>Poor Richard</family>
+      <family>Crimson Text Semibold</family>
       <pointsize>42</pointsize>
       <italic>false</italic>
       <bold>true</bold>
@@ -288,7 +288,7 @@ color:#9bc0e2;
     </property>
     <property name="styleSheet">
      <string notr="true">letter-spacing:5px;
-font: 42pt &quot;Poor Richard&quot;;
+font: 600 42pt &quot;Crimson Text Semibold&quot;;
 border:0px;
 color:white;
 font-weight:bold;</string>

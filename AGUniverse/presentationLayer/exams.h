@@ -1,13 +1,13 @@
 #ifndef EXAMS_H
 #define EXAMS_H
 
-#include <QDialog>
+#include <QWidget>
 
 namespace Ui {
 class exams;
 }
 
-class exams : public QDialog
+class exams : public QWidget
 {
     Q_OBJECT
 

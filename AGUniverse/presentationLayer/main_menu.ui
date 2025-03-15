@@ -326,15 +326,15 @@ color:white;</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>68</x>
+      <x>60</x>
       <y>100</y>
-      <width>91</width>
+      <width>101</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 11pt &quot;Crimson Text Semibold&quot;;
-color:white;</string>
+     <string notr="true">color:white;
+font: 600 12pt &quot;Crimson Text Semibold&quot;;</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;UNIVERSE&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>

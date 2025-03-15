@@ -36,9 +36,9 @@ qt_add_executable(AGUniverse
     presentationLayer/results.h
     presentationLayer/results.ui
 
-    presentationLayer/program.cpp
-    presentationLayer/program.h
-    presentationLayer/program.ui
+
+
+
 
     presentationLayer/inbox.cpp
     presentationLayer/inbox.h
@@ -52,6 +52,8 @@ qt_add_executable(AGUniverse
     dataAccessLayer/database.h
     dataAccessLayer/users.txt
     resources.qrc
+    presentationLayer/program.ui
+    presentationLayer/test.ui
 
 
 )

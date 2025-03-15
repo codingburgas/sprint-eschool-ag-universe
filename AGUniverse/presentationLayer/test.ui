@@ -35,10 +35,10 @@
     <string notr="true">background-color: #4486c3;</string>
    </property>
    <property name="frameShape">
-    <enum>QFrame::Shape::NoFrame</enum>
+    <enum>QFrame::NoFrame</enum>
    </property>
    <property name="frameShadow">
-    <enum>QFrame::Shadow::Raised</enum>
+    <enum>QFrame::Raised</enum>
    </property>
    <property name="text">
     <string/>
@@ -66,16 +66,16 @@ border-top-right-radius: 25px;
 border-bottom-right-radius: 25px;</string>
    </property>
    <property name="frameShape">
-    <enum>QFrame::Shape::StyledPanel</enum>
+    <enum>QFrame::StyledPanel</enum>
    </property>
    <property name="frameShadow">
-    <enum>QFrame::Shadow::Raised</enum>
+    <enum>QFrame::Raised</enum>
    </property>
    <widget class="QLabel" name="exams_Icon">
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>190</y>
+      <y>180</y>
       <width>51</width>
       <height>51</height>
      </rect>
@@ -99,6 +99,9 @@ border-bottom-right-radius: 25px;</string>
       <height>51</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #4486c3;</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -113,9 +116,9 @@ border-bottom-right-radius: 25px;</string>
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>310</y>
+      <y>320</y>
       <width>51</width>
-      <height>51</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
@@ -236,7 +239,8 @@ text-align:left;</string>
     <property name="styleSheet">
      <string notr="true">font: 15pt &quot;Allerta&quot;;
 color:white;
-text-align:left;</string>
+text-align:left;
+background-color: #4486c3;</string>
     </property>
     <property name="text">
      <string>Program</string>
@@ -349,6 +353,131 @@ font: 600 12pt &quot;Crimson Text Semibold&quot;;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;UNIVERSE&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>240</y>
+      <width>271</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #4486c3;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <zorder>frame</zorder>
+   <zorder>exams_Icon</zorder>
+   <zorder>program_Icon</zorder>
+   <zorder>results_Icon</zorder>
+   <zorder>inbox_Icon</zorder>
+   <zorder>profile_Icon</zorder>
+   <zorder>logout_Icon</zorder>
+   <zorder>logoutButton</zorder>
+   <zorder>examsButton</zorder>
+   <zorder>programButton</zorder>
+   <zorder>resultsButton</zorder>
+   <zorder>inboxButton</zorder>
+   <zorder>profileButton</zorder>
+   <zorder>navigationLabel</zorder>
+   <zorder>logoIcon</zorder>
+   <zorder>label</zorder>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>10</y>
+     <width>771</width>
+     <height>661</height>
+    </rect>
+   </property>
+   <property name="rowCount">
+    <number>9</number>
+   </property>
+   <property name="columnCount">
+    <number>13</number>
+   </property>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <column>
+    <property name="text">
+     <string>Monday</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Tuesday</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Wednesday</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Thursday</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Friday</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Saturday</string>
+    </property>
+   </column>
+   <column/>
+   <column/>
+   <column/>
+   <column/>
+   <column/>
+   <column/>
+   <column/>
+   <item row="0" column="0">
+    <property name="text">
+     <string/>
+    </property>
+    <property name="background">
+     <brush brushstyle="NoBrush">
+      <color alpha="255">
+       <red>155</red>
+       <green>192</green>
+       <blue>226</blue>
+      </color>
+     </brush>
+    </property>
+    <property name="foreground">
+     <brush brushstyle="NoBrush">
+      <color alpha="255">
+       <red>85</red>
+       <green>255</green>
+       <blue>127</blue>
+      </color>
+     </brush>
+    </property>
+   </item>
+   <item row="0" column="7">
+    <property name="text">
+     <string/>
+    </property>
+   </item>
   </widget>
   <action name="actiontext1">
    <property name="text">

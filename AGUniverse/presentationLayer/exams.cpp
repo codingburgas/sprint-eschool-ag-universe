@@ -14,6 +14,9 @@ exams::exams(QWidget *parent)
     QPixmap inboxIcon(":/assets/images/inbox_icon.png");
     QPixmap profileIcon(":/assets/images/profile.icon.png");
     QPixmap logoutIcon(":/assets/images/log_out_icon.png");
+    QPixmap mathsIcon(":/assets/images/math_icon.png");
+    QPixmap englishIcon(":/assets/images/english_icon.png");
+    QPixmap biologyIcon(":/assets/images/biology_icon.png");
 
     ui->logoIcon->setPixmap(logoIcon);
     ui->exams_Icon->setPixmap(examIcon);
@@ -22,8 +25,14 @@ exams::exams(QWidget *parent)
     ui->inbox_Icon->setPixmap(inboxIcon);
     ui->profile_Icon->setPixmap(profileIcon);
     ui->logout_Icon->setPixmap(logoutIcon);
+    ui->maths_Icon->setPixmap(mathsIcon);
+    ui->english_Icon->setPixmap(englishIcon);
+    ui->biology_Icon->setPixmap(biologyIcon);
 
-    setCustomFontAura(ui->titleLabel, 30);
+    setCustomFontAura(ui->titleLabel, 55);
+    setCustomFontAura(ui->mathsTitle, 50);
+    setCustomFontAura(ui->englishTitle, 50);
+    setCustomFontAura(ui->biologyTitle, 50);
     setCustomFontCT(ui->label, 12);
 }
 

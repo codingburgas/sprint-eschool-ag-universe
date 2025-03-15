@@ -28,6 +28,18 @@ qt_add_executable(AGUniverse
     presentationLayer/exams.h
     presentationLayer/exams.ui
 
+    presentationLayer/maths.cpp
+    presentationLayer/maths.h
+    presentationLayer/maths.ui
+
+    presentationLayer/english.cpp
+    presentationLayer/english.h
+    presentationLayer/english.ui
+
+    presentationLayer/biology.cpp
+    presentationLayer/biology.h
+    presentationLayer/biology.ui
+
     presentationLayer/profile.cpp
     presentationLayer/profile.h
     presentationLayer/profile.ui
@@ -76,6 +88,9 @@ set(AGUniverse_resource_files
     "assets/images/Test_logo_2.png"
     "assets/images/Logo1.png"
     "assets/images/profile_picture.png"
+    "assets/images/math_icon.png"
+    "assets/images/english_icon.png"
+    "assets/images/biology_icon.png"
     "assets/fonts/Aura Regular.ttf"
     "assets/fonts/CrimsonText-SemiBold.ttf"
     "assets/fonts/Allerta-Regular.ttf"

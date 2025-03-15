@@ -509,6 +509,72 @@ font: 50pt &quot;Aura&quot;;</string>
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QPushButton" name="mathsButton">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>130</y>
+     <width>321</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="englishButton">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>130</y>
+     <width>321</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="biologyButton">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>430</y>
+     <width>321</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>background</zorder>
+  <zorder>frame_2</zorder>
+  <zorder>mathsBox</zorder>
+  <zorder>englishBox</zorder>
+  <zorder>biologyBox</zorder>
+  <zorder>mathsTitle</zorder>
+  <zorder>englishTitle</zorder>
+  <zorder>biologyTitle</zorder>
+  <zorder>maths_Icon</zorder>
+  <zorder>english_Icon</zorder>
+  <zorder>biology_Icon</zorder>
+  <zorder>titleLabel</zorder>
+  <zorder>mathsButton</zorder>
+  <zorder>englishButton</zorder>
+  <zorder>biologyButton</zorder>
  </widget>
  <resources>
   <include location="../resources.qrc"/>

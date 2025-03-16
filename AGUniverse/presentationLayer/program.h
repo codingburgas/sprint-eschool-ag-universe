@@ -15,6 +15,13 @@ public:
     explicit program(QWidget *parent = nullptr);
     ~program();
 
+private slots:
+    void on_examsButton_clicked();
+    void on_resultsButton_clicked();
+    void on_programButton_clicked();
+    void on_inboxButton_clicked();
+    void on_profileButton_clicked();
+    void on_logoutButton_clicked();
 private:
     Ui::program *ui;
 };

@@ -329,8 +329,44 @@ font: 600 12pt &quot;Crimson Text Semibold&quot;;</string>
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="program_2">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>30</y>
+     <width>861</width>
+     <height>711</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../resources.qrc">:/assets/images/table.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="titleLabel">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>-10</y>
+     <width>671</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font-weight:bold;
+font: 55pt &quot;Aura&quot;;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;YOUR PROGRAM&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
   <zorder>background</zorder>
   <zorder>frame_2</zorder>
+  <zorder>program_2</zorder>
+  <zorder>titleLabel</zorder>
  </widget>
  <resources>
   <include location="../resources.qrc"/>

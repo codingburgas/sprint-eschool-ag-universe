@@ -17,6 +17,7 @@ program::program(QWidget *parent)
     QPixmap inboxIcon(":/assets/images/inbox_icon.png");
     QPixmap profileIcon(":/assets/images/profile.icon.png");
     QPixmap logoutIcon(":/assets/images/log_out_icon.png");
+    QPixmap timetable(":/assets/images/table.png");
 
     ui->logoIcon->setPixmap(logoIcon);
     ui->exams_Icon->setPixmap(examIcon);
@@ -25,6 +26,7 @@ program::program(QWidget *parent)
     ui->inbox_Icon->setPixmap(inboxIcon);
     ui->profile_Icon->setPixmap(profileIcon);
     ui->logout_Icon->setPixmap(logoutIcon);
+    ui->program_2->setPixmap(timetable);
 
     setCustomFontCT(ui->label, 12);
     setCustomFontAllerta(ui->navigationLabel, 17);
@@ -34,6 +36,7 @@ program::program(QWidget *parent)
     setCustomFontAllerta(ui->inboxButton, 15);
     setCustomFontAllerta(ui->profileButton, 15);
     setCustomFontAllerta(ui->logoutButton, 15);
+    setCustomFontAura(ui->titleLabel, 50);
 }
 
 program::~program()

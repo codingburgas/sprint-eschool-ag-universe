@@ -18,6 +18,7 @@ main_menu::main_menu(QWidget *parent)
     QPixmap inboxIcon(":/assets/images/inbox_icon.png");
     QPixmap profileIcon(":/assets/images/profile.icon.png");
     QPixmap logoutIcon(":/assets/images/log_out_icon.png");
+    QPixmap logo(":/assets/images/Test_logo_2.png");
 
     ui->logoIcon->setPixmap(logoIcon);
     ui->exams_Icon->setPixmap(examIcon);
@@ -26,6 +27,7 @@ main_menu::main_menu(QWidget *parent)
     ui->inbox_Icon->setPixmap(inboxIcon);
     ui->profile_Icon->setPixmap(profileIcon);
     ui->logout_Icon->setPixmap(logoutIcon);
+    ui->logoAG->setPixmap(logo);
     connect(ui->examsButton, &QPushButton::clicked, this, &main_menu::on_examsButton_clicked);
     connect(ui->logoutButton, &QPushButton::clicked, this, &main_menu::on_logoutButton_clicked);
     connect(ui->profileButton, &QPushButton::clicked, this, &main_menu::on_profileButton_clicked);
@@ -38,6 +40,8 @@ main_menu::main_menu(QWidget *parent)
     setCustomFontAllerta(ui->inboxButton, 15);
     setCustomFontAllerta(ui->profileButton, 15);
     setCustomFontAllerta(ui->logoutButton, 15);
+    setCustomFontAura(ui->titleLabel, 75);
+    setCustomFontCT(ui->logoTitle, 42);
 }
 
 main_menu::~main_menu()

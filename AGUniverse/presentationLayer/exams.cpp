@@ -2,6 +2,9 @@
 #include "presentationLayer/ui_exams.h"
 #include "fontutils.h"
 #include "login.h"
+#include "results.h"
+#include "program.h"
+#include "inbox.h"
 
 exams::exams(QWidget *parent)
     : QWidget(parent)
@@ -35,6 +38,13 @@ exams::exams(QWidget *parent)
     setCustomFontAura(ui->englishTitle, 50);
     setCustomFontAura(ui->biologyTitle, 50);
     setCustomFontCT(ui->label, 12);
+
+    connect(ui->examsButton, &QPushButton::clicked, this, &exams::on_examsButton_clicked);
+    connect(ui->resultsButton, &QPushButton::clicked, this, &exams::on_resultsButton_clicked);
+    connect(ui->programButton, &QPushButton::clicked, this, &exams::on_programButton_clicked);
+    connect(ui->inboxButton, &QPushButton::clicked, this, &exams::on_inboxButton_clicked);
+    connect(ui->profileButton, &QPushButton::clicked, this, &exams::on_profileButton_clicked);
+    connect(ui->logoutButton, &QPushButton::clicked, this, &exams::on_logoutButton_clicked);
 }
 
 exams::~exams()
@@ -64,5 +74,53 @@ void exams::on_biologyButton_clicked()
 
     biology *biologyWindow = new biology();
     biologyWindow->show();
+}
+
+void exams::on_examsButton_clicked()
+{
+    this->close();
+
+    exams *examsWindow = new exams();
+    examsWindow->show();
+}
+
+void exams::on_resultsButton_clicked()
+{
+    this->close();
+
+    results *resultsWindow = new results();
+    resultsWindow->show();
+}
+
+void exams::on_programButton_clicked()
+{
+    this->close();
+
+    program *programWindow = new program();
+    programWindow->show();
+}
+
+void exams::on_inboxButton_clicked()
+{
+    this->close();
+
+    inbox *inboxWindow = new inbox();
+    inboxWindow->show();
+}
+
+void exams::on_profileButton_clicked()
+{
+    this->close();
+
+    profile *profileWindow = new profile();
+    profileWindow->show();
+}
+
+void exams::on_logoutButton_clicked()
+{
+    this->close();
+
+    MainWindow *loginWindow = new MainWindow();
+    loginWindow->show();
 }
 

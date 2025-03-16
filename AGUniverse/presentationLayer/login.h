@@ -9,6 +9,9 @@
 #include "program.h"
 #include "inbox.h"
 #include "profile.h"
+#include "maths.h"
+#include "english.h"
+#include "biology.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

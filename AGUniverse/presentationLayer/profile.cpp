@@ -1,6 +1,10 @@
-#include "profile.h"
 #include "presentationLayer/ui_profile.h"
 #include "fontutils.h"
+#include "login.h"
+#include "exams.h"
+#include "results.h"
+#include "program.h"
+#include "inbox.h"
 
 profile::profile(QWidget *parent)
     : QWidget(parent)
@@ -32,9 +36,70 @@ profile::profile(QWidget *parent)
     setCustomFontAllerta(ui->inboxButton, 15);
     setCustomFontAllerta(ui->profileButton, 15);
     setCustomFontAllerta(ui->logoutButton, 15);
+
+    setCustomFontAura(ui->your_profile_text, 26);
+    setCustomFontAura(ui->hello_text, 40);
+    setCustomFontAura(ui->name, 50);
+    setCustomFontAura(ui->bio, 26);
+    setCustomFontAura(ui->change_bio, 13);
+
+    connect(ui->examsButton, &QPushButton::clicked, this, &profile::on_examsButton_clicked);
+    connect(ui->resultsButton, &QPushButton::clicked, this, &profile::on_resultsButton_clicked);
+    connect(ui->programButton, &QPushButton::clicked, this, &profile::on_programButton_clicked);
+    connect(ui->inboxButton, &QPushButton::clicked, this, &profile::on_inboxButton_clicked);
+    connect(ui->profileButton, &QPushButton::clicked, this, &profile::on_profileButton_clicked);
+    connect(ui->logoutButton, &QPushButton::clicked, this, &profile::on_logoutButton_clicked);
 }
 
 profile::~profile()
 {
     delete ui;
+}
+
+void profile::on_examsButton_clicked()
+{
+    this->close();
+
+    exams *examsWindow = new exams();
+    examsWindow->show();
+}
+
+void profile::on_resultsButton_clicked()
+{
+    this->close();
+
+    results *resultsWindow = new results();
+    resultsWindow->show();
+}
+
+void profile::on_programButton_clicked()
+{
+    this->close();
+
+    program *programWindow = new program();
+    programWindow->show();
+}
+
+void profile::on_inboxButton_clicked()
+{
+    this->close();
+
+    inbox *inboxWindow = new inbox();
+    inboxWindow->show();
+}
+
+void profile::on_profileButton_clicked()
+{
+    this->close();
+
+    profile *profileWindow = new profile();
+    profileWindow->show();
+}
+
+void profile::on_logoutButton_clicked()
+{
+    this->close();
+
+    MainWindow *loginWindow = new MainWindow();
+    loginWindow->show();
 }

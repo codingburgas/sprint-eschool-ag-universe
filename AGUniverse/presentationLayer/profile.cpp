@@ -42,13 +42,6 @@ profile::profile(QWidget *parent)
     setCustomFontAura(ui->name, 50);
     setCustomFontAura(ui->bio, 26);
     setCustomFontAura(ui->change_bio, 13);
-
-    connect(ui->examsButton, &QPushButton::clicked, this, &profile::on_examsButton_clicked);
-    connect(ui->resultsButton, &QPushButton::clicked, this, &profile::on_resultsButton_clicked);
-    connect(ui->programButton, &QPushButton::clicked, this, &profile::on_programButton_clicked);
-    connect(ui->inboxButton, &QPushButton::clicked, this, &profile::on_inboxButton_clicked);
-    connect(ui->profileButton, &QPushButton::clicked, this, &profile::on_profileButton_clicked);
-    connect(ui->logoutButton, &QPushButton::clicked, this, &profile::on_logoutButton_clicked);
 }
 
 profile::~profile()

@@ -97,6 +97,8 @@ set(AGUniverse_resource_files
     "assets/images/algebra_icon.png"
     "assets/images/grammar_icon.png"
     "assets/images/vocabulary_icon.png"
+    "assets/images/cell_biology_and_metabolism_icon.png"
+    "assets/images/genetics_and_heredity_icon.png"
     "assets/fonts/Aura Regular.ttf"
     "assets/fonts/CrimsonText-SemiBold.ttf"
     "assets/fonts/Allerta-Regular.ttf"

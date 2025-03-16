@@ -329,12 +329,12 @@ font: 600 12pt &quot;Crimson Text Semibold&quot;;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="mathsTitle">
+  <widget class="QLabel" name="biologyTitle">
    <property name="geometry">
     <rect>
-     <x>540</x>
+     <x>530</x>
      <y>20</y>
-     <width>271</width>
+     <width>291</width>
      <height>91</height>
     </rect>
    </property>
@@ -382,11 +382,95 @@ border-radius:35px;</string>
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="section1_Title">
+   <property name="geometry">
+    <rect>
+     <x>285</x>
+     <y>160</y>
+     <width>371</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Aura</family>
+     <pointsize>35</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font: 35pt &quot;Aura&quot;;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Cell Biology and&lt;/p&gt;&lt;p align=&quot;center&quot;&gt; Metabolism&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="section2_Title">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>160</y>
+     <width>361</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font: 40pt &quot;Aura&quot;;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Genetics and&lt;/p&gt;&lt;p align=&quot;center&quot;&gt; Heredity&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cellPicture">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>300</y>
+     <width>241</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../resources.qrc">:/assets/images/cell_biology_and_metabolism_icon.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="geneticsPicture">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>300</y>
+     <width>241</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../resources.qrc">:/assets/images/genetics_and_heredity_icon.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
   <zorder>background</zorder>
   <zorder>frame_2</zorder>
-  <zorder>mathsTitle</zorder>
+  <zorder>biologyTitle</zorder>
   <zorder>section1_Box</zorder>
   <zorder>section1_Box_2</zorder>
+  <zorder>section1_Title</zorder>
+  <zorder>section2_Title</zorder>
+  <zorder>cellPicture</zorder>
+  <zorder>geneticsPicture</zorder>
  </widget>
  <resources>
   <include location="../resources.qrc"/>

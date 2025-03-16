@@ -365,7 +365,7 @@ border-radius:35px;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="mathsTitle">
+  <widget class="QLabel" name="englishTitle">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -399,7 +399,7 @@ font: 40pt &quot;Aura&quot;;</string>
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;GRAMMAR&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QLabel" name="section1_Title_2">
+  <widget class="QLabel" name="section2_Title">
    <property name="geometry">
     <rect>
      <x>710</x>
@@ -416,7 +416,7 @@ font: 40pt &quot;Aura&quot;;</string>
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;VOCABULARY&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="grammarPicture">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -435,10 +435,10 @@ font: 40pt &quot;Aura&quot;;</string>
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="vocabularyPicture">
    <property name="geometry">
     <rect>
-     <x>770</x>
+     <x>750</x>
      <y>300</y>
      <width>241</width>
      <height>241</height>

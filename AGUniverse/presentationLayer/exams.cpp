@@ -11,6 +11,7 @@ exams::exams(QWidget *parent)
     , ui(new Ui::exams)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Exams Page");
     QPixmap logoIcon(":/assets/images/Logo1.png");
     QPixmap examIcon(":/assets/images/exams_icon.png");
     QPixmap programIcon(":/assets/images/program_icon.png");
@@ -33,6 +34,13 @@ exams::exams(QWidget *parent)
     ui->english_Icon->setPixmap(englishIcon);
     ui->biology_Icon->setPixmap(biologyIcon);
 
+    setCustomFontAllerta(ui->navigationLabel, 17);
+    setCustomFontAllerta(ui->examsButton, 14);
+    setCustomFontAllerta(ui->programButton, 15);
+    setCustomFontAllerta(ui->resultsButton, 15);
+    setCustomFontAllerta(ui->inboxButton, 15);
+    setCustomFontAllerta(ui->profileButton, 15);
+    setCustomFontAllerta(ui->logoutButton, 15);
     setCustomFontAura(ui->titleLabel, 55);
     setCustomFontAura(ui->mathsTitle, 50);
     setCustomFontAura(ui->englishTitle, 50);

@@ -32,13 +32,37 @@ qt_add_executable(AGUniverse
     presentationLayer/maths.h
     presentationLayer/maths.ui
 
+    presentationLayer/geometry.cpp
+    presentationLayer/geometry.h
+    presentationLayer/geometry.ui
+
+    presentationLayer/algebra.cpp
+    presentationLayer/algebra.h
+    presentationLayer/algebra.ui
+
     presentationLayer/english.cpp
     presentationLayer/english.h
     presentationLayer/english.ui
 
+    presentationLayer/grammar.cpp
+    presentationLayer/grammar.h
+    presentationLayer/grammar.ui
+
+    presentationLayer/vocabulary.cpp
+    presentationLayer/vocabulary.h
+    presentationLayer/vocabulary.ui
+
     presentationLayer/biology.cpp
     presentationLayer/biology.h
     presentationLayer/biology.ui
+
+    presentationLayer/cellBiology.cpp
+    presentationLayer/cellBiology.h
+    presentationLayer/cellBiology.ui
+
+    presentationLayer/genetics.cpp
+    presentationLayer/genetics.h
+    presentationLayer/genetics.ui
 
     presentationLayer/profile.cpp
     presentationLayer/profile.h

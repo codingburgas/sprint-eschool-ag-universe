@@ -12,6 +12,12 @@
 #include "maths.h"
 #include "english.h"
 #include "biology.h"
+#include "geometry.h"
+#include "algebra.h"
+#include "grammar.h"
+#include "vocabulary.h"
+#include "cellBiology.h"
+#include "genetics.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -43,6 +49,12 @@ private:
     maths *maths;
     english *english;
     biology *biology;
+    class geometry *geometry;
+    algebra *algebra;
+    grammar *grammar;
+    vocabulary *vocabulary;
+    cellBiology *cellBiology;
+    genetics *genetics;
 };
 
 #endif // LOGIN_H

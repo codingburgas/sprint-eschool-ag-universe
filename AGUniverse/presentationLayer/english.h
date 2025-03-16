@@ -22,6 +22,8 @@ private slots:
     void on_inboxButton_clicked();
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
+    void on_grammarButton_clicked();
+    void on_vocabularyButton_clicked();
 
 private:
     Ui::english *ui;

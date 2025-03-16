@@ -1,19 +1,19 @@
-#ifndef BIOLOGY_H
-#define BIOLOGY_H
+#ifndef GRAMMAR_H
+#define GRAMMAR_H
 
 #include <QWidget>
 
 namespace Ui {
-class biology;
+class grammar;
 }
 
-class biology : public QWidget
+class grammar : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit biology(QWidget *parent = nullptr);
-    ~biology();
+    explicit grammar(QWidget *parent = nullptr);
+    ~grammar();
 
 private slots:
     void on_examsButton_clicked();
@@ -23,12 +23,8 @@ private slots:
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
 
-    void on_cellBiologyButton_clicked();
-
-    void on_geneticsButton_clicked();
-
 private:
-    Ui::biology *ui;
+    Ui::grammar *ui;
 };
 
-#endif // BIOLOGY_H
+#endif // GRAMMAR_H

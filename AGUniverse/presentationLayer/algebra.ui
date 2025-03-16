@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>english</class>
- <widget class="QWidget" name="english">
+ <class>algebra</class>
+ <widget class="QWidget" name="algebra">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,17 +13,101 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="background">
+  <widget class="QLabel" name="titleLabel">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>0</y>
+     <width>671</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font-weight:bold;
+font: 55pt &quot;Aura&quot;;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;ALGEBRA&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="exam2">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>200</y>
+     <width>801</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(155, 192, 226);
+border:7px solid #3F7DB5;
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="exam3">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>290</y>
+     <width>801</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(155, 192, 226);
+border:7px solid #3F7DB5;
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="backgroundblue_bg">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1101</width>
-     <height>721</height>
+     <width>1100</width>
+     <height>720</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: #4486c3;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="exam1">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>110</y>
+     <width>801</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(155, 192, 226);
+border:7px solid #3F7DB5;
+border-radius:35px;</string>
    </property>
    <property name="text">
     <string/>
@@ -148,7 +232,7 @@ border-bottom-right-radius: 25px;</string>
    <widget class="QLabel" name="logout_Icon">
     <property name="geometry">
      <rect>
-      <x>53</x>
+      <x>50</x>
       <y>630</y>
       <width>51</width>
       <height>51</height>
@@ -329,165 +413,12 @@ font: 600 12pt &quot;Crimson Text Semibold&quot;;</string>
     </property>
    </widget>
   </widget>
-  <widget class="QLabel" name="section1_Box_2">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>140</y>
-     <width>381</width>
-     <height>491</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(155, 192, 226);
-border:7px solid #3F7DB5;
-border-radius:35px;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="section1_Box_3">
-   <property name="geometry">
-    <rect>
-     <x>680</x>
-     <y>140</y>
-     <width>381</width>
-     <height>491</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(155, 192, 226);
-border:7px solid #3F7DB5;
-border-radius:35px;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="englishTitle">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>10</y>
-     <width>271</width>
-     <height>91</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color:white;
-font: 50pt &quot;Aura&quot;;</string>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;ENGLISH&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="section1_Title">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>160</y>
-     <width>321</width>
-     <height>91</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color:white;
-font: 40pt &quot;Aura&quot;;</string>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;GRAMMAR&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="section2_Title">
-   <property name="geometry">
-    <rect>
-     <x>710</x>
-     <y>160</y>
-     <width>321</width>
-     <height>91</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color:white;
-font: 40pt &quot;Aura&quot;;</string>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;VOCABULARY&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="grammarPicture">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>300</y>
-     <width>241</width>
-     <height>241</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap resource="../resources.qrc">:/assets/images/grammar_icon.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QLabel" name="vocabularyPicture">
-   <property name="geometry">
-    <rect>
-     <x>750</x>
-     <y>300</y>
-     <width>241</width>
-     <height>241</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap resource="../resources.qrc">:/assets/images/vocabulary_icon.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="grammarButton">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>150</y>
-     <width>361</width>
-     <height>471</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgba(0, 0, 0, 0);
-border-radius:35px;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="vocabularyButton">
-   <property name="geometry">
-    <rect>
-     <x>680</x>
-     <y>150</y>
-     <width>361</width>
-     <height>471</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgba(0, 0, 0, 0);
-border-radius:35px;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
+  <zorder>backgroundblue_bg</zorder>
+  <zorder>titleLabel</zorder>
+  <zorder>exam2</zorder>
+  <zorder>exam3</zorder>
+  <zorder>exam1</zorder>
+  <zorder>frame_2</zorder>
  </widget>
  <resources>
   <include location="../resources.qrc"/>

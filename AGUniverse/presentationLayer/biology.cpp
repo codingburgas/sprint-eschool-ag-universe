@@ -98,3 +98,21 @@ void biology::on_logoutButton_clicked()
     MainWindow *loginWindow = new MainWindow();
     loginWindow->show();
 }
+
+void biology::on_cellBiologyButton_clicked()
+{
+    this->close();
+
+    cellBiology *cellBiologyWindow = new cellBiology();
+    cellBiologyWindow->show();
+}
+
+
+void biology::on_geneticsButton_clicked()
+{
+    this->close();
+
+    genetics *geneticsWindow = new genetics();
+    geneticsWindow->show();
+}
+

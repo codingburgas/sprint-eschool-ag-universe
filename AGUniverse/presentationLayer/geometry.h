@@ -1,19 +1,19 @@
-#ifndef BIOLOGY_H
-#define BIOLOGY_H
+#ifndef GEOMETRY_H
+#define GEOMETRY_H
 
 #include <QWidget>
 
 namespace Ui {
-class biology;
+class geometry;
 }
 
-class biology : public QWidget
+class geometry : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit biology(QWidget *parent = nullptr);
-    ~biology();
+    explicit geometry(QWidget *parent = nullptr);
+    ~geometry();
 
 private slots:
     void on_examsButton_clicked();
@@ -23,12 +23,8 @@ private slots:
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
 
-    void on_cellBiologyButton_clicked();
-
-    void on_geneticsButton_clicked();
-
 private:
-    Ui::biology *ui;
+    Ui::geometry *ui;
 };
 
-#endif // BIOLOGY_H
+#endif // GEOMETRY_H

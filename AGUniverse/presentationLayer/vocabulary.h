@@ -1,19 +1,19 @@
-#ifndef BIOLOGY_H
-#define BIOLOGY_H
+#ifndef VOCABULARY_H
+#define VOCABULARY_H
 
 #include <QWidget>
 
 namespace Ui {
-class biology;
+class vocabulary;
 }
 
-class biology : public QWidget
+class vocabulary : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit biology(QWidget *parent = nullptr);
-    ~biology();
+    explicit vocabulary(QWidget *parent = nullptr);
+    ~vocabulary();
 
 private slots:
     void on_examsButton_clicked();
@@ -23,12 +23,8 @@ private slots:
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
 
-    void on_cellBiologyButton_clicked();
-
-    void on_geneticsButton_clicked();
-
 private:
-    Ui::biology *ui;
+    Ui::vocabulary *ui;
 };
 
-#endif // BIOLOGY_H
+#endif // VOCABULARY_H

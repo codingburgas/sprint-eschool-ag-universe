@@ -462,6 +462,40 @@ font: 40pt &quot;Aura&quot;;</string>
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QPushButton" name="cellBiologyButton">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>140</y>
+     <width>361</width>
+     <height>471</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="geneticsButton">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>150</y>
+     <width>361</width>
+     <height>471</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <zorder>background</zorder>
   <zorder>frame_2</zorder>
   <zorder>biologyTitle</zorder>
@@ -471,6 +505,8 @@ font: 40pt &quot;Aura&quot;;</string>
   <zorder>section2_Title</zorder>
   <zorder>cellPicture</zorder>
   <zorder>geneticsPicture</zorder>
+  <zorder>cellBiologyButton</zorder>
+  <zorder>geneticsButton</zorder>
  </widget>
  <resources>
   <include location="../resources.qrc"/>

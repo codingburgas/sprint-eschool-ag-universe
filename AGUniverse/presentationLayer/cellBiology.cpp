@@ -1,18 +1,17 @@
-#include "english.h"
-#include "ui_english.h"
+#include "cellbiology.h"
+#include "ui_cellbiology.h"
 #include "fontutils.h"
 #include "login.h"
-#include "exams.h"
 #include "results.h"
 #include "program.h"
 #include "inbox.h"
 
-english::english(QWidget *parent)
+cellBiology::cellBiology(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::english)
+    , ui(new Ui::cellBiology)
 {
     ui->setupUi(this);
-    this->setWindowTitle("English Page");
+    this->setWindowTitle("Cell Biology and Metabolism exams");
     QPixmap logoIcon(":/assets/images/Logo1.png");
     QPixmap examIcon(":/assets/images/exams_icon.png");
     QPixmap programIcon(":/assets/images/program_icon.png");
@@ -20,8 +19,6 @@ english::english(QWidget *parent)
     QPixmap inboxIcon(":/assets/images/inbox_icon.png");
     QPixmap profileIcon(":/assets/images/profile.icon.png");
     QPixmap logoutIcon(":/assets/images/log_out_icon.png");
-    QPixmap grammarPicture(":/assets/images/grammar_icon.png");
-    QPixmap vocabularyPicture(":/assets/images/vocabulary_icon.png");
 
     ui->logoIcon->setPixmap(logoIcon);
     ui->exams_Icon->setPixmap(examIcon);
@@ -30,8 +27,6 @@ english::english(QWidget *parent)
     ui->inbox_Icon->setPixmap(inboxIcon);
     ui->profile_Icon->setPixmap(profileIcon);
     ui->logout_Icon->setPixmap(logoutIcon);
-    ui->vocabularyPicture->setPixmap(vocabularyPicture);
-    ui->grammarPicture->setPixmap(grammarPicture);
 
     setCustomFontCT(ui->label, 12);
     setCustomFontAllerta(ui->navigationLabel, 17);
@@ -41,17 +36,15 @@ english::english(QWidget *parent)
     setCustomFontAllerta(ui->inboxButton, 15);
     setCustomFontAllerta(ui->profileButton, 15);
     setCustomFontAllerta(ui->logoutButton, 15);
-    setCustomFontAura(ui->englishTitle, 50);
-    setCustomFontAura(ui->section1_Title, 40);
-    setCustomFontAura(ui->section2_Title, 40);
+    setCustomFontAura(ui->titleLabel, 50);
 }
 
-english::~english()
+cellBiology::~cellBiology()
 {
     delete ui;
 }
 
-void english::on_examsButton_clicked()
+void cellBiology::on_examsButton_clicked()
 {
     this->close();
 
@@ -59,7 +52,7 @@ void english::on_examsButton_clicked()
     examsWindow->show();
 }
 
-void english::on_resultsButton_clicked()
+void cellBiology::on_resultsButton_clicked()
 {
     this->close();
 
@@ -67,7 +60,7 @@ void english::on_resultsButton_clicked()
     resultsWindow->show();
 }
 
-void english::on_programButton_clicked()
+void cellBiology::on_programButton_clicked()
 {
     this->close();
 
@@ -75,7 +68,7 @@ void english::on_programButton_clicked()
     programWindow->show();
 }
 
-void english::on_inboxButton_clicked()
+void cellBiology::on_inboxButton_clicked()
 {
     this->close();
 
@@ -83,7 +76,7 @@ void english::on_inboxButton_clicked()
     inboxWindow->show();
 }
 
-void english::on_profileButton_clicked()
+void cellBiology::on_profileButton_clicked()
 {
     this->close();
 
@@ -91,28 +84,10 @@ void english::on_profileButton_clicked()
     profileWindow->show();
 }
 
-void english::on_logoutButton_clicked()
+void cellBiology::on_logoutButton_clicked()
 {
     this->close();
 
     MainWindow *loginWindow = new MainWindow();
     loginWindow->show();
 }
-
-void english::on_grammarButton_clicked()
-{
-    this->close();
-
-    grammar *grammarWindow = new grammar();
-    grammarWindow->show();
-}
-
-
-void english::on_vocabularyButton_clicked()
-{
-    this->close();
-
-    vocabulary *vocabularyWindow = new vocabulary();
-    vocabularyWindow->show();
-}
-

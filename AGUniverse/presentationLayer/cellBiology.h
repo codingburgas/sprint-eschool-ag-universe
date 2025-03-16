@@ -1,19 +1,19 @@
-#ifndef BIOLOGY_H
-#define BIOLOGY_H
+#ifndef CELLBIOLOGY_H
+#define CELLBIOLOGY_H
 
 #include <QWidget>
 
 namespace Ui {
-class biology;
+class cellBiology;
 }
 
-class biology : public QWidget
+class cellBiology : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit biology(QWidget *parent = nullptr);
-    ~biology();
+    explicit cellBiology(QWidget *parent = nullptr);
+    ~cellBiology();
 
 private slots:
     void on_examsButton_clicked();
@@ -23,12 +23,8 @@ private slots:
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
 
-    void on_cellBiologyButton_clicked();
-
-    void on_geneticsButton_clicked();
-
 private:
-    Ui::biology *ui;
+    Ui::cellBiology *ui;
 };
 
-#endif // BIOLOGY_H
+#endif // CELLBIOLOGY_H

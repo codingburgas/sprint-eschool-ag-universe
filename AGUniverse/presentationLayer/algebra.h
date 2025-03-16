@@ -1,19 +1,19 @@
-#ifndef BIOLOGY_H
-#define BIOLOGY_H
+#ifndef ALGEBRA_H
+#define ALGEBRA_H
 
 #include <QWidget>
 
 namespace Ui {
-class biology;
+class algebra;
 }
 
-class biology : public QWidget
+class algebra : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit biology(QWidget *parent = nullptr);
-    ~biology();
+    explicit algebra(QWidget *parent = nullptr);
+    ~algebra();
 
 private slots:
     void on_examsButton_clicked();
@@ -23,12 +23,9 @@ private slots:
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
 
-    void on_cellBiologyButton_clicked();
-
-    void on_geneticsButton_clicked();
-
 private:
-    Ui::biology *ui;
+    Ui::algebra *ui;
+
 };
 
-#endif // BIOLOGY_H
+#endif // ALGEBRA_H

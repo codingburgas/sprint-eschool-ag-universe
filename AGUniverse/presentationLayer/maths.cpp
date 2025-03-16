@@ -98,3 +98,21 @@ void maths::on_logoutButton_clicked()
     MainWindow *loginWindow = new MainWindow();
     loginWindow->show();
 }
+
+void maths::on_geometryButton_clicked()
+{
+    this->close();
+
+    class geometry *geometryWindow = new class geometry();
+    geometryWindow->show();
+}
+
+
+void maths::on_algebraButton_clicked()
+{
+    this->close();
+
+    algebra *algebraWindow = new algebra();
+    algebraWindow->show();
+}
+

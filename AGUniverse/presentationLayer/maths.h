@@ -22,6 +22,9 @@ private slots:
     void on_inboxButton_clicked();
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
+    void on_geometryButton_clicked();
+
+    void on_algebraButton_clicked();
 
 private:
     Ui::maths *ui;

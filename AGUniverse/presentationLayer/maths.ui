@@ -454,6 +454,40 @@ border-radius:35px;</string>
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QPushButton" name="geometryButton">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>150</y>
+     <width>361</width>
+     <height>471</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="algebraButton">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>150</y>
+     <width>361</width>
+     <height>471</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <zorder>background</zorder>
   <zorder>frame_2</zorder>
   <zorder>mathsTitle</zorder>
@@ -463,6 +497,8 @@ border-radius:35px;</string>
   <zorder>section1_Title</zorder>
   <zorder>geometryPicture</zorder>
   <zorder>algebraPicture</zorder>
+  <zorder>geometryButton</zorder>
+  <zorder>algebraButton</zorder>
  </widget>
  <resources>
   <include location="../resources.qrc"/>

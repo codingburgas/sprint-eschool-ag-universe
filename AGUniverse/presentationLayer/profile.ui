@@ -72,10 +72,10 @@ border-radius: 20px;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color:white;
-font: 500 26pt &quot;Zantroke&quot;;</string>
+font: 32pt &quot;Aura&quot;;</string>
     </property>
     <property name="text">
-     <string>YOUR PROFILE</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;YOUR PROFILE&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
@@ -83,14 +83,14 @@ font: 500 26pt &quot;Zantroke&quot;;</string>
    <property name="geometry">
     <rect>
      <x>610</x>
-     <y>180</y>
+     <y>150</y>
      <width>291</width>
-     <height>61</height>
+     <height>91</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color:white;
-font: 500 40pt &quot;Zantroke&quot;;
+font: 50pt &quot;Aura&quot;;
 background-color: rgb(68, 134, 195);
 border: none;</string>
    </property>
@@ -104,12 +104,12 @@ border: none;</string>
      <x>610</x>
      <y>240</y>
      <width>291</width>
-     <height>61</height>
+     <height>91</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color:white;
-font: 500 50pt &quot;Zantroke&quot;;
+font: 60pt &quot;Aura&quot;;
 background-color: rgb(68, 134, 195);
 border: none;</string>
    </property>
@@ -160,14 +160,14 @@ border-radius: 20px;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
+      <y>15</y>
       <width>71</width>
       <height>61</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color:white;
-font: 500 26pt &quot;Zantroke&quot;;</string>
+font: 31pt &quot;Aura&quot;;</string>
     </property>
     <property name="text">
      <string>BIO</string>
@@ -204,7 +204,7 @@ border-radius: 20px;</string>
      </property>
      <property name="styleSheet">
       <string notr="true">color:white;
-font: 500 13pt &quot;Zantroke&quot;;
+font: 16pt &quot;Aura&quot;;
 </string>
      </property>
      <property name="text">

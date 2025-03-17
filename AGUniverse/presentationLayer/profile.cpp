@@ -37,11 +37,11 @@ profile::profile(QWidget *parent)
     setCustomFontAllerta(ui->profileButton, 15);
     setCustomFontAllerta(ui->logoutButton, 15);
 
-    setCustomFontAura(ui->your_profile_text, 26);
-    setCustomFontAura(ui->hello_text, 40);
-    setCustomFontAura(ui->name, 50);
-    setCustomFontAura(ui->bio, 26);
-    setCustomFontAura(ui->change_bio, 13);
+    setCustomFontAura(ui->your_profile_text, 50);
+    setCustomFontAura(ui->hello_text, 60);
+    setCustomFontAura(ui->name, 60);
+    setCustomFontAura(ui->bio, 31);
+    setCustomFontAura(ui->change_bio, 16);
 }
 
 profile::~profile()

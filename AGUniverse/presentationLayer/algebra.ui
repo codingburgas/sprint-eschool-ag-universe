@@ -413,12 +413,30 @@ font: 600 12pt &quot;Crimson Text Semibold&quot;;</string>
     </property>
    </widget>
   </widget>
+  <widget class="QPushButton" name="algebraButton1">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>120</y>
+     <width>781</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <zorder>backgroundblue_bg</zorder>
   <zorder>titleLabel</zorder>
   <zorder>exam2</zorder>
   <zorder>exam3</zorder>
   <zorder>exam1</zorder>
   <zorder>frame_2</zorder>
+  <zorder>algebraButton1</zorder>
  </widget>
  <resources>
   <include location="../resources.qrc"/>

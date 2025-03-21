@@ -104,3 +104,12 @@ void algebra::on_logoutButton_clicked()
     MainWindow *loginWindow = new MainWindow(); // Return to the login screen
     loginWindow->show(); // Show the login window
 }
+
+void algebra::on_algebraButton1_clicked()
+{
+    this->close(); // Close the current window
+
+    algebraExam1 *algebraExam1Window = new algebraExam1(); // Create a new algebra exam window
+    algebraExam1Window->show(); // Show the algebra exam window
+}
+

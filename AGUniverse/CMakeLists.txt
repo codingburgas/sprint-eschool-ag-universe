@@ -40,6 +40,10 @@ qt_add_executable(AGUniverse
     presentationLayer/algebra.h
     presentationLayer/algebra.ui
 
+    presentationLayer/algebraExam1.cpp
+    presentationLayer/algebraExam1.h
+    presentationLayer/algebraExam1.ui
+
     presentationLayer/english.cpp
     presentationLayer/english.h
     presentationLayer/english.ui

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>algebraExam1</class>
+ <widget class="QWidget" name="algebraExam1">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #4486c3;</string>
+  </property>
+  <widget class="QScrollArea" name="scrollArea">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>1081</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollAreaWidgetContents">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1062</width>
+      <height>646</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>646</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777192</width>
+      <height>594</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <property name="sizeConstraint">
+      <enum>QLayout::SizeConstraint::SetMaximumSize</enum>
+     </property>
+     <property name="leftMargin">
+      <number>20</number>
+     </property>
+     <property name="topMargin">
+      <number>20</number>
+     </property>
+     <property name="rightMargin">
+      <number>20</number>
+     </property>
+     <property name="bottomMargin">
+      <number>20</number>
+     </property>
+     <property name="horizontalSpacing">
+      <number>8</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>15</number>
+     </property>
+     <item row="2" column="0">
+      <widget class="QFrame" name="frame_4">
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(155, 192, 226);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="1" column="3">
+         <widget class="QPushButton" name="answerButton4_3">
+          <property name="styleSheet">
+           <string notr="true">background-color:#5f9cd5;</string>
+          </property>
+          <property name="text">
+           <string>Answer 4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="answerButton2_3">
+          <property name="styleSheet">
+           <string notr="true">background-color:#5f9cd5;</string>
+          </property>
+          <property name="text">
+           <string>Answer 2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="questionLabel_3">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Question 1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="answerButton3_3">
+          <property name="styleSheet">
+           <string notr="true">background-color:#5f9cd5;</string>
+          </property>
+          <property name="text">
+           <string>Answer 3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="answerButton1_3">
+          <property name="styleSheet">
+           <string notr="true">background-color:#5f9cd5;</string>
+          </property>
+          <property name="text">
+           <string>Answer 1</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QFrame" name="frame_2">
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(155, 192, 226);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="1" column="3">
+         <widget class="QPushButton" name="answerButton4">
+          <property name="styleSheet">
+           <string notr="true">background-color:#5f9cd5;</string>
+          </property>
+          <property name="text">
+           <string>Answer 4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="answerButton2">
+          <property name="styleSheet">
+           <string notr="true">background-color:#5f9cd5;</string>
+          </property>
+          <property name="text">
+           <string>Answer 2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="questionLabel">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Question 1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="answerButton3">
+          <property name="styleSheet">
+           <string notr="true">background-color:#5f9cd5;</string>
+          </property>
+          <property name="text">
+           <string>Answer 3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="answerButton1">
+          <property name="styleSheet">
+           <string notr="true">background-color:#5f9cd5;</string>
+          </property>
+          <property name="text">
+           <string>Answer 1</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QFrame" name="frame_3">
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(155, 192, 226);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="1" column="3">
+         <widget class="QPushButton" name="answerButton4_2">
+          <property name="styleSheet">
+           <string notr="true">background-color:#5f9cd5;</string>
+          </property>
+          <property name="text">
+           <string>Answer 4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="answerButton2_2">
+          <property name="styleSheet">
+           <string notr="true">background-color:#5f9cd5;</string>
+          </property>
+          <property name="text">
+           <string>Answer 2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="questionLabel_2">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Question 1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="answerButton3_2">
+          <property name="styleSheet">
+           <string notr="true">background-color:#5f9cd5;</string>
+          </property>
+          <property name="text">
+           <string>Answer 3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="answerButton1_2">
+          <property name="styleSheet">
+           <string notr="true">background-color:#5f9cd5;</string>
+          </property>
+          <property name="text">
+           <string>Answer 1</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QFrame" name="frame_5">
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(155, 192, 226);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="1" column="3">
+         <widget class="QPushButton" name="answerButton4_4">
+          <property name="styleSheet">
+           <string notr="true">background-color:#5f9cd5;</string>
+          </property>
+          <property name="text">
+           <string>Answer 4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="answerButton2_4">
+          <property name="styleSheet">
+           <string notr="true">background-color:#5f9cd5;</string>
+          </property>
+          <property name="text">
+           <string>Answer 2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="questionLabel_4">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Question 1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="answerButton3_4">
+          <property name="styleSheet">
+           <string notr="true">background-color:#5f9cd5;</string>
+          </property>
+          <property name="text">
+           <string>Answer 3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="answerButton1_4">
+          <property name="styleSheet">
+           <string notr="true">background-color:#5f9cd5;</string>
+          </property>
+          <property name="text">
+           <string>Answer 1</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="You_profile_back">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>10</y>
+     <width>311</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(155, 192, 226);
+border:0px;
+border-radius: 20px;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <widget class="QLabel" name="your_profile_text">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>291</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;
+font: 32pt &quot;Aura&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;ALGEBRA 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

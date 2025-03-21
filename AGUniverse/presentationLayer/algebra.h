@@ -23,6 +23,8 @@ private slots:
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
 
+    void on_algebraButton1_clicked();
+
 private:
     Ui::algebra *ui;
 

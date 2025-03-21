@@ -18,6 +18,7 @@
 #include "vocabulary.h"
 #include "cellBiology.h"
 #include "genetics.h"
+#include "algebraExam1.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -55,6 +56,7 @@ private:
     vocabulary *vocabulary;
     cellBiology *cellBiology;
     genetics *genetics;
+    algebraExam1 *algebraExam1;
 };
 
 #endif // LOGIN_H

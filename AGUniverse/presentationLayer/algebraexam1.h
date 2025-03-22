@@ -6,17 +6,11 @@
 #include <QStringList>
 #include <QPushButton>
 #include <QSet>
+#include "questionStructure.h"
 
 namespace Ui {
 class algebraExam1;
 }
-
-struct Question {
-    QString text;
-    QStringList answers;
-    int correctIndex;
-    int difficulty;
-};
 
 class algebraExam1 : public QWidget
 {
@@ -25,6 +19,9 @@ class algebraExam1 : public QWidget
 public:
     explicit algebraExam1(QWidget *parent = nullptr);
     ~algebraExam1();
+    double percentageAE1;
+    int scoreAE1;
+    int maxScoreAE1;
 
 private slots:
     void onNextQuestion();  // Moved to slots for proper Qt signal handling
@@ -34,7 +31,6 @@ private:
     QVector<Question> questions;
     Question currentQuestion;
     QSet<int> usedIndices;  // Added to track used questions
-    int score;
     int questionsAnswered;
     int selectedAnswerIndex;
 

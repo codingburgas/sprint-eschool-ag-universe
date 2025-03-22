@@ -107,6 +107,8 @@ qt_add_executable(AGUniverse
     presentationLayer/fontutils.cpp
     presentationLayer/fontutils.h
 
+    presentationLayer/questionStructure.h
+
     # Data Access Layer
     dataAccessLayer/database.cpp
     dataAccessLayer/database.h

@@ -8,7 +8,8 @@
 algebraExam1::algebraExam1(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::algebraExam1)
-    , score(0)
+    , scoreAE1(0)
+    , maxScoreAE1(0)
     , questionsAnswered(0)
     , selectedAnswerIndex(-1)
 {
@@ -129,10 +130,11 @@ void algebraExam1::checkAnswer(int index) {
 
 void algebraExam1::onNextQuestion() {
     if (selectedAnswerIndex == currentQuestion.correctIndex) {
-        score += currentQuestion.difficulty;
+        scoreAE1 += currentQuestion.difficulty;
     }
     questionsAnswered++;
     displayRandomQuestion();
+    maxScoreAE1 += currentQuestion.difficulty;
 }
 
 void algebraExam1::resetButtonStyles() {
@@ -150,10 +152,11 @@ void algebraExam1::resetButtonStyles() {
 }
 
 void algebraExam1::showResults() {
-    double percentage = (score / 60.0) * 100;
-    QString resultMessage = QString("Quiz Completed!\nYour Score: %1\nPercentage: %2%")
-                                .arg(score)
-                                .arg(percentage, 0, 'f', 2);
+    percentageAE1 = (scoreAE1 * 100.0)/ maxScoreAE1;
+    QString resultMessage = QString("Quiz Completed!\nYour Score: %1/%2\nPercentage: %3%")
+                                .arg(scoreAE1)
+                                .arg(maxScoreAE1)
+                                .arg(percentageAE1, 0, 'f', 2);
 
     QMessageBox msgBox;
     msgBox.setWindowTitle("Results");

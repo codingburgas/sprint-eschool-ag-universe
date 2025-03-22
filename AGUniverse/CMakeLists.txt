@@ -44,6 +44,26 @@ qt_add_executable(AGUniverse
     presentationLayer/algebraExam1.h
     presentationLayer/algebraExam1.ui
 
+    presentationLayer/algebraExam2.cpp
+    presentationLayer/algebraExam2.h
+    presentationLayer/algebraExam2.ui
+
+    presentationLayer/algebraExam3.cpp
+    presentationLayer/algebraExam3.h
+    presentationLayer/algebraExam3.ui
+
+    presentationLayer/geometryExam1.cpp
+    presentationLayer/geometryExam1.h
+    presentationLayer/geometryExam1.ui
+
+    presentationLayer/geometryExam2.cpp
+    presentationLayer/geometryExam2.h
+    presentationLayer/geometryExam2.ui
+
+    presentationLayer/geometryExam3.cpp
+    presentationLayer/geometryExam3.h
+    presentationLayer/geometryExam3.ui
+
     presentationLayer/english.cpp
     presentationLayer/english.h
     presentationLayer/english.ui

@@ -23,6 +23,12 @@ private slots:
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
 
+    void on_grammarButton1_clicked();
+
+    void on_grammarButton2_clicked();
+
+    void on_grammarButton3_clicked();
+
 private:
     Ui::grammar *ui;
 };

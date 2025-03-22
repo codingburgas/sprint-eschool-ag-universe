@@ -5,6 +5,9 @@
 #include "results.h"
 #include "program.h"
 #include "inbox.h"
+#include "grammarExam1.h"
+#include "grammarExam2.h"
+#include "grammarExam3.h"
 
 grammar::grammar(QWidget *parent)
     : QWidget(parent)
@@ -91,3 +94,32 @@ void grammar::on_logoutButton_clicked()
     MainWindow *loginWindow = new MainWindow();
     loginWindow->show();
 }
+
+void grammar::on_grammarButton1_clicked()
+{
+    this->close();
+
+    grammarExam1 *grammarExam1Window = new grammarExam1();
+    grammarExam1Window->show();
+}
+
+
+
+
+void grammar::on_grammarButton2_clicked()
+{
+    this->close();
+
+    grammarExam2 *grammarExam2Window = new grammarExam2();
+    grammarExam2Window->show();
+}
+
+
+void grammar::on_grammarButton3_clicked()
+{
+    this->close();
+
+    grammarExam3 *grammarExam3Window = new grammarExam3();
+    grammarExam3Window->show();
+}
+

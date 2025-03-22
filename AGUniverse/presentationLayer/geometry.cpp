@@ -1,4 +1,7 @@
 #include "geometry.h"
+#include "geometryExam1.h"
+#include "geometryExam2.h"
+#include "geometryExam3.h"
 #include "ui_geometry.h"
 #include "fontutils.h"
 #include "login.h"
@@ -91,4 +94,26 @@ void geometry::on_logoutButton_clicked()
 
     MainWindow *loginWindow = new MainWindow();
     loginWindow->show();
+}
+
+void geometry::on_geometryButton1_clicked()
+{
+    this->close(); // Close the current window
+
+    geometryExam1 *geometryExam1Window = new geometryExam1();
+    geometryExam1Window->show();
+}
+void geometry::on_geometryButton2_clicked()
+{
+    this->close(); // Close the current window
+
+    geometryExam2 *geometryExam2Window = new geometryExam2();
+    geometryExam2Window->show();
+}
+void geometry::on_geometryButton3_clicked()
+{
+    this->close(); // Close the current window
+
+    geometryExam3 *geometryExam3Window = new geometryExam3();
+    geometryExam3Window->show();
 }

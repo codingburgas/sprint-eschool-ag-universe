@@ -433,11 +433,14 @@ border-radius:35px;</string>
   <widget class="QLabel" name="Exam1Label">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>103</y>
-     <width>671</width>
+     <x>300</x>
+     <y>102</y>
+     <width>451</width>
      <height>91</height>
     </rect>
+   </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EXAM 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">color:white;
@@ -445,15 +448,15 @@ font-weight:bold;
 font: 45pt &quot;Aura&quot;;</string>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;EXAM 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EXAM 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="Exam2Label">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>190</y>
-     <width>671</width>
+     <x>300</x>
+     <y>192</y>
+     <width>451</width>
      <height>91</height>
     </rect>
    </property>
@@ -463,25 +466,29 @@ font-weight:bold;
 font: 45pt &quot;Aura&quot;;</string>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;EXAM 2&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EXAM 2&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="Exam3Label">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>280</y>
-     <width>671</width>
+     <x>300</x>
+     <y>282</y>
+     <width>451</width>
      <height>91</height>
     </rect>
+   </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">color:white;
 font-weight:bold;
-font: 45pt &quot;Aura&quot;;</string>
+font: 45pt &quot;Aura&quot;;
+text-align:left;</string>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;EXAM 3&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EXAM 3&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="algebraButton2">

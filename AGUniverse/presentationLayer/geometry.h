@@ -23,6 +23,10 @@ private slots:
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
 
+    void on_geometryButton1_clicked();
+    void on_geometryButton2_clicked();
+    void on_geometryButton3_clicked();
+
 private:
     Ui::geometry *ui;
 };

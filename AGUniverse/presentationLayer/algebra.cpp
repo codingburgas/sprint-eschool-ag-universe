@@ -43,6 +43,9 @@ algebra::algebra(QWidget *parent)
     setCustomFontAllerta(ui->profileButton, 15);
     setCustomFontAllerta(ui->logoutButton, 15);
     setCustomFontAura(ui->titleLabel, 50);
+    setCustomFontAura(ui->Exam1Label, 45);
+    setCustomFontAura(ui->Exam2Label, 45);
+    setCustomFontAura(ui->Exam3Label, 45);
 }
 
 // Destructor

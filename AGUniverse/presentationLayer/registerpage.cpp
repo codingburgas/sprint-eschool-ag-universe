@@ -54,12 +54,26 @@ void registerPage::on_pushButton_clicked()
     QString cpassword = ui->lineEdit_3->text();
 
     if (username.isEmpty() || password.isEmpty() || cpassword.isEmpty()) {
-        QMessageBox::warning(this, "Input Error", "All fields must be filled out.");
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("Input Error");
+        msgBox.setText("All fields must be filled out.");
+        msgBox.setStyleSheet("QMessageBox { background-color: white; }"
+                             "QLabel { color: black; font-size: 18px; }"
+                             "QPushButton { background-color: #4486c3; color: white; padding: 5px; border-radius: 5px; }"
+                             "QPushButton:hover { background-color: #3a76b2; }");
+        msgBox.exec();
         return;
     }
 
     if (password != cpassword) {
-        QMessageBox::warning(this, "Password Mismatch", "Passwords do not match.");
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("Password Mismatch");
+        msgBox.setText("Passwords do not match.");
+        msgBox.setStyleSheet("QMessageBox { background-color: white; }"
+                             "QLabel { color: black; font-size: 18px; }"
+                             "QPushButton { background-color: #4486c3; color: white; padding: 5px; border-radius: 5px; }"
+                             "QPushButton:hover { background-color: #3a76b2; }");
+        msgBox.exec();
         return;
     }
 
@@ -90,11 +104,25 @@ void registerPage::on_pushButton_clicked()
         file.close();
 
         if (usernameExists) {
-            QMessageBox::warning(this, "Registration Failed", "Username already exists.");
+            QMessageBox msgBox;
+            msgBox.setWindowTitle("Registration Failed");
+            msgBox.setText("Username already exists.");
+            msgBox.setStyleSheet("QMessageBox { background-color: white; }"
+                                 "QLabel { color: black; font-size: 18px; }"
+                                 "QPushButton { background-color: #4486c3; color: white; padding: 5px; border-radius: 5px; }"
+                                 "QPushButton:hover { background-color: #3a76b2; }");
+            msgBox.exec();
             return;
         }
     } else {
-        QMessageBox::critical(this, "Error", "Failed to open the user database file.");
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("Error");
+        msgBox.setText("Failed to open the user database file.");
+        msgBox.setStyleSheet("QMessageBox { background-color: white; }"
+                             "QLabel { color: black; font-size: 18px; }"
+                             "QPushButton { background-color: #4486c3; color: white; padding: 5px; border-radius: 5px; }"
+                             "QPushButton:hover { background-color: #3a76b2; }");
+        msgBox.exec();
         return;
     }
 
@@ -103,10 +131,24 @@ void registerPage::on_pushButton_clicked()
         out << username << "," << password << ",user,0\n";  // Assuming default role is "user"
         file.close();
 
-        QMessageBox::information(this, "Success", "Account successfully created.");
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("Success");
+        msgBox.setText("Account successfully created.");
+        msgBox.setStyleSheet("QMessageBox { background-color: white; }"
+                             "QLabel { color: black; font-size: 18px; }"
+                             "QPushButton { background-color: #4486c3; color: white; padding: 5px; border-radius: 5px; }"
+                             "QPushButton:hover { background-color: #3a76b2; }");
+        msgBox.exec();
         this->close();  // Close the register page after successful registration
     } else {
-        QMessageBox::critical(this, "Error", "Failed to save user data.");
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("Error");
+        msgBox.setText("Failed to save user data.");
+        msgBox.setStyleSheet("QMessageBox { background-color: white; }"
+                             "QLabel { color: black; font-size: 18px; }"
+                             "QPushButton { background-color: #4486c3; color: white; padding: 5px; border-radius: 5px; }"
+                             "QPushButton:hover { background-color: #3a76b2; }");
+        msgBox.exec();
     }
 }
 

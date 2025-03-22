@@ -430,13 +430,70 @@ border-radius:35px;</string>
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="Exam1Label">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>103</y>
+     <width>671</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font-weight:bold;
+font: 45pt &quot;Aura&quot;;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;EXAM 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Exam2Label">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>190</y>
+     <width>671</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font-weight:bold;
+font: 45pt &quot;Aura&quot;;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;EXAM 2&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Exam3Label">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>280</y>
+     <width>671</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font-weight:bold;
+font: 45pt &quot;Aura&quot;;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;EXAM 3&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
   <zorder>backgroundblue_bg</zorder>
   <zorder>titleLabel</zorder>
   <zorder>exam2</zorder>
   <zorder>exam3</zorder>
   <zorder>exam1</zorder>
   <zorder>frame_2</zorder>
+  <zorder>Exam1Label</zorder>
   <zorder>algebraButton1</zorder>
+  <zorder>Exam2Label</zorder>
+  <zorder>Exam3Label</zorder>
  </widget>
  <resources>
   <include location="../resources.qrc"/>

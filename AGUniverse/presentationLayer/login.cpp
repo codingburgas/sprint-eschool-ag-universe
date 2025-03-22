@@ -62,13 +62,27 @@ void MainWindow::loginButtonClicked()
     QString userPassword = ui->lineEdit_2->text();
 
     if (username.isEmpty() || userPassword.isEmpty()) {
-        QMessageBox::warning(this, "Login Failed", "Please enter both username and password.");
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("Login Failed");
+        msgBox.setText("Please enter both username and password.");
+        msgBox.setStyleSheet("QMessageBox { background-color: white; }"
+                             "QLabel { color: black; font-size: 18px; }"
+                             "QPushButton { background-color: #4486c3; color: white; padding: 5px; border-radius: 5px; }"
+                             "QPushButton:hover { background-color: #3a76b2; }");
+        msgBox.exec();
         return;
     }
 
     QFile file("../../dataAccessLayer/users.txt");
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QMessageBox::critical(this, "Error", "Failed to open the user database.");
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("Error");
+        msgBox.setText("Failed to open the user database.");
+        msgBox.setStyleSheet("QMessageBox { background-color: white; }"
+                             "QLabel { color: black; font-size: 18px; }"
+                             "QPushButton { background-color: #4486c3; color: white; padding: 5px; border-radius: 5px; }"
+                             "QPushButton:hover { background-color: #3a76b2; }");
+        msgBox.exec();
         return;
     }
 
@@ -93,12 +107,26 @@ void MainWindow::loginButtonClicked()
     file.close();
 
     if (found) {
-        QMessageBox::information(this, "Login Successful", "Welcome " + username + "!");
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("Login Successful");
+        msgBox.setText("Welcome " + username + "!");
+        msgBox.setStyleSheet("QMessageBox { background-color: white; }"
+                             "QLabel { color: black; font-size: 18px; }"
+                             "QPushButton { background-color: #4486c3; color: white; padding: 5px; border-radius: 5px; }"
+                             "QPushButton:hover { background-color: #3a76b2; }");
+        msgBox.exec();
 
         this->hide();
-        main_Menu->show();       // Open main menu
+        main_Menu->show();
     } else {
-        QMessageBox::warning(this, "Login Failed", "Invalid username or password.");
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("Login Failed");
+        msgBox.setText("Invalid username or password.");
+        msgBox.setStyleSheet("QMessageBox { background-color: white; }"
+                             "QLabel { color: black; font-size: 18px; }"
+                             "QPushButton { background-color: #4486c3; color: white; padding: 5px; border-radius: 5px; }"
+                             "QPushButton:hover { background-color: #3a76b2; }");
+        msgBox.exec();
     }
 }
 

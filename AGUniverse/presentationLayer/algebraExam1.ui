@@ -74,7 +74,7 @@ border-radius: 20px;</string>
    <property name="frameShadow">
     <enum>QFrame::Shadow::Raised</enum>
    </property>
-   <widget class="QLabel" name="Question">
+   <widget class="QLabel" name="question">
     <property name="geometry">
      <rect>
       <x>170</x>

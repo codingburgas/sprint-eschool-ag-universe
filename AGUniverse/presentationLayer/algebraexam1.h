@@ -5,6 +5,7 @@
 #include <QVector>
 #include <QStringList>
 #include <QPushButton>
+#include <QSet>
 
 namespace Ui {
 class algebraExam1;
@@ -25,23 +26,25 @@ public:
     explicit algebraExam1(QWidget *parent = nullptr);
     ~algebraExam1();
 
+private slots:
+    void onNextQuestion();  // Moved to slots for proper Qt signal handling
+
 private:
     Ui::algebraExam1 *ui;
     QVector<Question> questions;
     Question currentQuestion;
+    QSet<int> usedIndices;  // Added to track used questions
     int score;
     int questionsAnswered;
+    int selectedAnswerIndex;
 
     void loadQuestions();
     void displayRandomQuestion();
     void checkAnswer(int index);
     void showResults();
-
+    void quizFinished();
     void updateButtonStyles(QPushButton* selectedButton);
     void resetButtonStyles();
-    int selectedAnswerIndex;
-    void onNextQuestion();
-    void quizFinished();
 };
 
 #endif // ALGEBRAEXAM1_H

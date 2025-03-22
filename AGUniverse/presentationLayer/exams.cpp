@@ -5,6 +5,9 @@
 #include "results.h"
 #include "program.h"
 #include "inbox.h"
+#include "maths.h"
+#include "biology.h"
+#include "english.h"
 
 exams::exams(QWidget *parent)
     : QWidget(parent)

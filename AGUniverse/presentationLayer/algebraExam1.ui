@@ -77,9 +77,9 @@ border-radius: 20px;</string>
    <widget class="QLabel" name="question">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>50</x>
       <y>10</y>
-      <width>1031</width>
+      <width>931</width>
       <height>141</height>
      </rect>
     </property>

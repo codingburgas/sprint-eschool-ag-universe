@@ -6,6 +6,8 @@
 #include "results.h"
 #include "program.h"
 #include "inbox.h"
+#include "genetics.h"
+#include "cellBiology.h"
 
 
 biology::biology(QWidget *parent)

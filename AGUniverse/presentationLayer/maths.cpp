@@ -6,6 +6,8 @@
 #include "results.h"
 #include "program.h"
 #include "inbox.h"
+#include "geometry.h"
+#include "algebra.h"
 
 maths::maths(QWidget *parent)
     : QWidget(parent)

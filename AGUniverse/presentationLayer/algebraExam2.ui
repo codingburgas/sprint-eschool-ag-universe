@@ -39,9 +39,9 @@ border-radius: 20px;</string>
    <widget class="QLabel" name="question">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>50</x>
       <y>10</y>
-      <width>711</width>
+      <width>931</width>
       <height>141</height>
      </rect>
     </property>
@@ -390,7 +390,7 @@ border-radius: 20px;</string>
 font: 32pt &quot;Aura&quot;;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;ALGEBRA 1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;ALGEBRA 2&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>

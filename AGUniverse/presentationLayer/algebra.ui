@@ -484,6 +484,40 @@ font: 45pt &quot;Aura&quot;;</string>
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;EXAM 3&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="algebraButton2">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>210</y>
+     <width>781</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="algebraButton3">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>300</y>
+     <width>781</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <zorder>backgroundblue_bg</zorder>
   <zorder>titleLabel</zorder>
   <zorder>exam2</zorder>
@@ -494,6 +528,8 @@ font: 45pt &quot;Aura&quot;;</string>
   <zorder>algebraButton1</zorder>
   <zorder>Exam2Label</zorder>
   <zorder>Exam3Label</zorder>
+  <zorder>algebraButton2</zorder>
+  <zorder>algebraButton3</zorder>
  </widget>
  <resources>
   <include location="../resources.qrc"/>

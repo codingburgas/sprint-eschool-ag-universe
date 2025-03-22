@@ -6,6 +6,8 @@
 #include "results.h"
 #include "program.h"
 #include "inbox.h"
+#include "grammar.h"
+#include "vocabulary.h"
 
 english::english(QWidget *parent)
     : QWidget(parent)

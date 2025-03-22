@@ -9,16 +9,6 @@
 #include "program.h"
 #include "inbox.h"
 #include "profile.h"
-#include "maths.h"
-#include "english.h"
-#include "biology.h"
-#include "geometry.h"
-#include "algebra.h"
-#include "grammar.h"
-#include "vocabulary.h"
-#include "cellBiology.h"
-#include "genetics.h"
-#include "algebraExam1.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -47,16 +37,7 @@ private:
     program *program;
     inbox *inbox;
     profile *profile;
-    maths *maths;
-    english *english;
-    biology *biology;
-    class geometry *geometry;
-    algebra *algebra;
-    grammar *grammar;
-    vocabulary *vocabulary;
-    cellBiology *cellBiology;
-    genetics *genetics;
-    algebraExam1 *algebraExam1;
+
 };
 
 #endif // LOGIN_H

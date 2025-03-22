@@ -5,7 +5,9 @@
 #include "results.h"
 #include "program.h"
 #include "inbox.h"
-
+#include "algebraExam1.h"
+#include "algebraExam2.h"
+#include "algebraExam3.h"
 
 algebra::algebra(QWidget *parent)
     : QWidget(parent) //initializing the UI
@@ -114,5 +116,23 @@ void algebra::on_algebraButton1_clicked()
 
     algebraExam1 *algebraExam1Window = new algebraExam1(); // Create a new algebra exam window
     algebraExam1Window->show(); // Show the algebra exam window
+}
+
+
+void algebra::on_algebraButton2_clicked()
+{
+    this->close(); // Close the current window
+
+    algebraExam2 *algebraExam2Window = new algebraExam2(); // Create a new algebra exam window
+    algebraExam2Window->show();
+}
+
+
+void algebra::on_algebraButton3_clicked()
+{
+    this->close(); // Close the current window
+
+    algebraExam3 *algebraExam3Window = new algebraExam3(); // Create a new algebra exam window
+    algebraExam3Window->show();
 }
 

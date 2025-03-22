@@ -72,9 +72,33 @@ qt_add_executable(AGUniverse
     presentationLayer/grammar.h
     presentationLayer/grammar.ui
 
+    presentationLayer/grammarExam1.cpp
+    presentationLayer/grammarExam1.h
+    presentationLayer/grammarExam1.ui
+
+    presentationLayer/grammarExam2.cpp
+    presentationLayer/grammarExam2.h
+    presentationLayer/grammarExam2.ui
+
+    presentationLayer/grammarExam3.cpp
+    presentationLayer/grammarExam3.h
+    presentationLayer/grammarExam3.ui
+
     presentationLayer/vocabulary.cpp
     presentationLayer/vocabulary.h
     presentationLayer/vocabulary.ui
+
+    presentationLayer/vocabularyExam1.cpp
+    presentationLayer/vocabularyExam1.h
+    presentationLayer/vocabularyExam1.ui
+
+    presentationLayer/vocabularyExam2.cpp
+    presentationLayer/vocabularyExam2.h
+    presentationLayer/vocabularyExam2.ui
+
+    presentationLayer/vocabularyExam3.cpp
+    presentationLayer/vocabularyExam3.h
+    presentationLayer/vocabularyExam3.ui
 
     presentationLayer/biology.cpp
     presentationLayer/biology.h
@@ -84,9 +108,33 @@ qt_add_executable(AGUniverse
     presentationLayer/cellBiology.h
     presentationLayer/cellBiology.ui
 
+    presentationLayer/cellBiologyExam1.cpp
+    presentationLayer/cellBiologyExam1.h
+    presentationLayer/cellBiologyExam1.ui
+
+    presentationLayer/cellBiologyExam2.cpp
+    presentationLayer/cellBiologyExam2.h
+    presentationLayer/cellBiologyExam2.ui
+
+    presentationLayer/cellBiologyExam3.cpp
+    presentationLayer/cellBiologyExam3.h
+    presentationLayer/cellBiologyExam3.ui
+
     presentationLayer/genetics.cpp
     presentationLayer/genetics.h
     presentationLayer/genetics.ui
+
+    presentationLayer/geneticsExam1.cpp
+    presentationLayer/geneticsExam1.h
+    presentationLayer/geneticsExam1.ui
+
+    presentationLayer/geneticsExam2.cpp
+    presentationLayer/geneticsExam2.h
+    presentationLayer/geneticsExam2.ui
+
+    presentationLayer/geneticsExam3.cpp
+    presentationLayer/geneticsExam3.h
+    presentationLayer/geneticsExam3.ui
 
     presentationLayer/profile.cpp
     presentationLayer/profile.h

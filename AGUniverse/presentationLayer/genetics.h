@@ -23,6 +23,10 @@ private slots:
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
 
+    void on_geneticsButton1_clicked();
+    void on_geneticsButton2_clicked();
+    void on_geneticsButton3_clicked();
+
 private:
     Ui::genetics *ui;
 };

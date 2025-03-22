@@ -5,6 +5,9 @@
 #include "results.h"
 #include "program.h"
 #include "inbox.h"
+#include "geneticsExam1.h"
+#include "geneticsExam2.h"
+#include "geneticsExam3.h"
 
 genetics::genetics(QWidget *parent)
     : QWidget(parent)
@@ -90,4 +93,26 @@ void genetics::on_logoutButton_clicked()
 
     MainWindow *loginWindow = new MainWindow();
     loginWindow->show();
+}
+
+void genetics::on_geneticsButton1_clicked()
+{
+    this->close(); // Close the current window
+
+    geneticsExam1 *geneticsExam1Window = new geneticsExam1();
+    geneticsExam1Window->show();
+}
+void genetics::on_geneticsButton2_clicked()
+{
+    this->close(); // Close the current window
+
+    geneticsExam2 *geneticsExam2Window = new geneticsExam2();
+    geneticsExam2Window->show();
+}
+void genetics::on_geneticsButton3_clicked()
+{
+    this->close(); // Close the current window
+
+    geneticsExam3 *geneticsExam3Window = new geneticsExam3();
+    geneticsExam3Window->show();
 }

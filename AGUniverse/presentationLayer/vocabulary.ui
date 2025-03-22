@@ -418,7 +418,7 @@ border-radius:35px;</string>
     <rect>
      <x>300</x>
      <y>100</y>
-     <width>451</width>
+     <width>201</width>
      <height>91</height>
     </rect>
    </property>
@@ -439,7 +439,7 @@ font: 45pt &quot;Aura&quot;;</string>
     <rect>
      <x>300</x>
      <y>190</y>
-     <width>451</width>
+     <width>201</width>
      <height>91</height>
     </rect>
    </property>
@@ -460,7 +460,7 @@ font: 45pt &quot;Aura&quot;;</string>
     <rect>
      <x>300</x>
      <y>280</y>
-     <width>451</width>
+     <width>201</width>
      <height>91</height>
     </rect>
    </property>

@@ -23,6 +23,10 @@ private slots:
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
 
+    void on_cellBiologyButton1_clicked();
+    void on_cellBiologyButton2_clicked();
+    void on_cellBiologyButton3_clicked();
+
 private:
     Ui::cellBiology *ui;
 };

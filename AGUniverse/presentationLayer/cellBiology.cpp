@@ -5,6 +5,9 @@
 #include "results.h"
 #include "program.h"
 #include "inbox.h"
+#include "cellBiologyExam1.h"
+#include "cellBiologyExam2.h"
+#include "cellBiologyExam3.h"
 
 cellBiology::cellBiology(QWidget *parent)
     : QWidget(parent)
@@ -90,4 +93,25 @@ void cellBiology::on_logoutButton_clicked()
 
     MainWindow *loginWindow = new MainWindow();
     loginWindow->show();
+}
+void cellBiology::on_cellBiologyButton1_clicked()
+{
+    this->close(); // Close the current window
+
+    cellBiologyExam1 *cellBiologyExam1Window = new cellBiologyExam1();
+    cellBiologyExam1Window->show();
+}
+void cellBiology::on_cellBiologyButton2_clicked()
+{
+    this->close(); // Close the current window
+
+    cellBiologyExam2 *cellBiologyExam2Window = new cellBiologyExam2();
+    cellBiologyExam2Window->show();
+}
+void cellBiology::on_cellBiologyButton3_clicked()
+{
+    this->close(); // Close the current window
+
+    cellBiologyExam3 *cellBiologyExam3Window = new cellBiologyExam3();
+    cellBiologyExam3Window->show();
 }

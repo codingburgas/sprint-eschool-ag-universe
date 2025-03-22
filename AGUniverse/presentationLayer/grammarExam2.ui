@@ -114,6 +114,8 @@ border-radius:35px;</string>
       <string/>
      </property>
     </widget>
+    <zorder>answer_1Button</zorder>
+    <zorder>answer_1</zorder>
    </widget>
    <widget class="QFrame" name="answerTab_2">
     <property name="geometry">
@@ -172,6 +174,8 @@ border-radius:35px;</string>
       <string/>
      </property>
     </widget>
+    <zorder>answer_2Button</zorder>
+    <zorder>answer_2</zorder>
    </widget>
    <widget class="QFrame" name="answerTab_3">
     <property name="geometry">
@@ -230,6 +234,8 @@ border-radius:35px;</string>
       <string/>
      </property>
     </widget>
+    <zorder>answer_3Button</zorder>
+    <zorder>answer_3</zorder>
    </widget>
    <widget class="QFrame" name="answerTab_4">
     <property name="geometry">
@@ -288,6 +294,8 @@ border-radius:35px;</string>
       <string/>
      </property>
     </widget>
+    <zorder>answer_4Button</zorder>
+    <zorder>answer_4</zorder>
    </widget>
    <widget class="QFrame" name="nextTab">
     <property name="geometry">

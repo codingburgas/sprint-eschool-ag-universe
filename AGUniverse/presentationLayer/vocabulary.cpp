@@ -5,6 +5,9 @@
 #include "results.h"
 #include "program.h"
 #include "inbox.h"
+#include "vocabularyExam1.h"
+#include "vocabularyExam2.h"
+#include "vocabularyExam3.h"
 
 vocabulary::vocabulary(QWidget *parent)
     : QWidget(parent)
@@ -91,3 +94,30 @@ void vocabulary::on_logoutButton_clicked()
     MainWindow *loginWindow = new MainWindow();
     loginWindow->show();
 }
+
+void vocabulary::on_vocabularyButton1_clicked()
+{
+    this->close();
+
+    vocabularyExam1 *vocabularyExam1Window = new vocabularyExam1();
+    vocabularyExam1Window->show();
+}
+
+
+void vocabulary::on_vocabularyButton2_clicked()
+{
+    this->close();
+
+    vocabularyExam2 *vocabularyExam2Window = new vocabularyExam2();
+    vocabularyExam2Window->show();
+}
+
+
+void vocabulary::on_vocabularyButton3_clicked()
+{
+    this->close();
+
+    vocabularyExam3 *vocabularyExam3Window = new vocabularyExam3();
+    vocabularyExam3Window->show();
+}
+

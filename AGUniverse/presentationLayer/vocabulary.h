@@ -23,6 +23,12 @@ private slots:
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
 
+    void on_vocabularyButton1_clicked();
+
+    void on_vocabularyButton2_clicked();
+
+    void on_vocabularyButton3_clicked();
+
 private:
     Ui::vocabulary *ui;
 };

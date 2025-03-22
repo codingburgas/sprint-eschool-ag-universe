@@ -43,4 +43,4 @@ private:
     void resetButtonStyles();
 };
 
-#endif // ALGEBRAEXAM1_H
+#endif // GRAMMAREXAM1_H

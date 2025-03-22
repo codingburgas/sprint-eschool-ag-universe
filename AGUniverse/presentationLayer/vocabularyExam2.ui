@@ -80,9 +80,9 @@ border-radius: 20px;</string>
     <widget class="QLabel" name="answer_1">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>10</y>
-       <width>291</width>
+       <x>10</x>
+       <y>40</y>
+       <width>411</width>
        <height>61</height>
       </rect>
      </property>
@@ -140,9 +140,9 @@ border-radius: 20px;</string>
     <widget class="QLabel" name="answer_2">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>10</y>
-       <width>291</width>
+       <x>10</x>
+       <y>40</y>
+       <width>411</width>
        <height>61</height>
       </rect>
      </property>
@@ -200,9 +200,9 @@ border-radius: 20px;</string>
     <widget class="QLabel" name="answer_3">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>10</y>
-       <width>291</width>
+       <x>10</x>
+       <y>40</y>
+       <width>411</width>
        <height>61</height>
       </rect>
      </property>
@@ -260,9 +260,9 @@ border-radius: 20px;</string>
     <widget class="QLabel" name="answer_4">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>10</y>
-       <width>291</width>
+       <x>10</x>
+       <y>40</y>
+       <width>411</width>
        <height>61</height>
       </rect>
      </property>

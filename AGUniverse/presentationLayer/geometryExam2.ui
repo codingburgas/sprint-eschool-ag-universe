@@ -118,9 +118,9 @@ border-radius: 20px;</string>
     <widget class="QLabel" name="answer_1">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>10</y>
-       <width>291</width>
+       <x>10</x>
+       <y>40</y>
+       <width>411</width>
        <height>61</height>
       </rect>
      </property>
@@ -152,8 +152,6 @@ border-radius:35px;</string>
       <string/>
      </property>
     </widget>
-    <zorder>answer_1Button</zorder>
-    <zorder>answer_1</zorder>
    </widget>
    <widget class="QFrame" name="answerTab_2">
     <property name="geometry">
@@ -178,9 +176,9 @@ border-radius: 20px;</string>
     <widget class="QLabel" name="answer_2">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>10</y>
-       <width>291</width>
+       <x>10</x>
+       <y>40</y>
+       <width>411</width>
        <height>61</height>
       </rect>
      </property>
@@ -212,8 +210,6 @@ border-radius:35px;</string>
       <string/>
      </property>
     </widget>
-    <zorder>answer_2Button</zorder>
-    <zorder>answer_2</zorder>
    </widget>
    <widget class="QFrame" name="answerTab_3">
     <property name="geometry">
@@ -238,9 +234,9 @@ border-radius: 20px;</string>
     <widget class="QLabel" name="answer_3">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>10</y>
-       <width>291</width>
+       <x>10</x>
+       <y>40</y>
+       <width>411</width>
        <height>61</height>
       </rect>
      </property>
@@ -272,8 +268,6 @@ border-radius:35px;</string>
       <string/>
      </property>
     </widget>
-    <zorder>answer_3Button</zorder>
-    <zorder>answer_3</zorder>
    </widget>
    <widget class="QFrame" name="answerTab_4">
     <property name="geometry">
@@ -298,9 +292,9 @@ border-radius: 20px;</string>
     <widget class="QLabel" name="answer_4">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>10</y>
-       <width>291</width>
+       <x>10</x>
+       <y>40</y>
+       <width>411</width>
        <height>61</height>
       </rect>
      </property>
@@ -332,8 +326,6 @@ border-radius:35px;</string>
       <string/>
      </property>
     </widget>
-    <zorder>answer_4Button</zorder>
-    <zorder>answer_4</zorder>
    </widget>
    <widget class="QFrame" name="nextTab">
     <property name="geometry">

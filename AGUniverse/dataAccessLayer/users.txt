@@ -1,2 +1,4 @@
-Gosho,Ivan,user,0
-GZPavlov23,123123,user,0
+GZPavlov23,123123,9,G
+KBPozharliev23,345345,9,V
+KSTurmanov23,789789,9,A
+DHPapazian23,098098,9,B

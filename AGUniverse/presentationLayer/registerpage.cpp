@@ -52,8 +52,10 @@ void registerPage::on_pushButton_clicked()
     QString username = ui->lineEdit->text();
     QString password = ui->lineEdit_2->text();
     QString cpassword = ui->lineEdit_3->text();
+    QString grade = ui->comboBox->currentText();   // Get selected grade
+    QString studentClass = ui->comboBox2->currentText();
 
-    if (username.isEmpty() || password.isEmpty() || cpassword.isEmpty()) {
+    if (username.isEmpty() || password.isEmpty() || cpassword.isEmpty() || grade.isEmpty() || studentClass.isEmpty()) {
         QMessageBox msgBox;
         msgBox.setWindowTitle("Input Error");
         msgBox.setText("All fields must be filled out.");
@@ -93,7 +95,7 @@ void registerPage::on_pushButton_clicked()
             QString line = in.readLine();
             QStringList details = line.split(",");
 
-            if (details.size() >= 3) {
+            if (details.size() >= 4) {
                 if (details[0] == username) {
                     usernameExists = true;
                     break;
@@ -128,7 +130,7 @@ void registerPage::on_pushButton_clicked()
 
     if (file.open(QIODevice::Append | QIODevice::Text)) {
         QTextStream out(&file);
-        out << username << "," << password << ",user,0\n";  // Assuming default role is "user"
+        out << username << "," << password << "," << grade << "," << studentClass << "\n";  // Assuming default role is "user"
         file.close();
 
         QMessageBox msgBox;

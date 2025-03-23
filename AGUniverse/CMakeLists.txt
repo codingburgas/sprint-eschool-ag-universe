@@ -152,6 +152,10 @@ qt_add_executable(AGUniverse
     presentationLayer/inbox.h
     presentationLayer/inbox.ui
 
+    presentationLayer/lessons.cpp
+    presentationLayer/lessons.h
+    presentationLayer/lessons.ui
+
     presentationLayer/fontutils.cpp
     presentationLayer/fontutils.h
 
@@ -183,6 +187,7 @@ set(AGUniverse_resource_files
     "assets/images/results_icon.png"
     "assets/images/program_icon.png"
     "assets/images/inbox_icon.png"
+    "assets/images/lessons_icon.png"
     "assets/images/profile.icon.png"
     "assets/images/log_out_icon.png"
     "assets/images/Test_logo_2.png"

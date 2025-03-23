@@ -8,6 +8,7 @@
 #include "results.h"
 #include "program.h"
 #include "inbox.h"
+#include "lessons.h"
 #include "profile.h"
 
 QT_BEGIN_NAMESPACE
@@ -36,6 +37,7 @@ private:
     results *results;
     program *program;
     inbox *inbox;
+    lessons *lessons;
     profile *profile;
 
 };

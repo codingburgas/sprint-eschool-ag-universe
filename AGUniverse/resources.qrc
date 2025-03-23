@@ -2,6 +2,7 @@
     <qresource prefix="/">
         <file>assets/images/exams_icon.png</file>
         <file>assets/images/inbox_icon.png</file>
+        <file>assets/images/lessons_icon.png</file>
         <file>assets/images/log_out_icon.png</file>
         <file>assets/images/profile.icon.png</file>
         <file>assets/images/program_icon.png</file>

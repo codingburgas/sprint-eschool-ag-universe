@@ -95,6 +95,14 @@ void biology::on_inboxButton_clicked()
     inboxWindow->show(); // Show the inbox window
 }
 
+void biology::on_lessonsButton_clicked()
+{
+    this->close();
+
+    lessons *lessonsWindow = new lessons();
+    lessonsWindow->show();
+}
+
 // Opens the Inbox window when the button is clicked
 void biology::on_profileButton_clicked()
 {

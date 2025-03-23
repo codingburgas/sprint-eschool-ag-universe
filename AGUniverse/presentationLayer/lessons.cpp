@@ -1,59 +1,50 @@
-#include "maths.h"
-#include "ui_maths.h"
-#include "fontutils.h"
+#include "lessons.h"
+#include "presentationLayer/ui_lessons.h"
 #include "login.h"
-#include "exams.h"
-#include "results.h"
-#include "program.h"
-#include "inbox.h"
-#include "geometry.h"
-#include "algebra.h"
+#include "fontutils.h"
+#include <QPixmap>
 
-maths::maths(QWidget *parent)
+lessons::lessons(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::maths)
+    , ui(new Ui::lessons)
 {
     ui->setupUi(this);
-    this->setWindowTitle("Maths Page");
+    this->setWindowTitle("Lessons");
     QPixmap logoIcon(":/assets/images/Logo1.png");
     QPixmap examIcon(":/assets/images/exams_icon.png");
     QPixmap programIcon(":/assets/images/program_icon.png");
     QPixmap resultsIcon(":/assets/images/results_icon.png");
     QPixmap inboxIcon(":/assets/images/inbox_icon.png");
+    QPixmap lessonsIcon(":/assets/images/lessons_icon.png");
     QPixmap profileIcon(":/assets/images/profile.icon.png");
     QPixmap logoutIcon(":/assets/images/log_out_icon.png");
-    QPixmap geometryPicture(":/assets/images/geometry_icon.png");
-    QPixmap algebraPicture(":/assets/images/algebra_icon.png");
 
     ui->logoIcon->setPixmap(logoIcon);
     ui->exams_Icon->setPixmap(examIcon);
     ui->program_Icon->setPixmap(programIcon);
     ui->results_Icon->setPixmap(resultsIcon);
     ui->inbox_Icon->setPixmap(inboxIcon);
+    ui->lessons_Icon->setPixmap(lessonsIcon);
     ui->profile_Icon->setPixmap(profileIcon);
     ui->logout_Icon->setPixmap(logoutIcon);
-    ui->algebraPicture->setPixmap(algebraPicture);
-    ui->geometryPicture->setPixmap(geometryPicture);
 
     setCustomFontCT(ui->label, 12);
     setCustomFontAllerta(ui->navigationLabel, 17);
     setCustomFontAllerta(ui->examsButton, 14);
     setCustomFontAllerta(ui->programButton, 15);
     setCustomFontAllerta(ui->resultsButton, 15);
+    setCustomFontAllerta(ui->lessonsButton, 15);
     setCustomFontAllerta(ui->inboxButton, 15);
     setCustomFontAllerta(ui->profileButton, 15);
     setCustomFontAllerta(ui->logoutButton, 15);
-    setCustomFontAura(ui->mathsTitle, 50);
-    setCustomFontAura(ui->section1_Title, 40);
-    setCustomFontAura(ui->section2_Title, 40);
 }
 
-maths::~maths()
+lessons::~lessons()
 {
     delete ui;
 }
 
-void maths::on_examsButton_clicked()
+void lessons::on_examsButton_clicked()
 {
     this->close();
 
@@ -61,7 +52,7 @@ void maths::on_examsButton_clicked()
     examsWindow->show();
 }
 
-void maths::on_resultsButton_clicked()
+void lessons::on_resultsButton_clicked()
 {
     this->close();
 
@@ -69,7 +60,7 @@ void maths::on_resultsButton_clicked()
     resultsWindow->show();
 }
 
-void maths::on_programButton_clicked()
+void lessons::on_programButton_clicked()
 {
     this->close();
 
@@ -77,7 +68,7 @@ void maths::on_programButton_clicked()
     programWindow->show();
 }
 
-void maths::on_inboxButton_clicked()
+void lessons::on_inboxButton_clicked()
 {
     this->close();
 
@@ -85,15 +76,7 @@ void maths::on_inboxButton_clicked()
     inboxWindow->show();
 }
 
-void maths::on_lessonsButton_clicked()
-{
-    this->close();
-
-    lessons *lessonsWindow = new lessons();
-    lessonsWindow->show();
-}
-
-void maths::on_profileButton_clicked()
+void lessons::on_profileButton_clicked()
 {
     this->close();
 
@@ -101,28 +84,10 @@ void maths::on_profileButton_clicked()
     profileWindow->show();
 }
 
-void maths::on_logoutButton_clicked()
+void lessons::on_logoutButton_clicked()
 {
     this->close();
 
     MainWindow *loginWindow = new MainWindow();
     loginWindow->show();
 }
-
-void maths::on_geometryButton_clicked()
-{
-    this->close();
-
-    class geometry *geometryWindow = new class geometry();
-    geometryWindow->show();
-}
-
-
-void maths::on_algebraButton_clicked()
-{
-    this->close();
-
-    algebra *algebraWindow = new algebra();
-    algebraWindow->show();
-}
-

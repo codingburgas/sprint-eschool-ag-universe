@@ -80,6 +80,14 @@ void geometry::on_inboxButton_clicked()
     inboxWindow->show();
 }
 
+void geometry::on_lessonsButton_clicked()
+{
+    this->close();
+
+    lessons *lessonsWindow = new lessons();
+    lessonsWindow->show();
+}
+
 void geometry::on_profileButton_clicked()
 {
     this->close();

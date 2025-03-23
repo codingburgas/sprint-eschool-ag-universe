@@ -25,6 +25,8 @@ private slots:
     void on_logoutButton_clicked();
 
 
+    void on_lessonsButton_clicked();
+
 private:
     Ui::main_menu *ui;
 };

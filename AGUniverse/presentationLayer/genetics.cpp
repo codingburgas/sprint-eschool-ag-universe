@@ -79,6 +79,14 @@ void genetics::on_inboxButton_clicked()
     inboxWindow->show();
 }
 
+void genetics::on_lessonsButton_clicked()
+{
+    this->close();
+
+    lessons *lessonsWindow = new lessons();
+    lessonsWindow->show();
+}
+
 void genetics::on_profileButton_clicked()
 {
     this->close();

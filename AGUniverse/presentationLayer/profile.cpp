@@ -81,6 +81,14 @@ void profile::on_inboxButton_clicked()
     inboxWindow->show();
 }
 
+void profile::on_lessonsButton_clicked()
+{
+    this->close();
+
+    lessons *lessonsWindow = new lessons();
+    lessonsWindow->show();
+}
+
 void profile::on_profileButton_clicked()
 {
     this->close();

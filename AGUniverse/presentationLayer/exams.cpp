@@ -119,6 +119,14 @@ void exams::on_inboxButton_clicked()
     inboxWindow->show();
 }
 
+void exams::on_lessonsButton_clicked()
+{
+    this->close();
+
+    lessons *lessonsWindow = new lessons();
+    lessonsWindow->show();
+}
+
 void exams::on_profileButton_clicked()
 {
     this->close();

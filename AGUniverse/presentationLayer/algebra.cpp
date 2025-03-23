@@ -92,6 +92,14 @@ void algebra::on_inboxButton_clicked()
     inboxWindow->show(); // Show the new window when clicked
 }
 
+void algebra::on_lessonsButton_clicked()
+{
+    this->close();
+
+    lessons *lessonsWindow = new lessons();
+    lessonsWindow->show();
+}
+
 // Slot function triggered when the "Profile" button is clicked
 void algebra::on_profileButton_clicked()
 {

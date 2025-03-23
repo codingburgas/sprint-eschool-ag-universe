@@ -79,6 +79,14 @@ void grammar::on_inboxButton_clicked()
     inboxWindow->show();
 }
 
+void grammar::on_lessonsButton_clicked()
+{
+    this->close();
+
+    lessons *lessonsWindow = new lessons();
+    lessonsWindow->show();
+}
+
 void grammar::on_profileButton_clicked()
 {
     this->close();

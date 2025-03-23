@@ -1,30 +1,31 @@
-#ifndef PROGRAM_H
-#define PROGRAM_H
+#ifndef LESSONS_H
+#define LESSONS_H
 
 #include <QWidget>
 
 namespace Ui {
-class program;
+class lessons;
 }
 
-class program : public QWidget
+class lessons : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit program(QWidget *parent = nullptr);
-    ~program();
+    explicit lessons(QWidget *parent = nullptr);
+    ~lessons();
 
 private slots:
     void on_examsButton_clicked();
     void on_resultsButton_clicked();
     void on_programButton_clicked();
     void on_inboxButton_clicked();
-    void on_lessonsButton_clicked();
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
+
+
 private:
-    Ui::program *ui;
+    Ui::lessons *ui;
 };
 
-#endif // PROGRAM_H
+#endif // LESSONS_H

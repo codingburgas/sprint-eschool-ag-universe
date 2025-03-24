@@ -23,11 +23,13 @@ private slots:
     void on_lessonsButton_clicked();
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
-
+    void on_change_bio_clicked();  // Slot for saving bio changes
 
 private:
     Ui::profile *ui;
 
+    QString getUserBio(const QString& username);  // Fetch user's bio
+    void updateUserBio(const QString& username, const QString& newBio);  // Save updated bio
 };
 
 #endif // PROFILE_H

@@ -130,7 +130,7 @@ void registerPage::on_pushButton_clicked()
 
     if (file.open(QIODevice::Append | QIODevice::Text)) {
         QTextStream out(&file);
-        out << username << "," << password << "," << grade << "," << studentClass << "\n";  // Assuming default role is "user"
+        out << username << "," << password << "," << grade << "," << studentClass << ",\n";  // Assuming default role is "user"
         file.close();
 
         QMessageBox msgBox;

@@ -6,6 +6,8 @@
 #include "program.h"
 #include "inbox.h"
 #include "../dataAccessLayer/userSession.h"
+#include <QFile>
+#include <QTextStream>
 
 profile::profile(QWidget *parent)
     : QWidget(parent)
@@ -13,6 +15,7 @@ profile::profile(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowTitle("Profile Page");
+
     QPixmap logoIcon(":/assets/images/Logo1.png");
     QPixmap examIcon(":/assets/images/exams_icon.png");
     QPixmap programIcon(":/assets/images/program_icon.png");
@@ -49,9 +52,15 @@ profile::profile(QWidget *parent)
     QString userUsername = UserSession::getInstance()->getUsername();
     QString userGrade = QString::number(UserSession::getInstance()->getGrade());
     QString userClass = UserSession::getInstance()->getStudentClass();
+    QString userBio = getUserBio(userUsername);  // Load bio
+
     ui->name->setText(userUsername);
     ui->grade->setText(userGrade);
     ui->gradeClass->setText(userClass);
+    ui->textEdit->setText(userBio);  // Display bio
+
+    // Manually connect the button signal to slot
+    connect(ui->change_bio, &QPushButton::clicked, this, &profile::on_change_bio_clicked);
 }
 
 profile::~profile()
@@ -59,10 +68,81 @@ profile::~profile()
     delete ui;
 }
 
+QString profile::getUserBio(const QString& username) {
+    QFile file("../../dataAccessLayer/users.txt");
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        return "";  // Return empty if file can't be opened
+    }
+
+    QTextStream in(&file);
+    while (!in.atEnd()) {
+        QString line = in.readLine();
+        QStringList details = line.split(",");
+        if (details.size() >= 5 && details[0] == username) {
+            return details[4];  // Return bio if user is found
+        }
+    }
+
+    return "";  // Default empty bio
+}
+
+void profile::updateUserBio(const QString& username, const QString& newBio) {
+    QFile file("../../dataAccessLayer/users.txt");
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        return;
+    }
+
+    QTextStream in(&file);
+    QStringList lines;
+    bool userFound = false;
+
+    while (!in.atEnd()) {
+        QString line = in.readLine();
+        QStringList details = line.split(",");
+
+        if (details.size() >= 1 && details[0] == username) {
+            while (details.size() < 5) {
+                details.append("");  // Ensure there is a space for bio
+            }
+            details[4] = newBio;  // Update bio
+            userFound = true;
+        }
+
+        lines.append(details.join(","));
+    }
+    file.close();
+
+    if (!userFound) {
+        return;
+    }
+
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
+        return;
+    }
+
+    QTextStream out(&file);
+    for (const QString& line : lines) {
+        out << line << "\n";
+    }
+    file.close();
+
+}
+
+void profile::on_change_bio_clicked()
+{
+
+    QString newBio = ui->textEdit->toPlainText();
+    QString username = UserSession::getInstance()->getUsername();
+
+    updateUserBio(username, newBio);
+
+    // Update UI with the new bio
+    ui->textEdit->setText(newBio);
+}
+
 void profile::on_examsButton_clicked()
 {
     this->close();
-
     exams *examsWindow = new exams();
     examsWindow->show();
 }
@@ -70,7 +150,6 @@ void profile::on_examsButton_clicked()
 void profile::on_resultsButton_clicked()
 {
     this->close();
-
     results *resultsWindow = new results();
     resultsWindow->show();
 }
@@ -78,7 +157,6 @@ void profile::on_resultsButton_clicked()
 void profile::on_programButton_clicked()
 {
     this->close();
-
     program *programWindow = new program();
     programWindow->show();
 }
@@ -86,7 +164,6 @@ void profile::on_programButton_clicked()
 void profile::on_inboxButton_clicked()
 {
     this->close();
-
     inbox *inboxWindow = new inbox();
     inboxWindow->show();
 }
@@ -94,7 +171,6 @@ void profile::on_inboxButton_clicked()
 void profile::on_lessonsButton_clicked()
 {
     this->close();
-
     lessons *lessonsWindow = new lessons();
     lessonsWindow->show();
 }
@@ -102,7 +178,6 @@ void profile::on_lessonsButton_clicked()
 void profile::on_profileButton_clicked()
 {
     this->close();
-
     profile *profileWindow = new profile();
     profileWindow->show();
 }
@@ -110,7 +185,6 @@ void profile::on_profileButton_clicked()
 void profile::on_logoutButton_clicked()
 {
     this->close();
-
     MainWindow *loginWindow = new MainWindow();
     loginWindow->show();
 }

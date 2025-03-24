@@ -5,6 +5,7 @@
 #include "results.h"
 #include "program.h"
 #include "inbox.h"
+#include "../dataAccessLayer/userSession.h"
 
 profile::profile(QWidget *parent)
     : QWidget(parent)
@@ -42,6 +43,15 @@ profile::profile(QWidget *parent)
     setCustomFontAura(ui->name, 60);
     setCustomFontAura(ui->bio, 31);
     setCustomFontAura(ui->change_bio, 16);
+    setCustomFontAura(ui->grade, 55);
+    setCustomFontAura(ui->gradeClass, 55);
+
+    QString userUsername = UserSession::getInstance()->getUsername();
+    QString userGrade = QString::number(UserSession::getInstance()->getGrade());
+    QString userClass = UserSession::getInstance()->getStudentClass();
+    ui->name->setText(userUsername);
+    ui->grade->setText(userGrade);
+    ui->gradeClass->setText(userClass);
 }
 
 profile::~profile()

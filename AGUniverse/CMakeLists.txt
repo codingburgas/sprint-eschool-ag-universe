@@ -152,6 +152,10 @@ qt_add_executable(AGUniverse
     presentationLayer/inbox.h
     presentationLayer/inbox.ui
 
+    presentationLayer/feedback.cpp
+    presentationLayer/feedback.h
+    presentationLayer/feedback.ui
+
     presentationLayer/lessons.cpp
     presentationLayer/lessons.h
     presentationLayer/lessons.ui

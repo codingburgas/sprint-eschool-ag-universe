@@ -3,6 +3,7 @@
 #include "registerpage.h"
 #include "main_menu.h"
 #include "fontutils.h"
+#include "../dataAccessLayer/userSession.h"
 #include <QLabel>
 #include <QPixmap>
 #include <QGraphicsDropShadowEffect>
@@ -88,6 +89,8 @@ void MainWindow::loginButtonClicked()
 
     QTextStream in(&file);
     bool found = false;
+    int grade = 0;
+    QString studentClass = "";
 
     while (!in.atEnd()) {
         QString line = in.readLine();
@@ -96,9 +99,13 @@ void MainWindow::loginButtonClicked()
         if (details.size() >= 3) {
             QString storedUsername = details[0];
             QString storedPassword = details[1];
+            int storedGrade = details[2].trimmed().toInt();
+            QString storedStudentClass = details[3].trimmed();
 
             if (storedUsername == username && storedPassword == userPassword) {
                 found = true;
+                grade = storedGrade;
+                studentClass = storedStudentClass;
                 break;
             }
         }
@@ -107,6 +114,8 @@ void MainWindow::loginButtonClicked()
     file.close();
 
     if (found) {
+        UserSession::getInstance()->setUser(username, grade, studentClass);
+
         QMessageBox msgBox;
         msgBox.setWindowTitle("Login Successful");
         msgBox.setText("Welcome " + username + "!");
@@ -115,6 +124,7 @@ void MainWindow::loginButtonClicked()
                              "QPushButton { background-color: #4486c3; color: white; padding: 5px; border-radius: 5px; }"
                              "QPushButton:hover { background-color: #3a76b2; }");
         msgBox.exec();
+
 
         this->hide();
         main_Menu->show();

@@ -4,6 +4,7 @@
 #include <QRandomGenerator>
 #include <QMessageBox>
 #include "fontutils.h"
+#include "../dataAccessLayer/userSession.h"
 
 algebraExam1::algebraExam1(QWidget *parent)
     : QWidget(parent)
@@ -39,7 +40,10 @@ algebraExam1::~algebraExam1()
 }
 
 void algebraExam1::loadQuestions() {
+    int userGrade = UserSession::getInstance()->getGrade();
+
     // Easy (3 points)
+    if (userGrade == 8) {
     questions.append({"What is 5 + (-3)?", {"2", "-2", "8", "3"}, 0, 3});
     questions.append({"Simplify: 3(x + 2)", {"3x + 2", "3x + 6", "x + 6", "6x"}, 1, 3});
     questions.append({"Solve for x: 4x = 20", {"4", "5", "6", "8"}, 1, 3});
@@ -55,7 +59,8 @@ void algebraExam1::loadQuestions() {
     questions.append({"Find the area of a rectangle with width 4 and height 5", {"20", "18", "25", "22"}, 0, 3});
     questions.append({"Which number is greater: -3 or -5?", {"-3", "-5", "They are equal", "Can't determine"}, 0, 3});
     questions.append({"What is the square root of 49?", {"6", "7", "8", "9"}, 1, 3});
-
+    }
+    else if(userGrade == 9) {
     // Medium (5 points)
     questions.append({"Factorize: x^2 - 16", {"(x - 4)(x + 4)", "(x - 8)(x + 2)", "(x - 2)(x + 8)", "(x - 16)(x + 1)"}, 0, 5});
     questions.append({"Solve: 2x - 5 = 7", {"6", "4", "3", "5"}, 1, 5});
@@ -72,7 +77,8 @@ void algebraExam1::loadQuestions() {
     questions.append({"Find the GCF of 24 and 36", {"12", "6", "18", "24"}, 0, 5});
     questions.append({"Which is greater: 2^3 or 3^2?", {"2^3", "3^2", "They are equal", "None"}, 2, 5});
     questions.append({"Find the missing term in the sequence: 4, 9, 16, ?, 36", {"20", "24", "25", "30"}, 2, 5});
-
+    }
+    else if(userGrade == 10) {
     // Hard (7 points)
     questions.append({"Solve for x: 3x^2 - 12x + 9 = 0", {"x = 1, 3", "x = 2, 3", "x = 1, 2", "x = 0, 4"}, 0, 7});
     questions.append({"Find the determinant of the matrix |2 3| |1 4|", {"5", "6", "7", "8"}, 0, 7});
@@ -84,6 +90,7 @@ void algebraExam1::loadQuestions() {
     questions.append({"Find the determinant of |3 4| |2 5|", {"7", "8", "9", "10"}, 1, 7});
     questions.append({"Solve for x in 2x^2 - 5x - 3 = 0", {"x = 3, -1/2", "x = 2, -3/2", "x = 5, -2", "x = 4, -1"}, 0, 7});
     questions.append({"Find the cube root of 27", {"9", "6", "3", "4"}, 2, 7});
+    }
 }
 
 void algebraExam1::displayRandomQuestion() {

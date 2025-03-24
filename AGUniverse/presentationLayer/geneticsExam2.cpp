@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include "fontutils.h"
 #include "genetics.h"
+#include "../dataAccessLayer/userSession.h"
 
 geneticsExam2::geneticsExam2(QWidget *parent)
     : QWidget(parent)
@@ -38,56 +39,114 @@ geneticsExam2::~geneticsExam2()
     delete ui;
 }
 void geneticsExam2::loadQuestions() {
-    // Easy (3 points)
-    questions.append({"What carries heredity?", {"Gene", "Enzyme", "Protein", "Lipid"}, 0, 3});
-    questions.append({"Who studied pea plants?", {"Darwin", "Mendel", "Watson", "Franklin"}, 1, 3});
-    questions.append({"Genes are on what?", {"Mitochondria", "Ribosomes", "Chromosomes", "Cytoplasm"}, 2, 3});
-    questions.append({"DNA shape?", {"Single", "Double helix", "Linear", "Triple"}, 1, 3});
-    questions.append({"Which reproduction makes clones?", {"Sexual", "Asexual", "Hybrid", "Mutation"}, 1, 3});
-    questions.append({"Gene variants are called?", {"Genotype", "Allele", "Nucleotide", "Chromatid"}, 1, 3});
-    questions.append({"Dominant alleles are?", {"Always seen", "Hidden", "Only in males", "If recessive too"}, 0, 3});
-    questions.append({"Genetic info is stored in?", {"Protein", "Lipid", "Nucleic acid", "Carbohydrate"}, 2, 3});
-    questions.append({"Human chromosome pairs?", {"20", "22", "23", "24"}, 2, 3});
-    questions.append({"Punnett squares predict?", {"Genetics", "Mutations", "Cell division", "DNA"}, 0, 3});
-    questions.append({"Male sex chromosomes?", {"XX", "XY", "YY", "XZ"}, 1, 3});
-    questions.append({"Protein synthesis site?", {"Nucleus", "Mitochondria", "Ribosome", "Lysosome"}, 2, 3});
-    questions.append({"Visible traits are?", {"Genotype", "Phenotype", "Genome", "Mutation"}, 1, 3});
-    questions.append({"Recessive trait needs?", {"1", "2", "3", "4"}, 1, 3});
-    questions.append({"RNA base replacing thymine?", {"A", "G", "U", "C"}, 2, 3});
+    int userGrade = UserSession::getInstance()->getGrade();
 
-    // Medium (5 points)
-    questions.append({"DNA base change?", {"Insertion", "Deletion", "Substitution", "Frameshift"}, 2, 5});
-    questions.append({"Chromosome pairs are?", {"Homologous", "Sisters", "Haploid", "Recessive"}, 0, 5});
-    questions.append({"Homozygous means?", {"Same alleles", "Different alleles", "Both recessive", "Both dominant"}, 0, 5});
-    questions.append({"Karyotypes show?", {"Traits", "Chromosomes", "Proteins", "Mutations"}, 1, 5});
-    questions.append({"Who found DNA’s shape?", {"Franklin", "Darwin", "Watson & Crick", "Mendel"}, 2, 5});
-    questions.append({"mRNA does what?", {"Builds proteins", "Copies DNA", "Transports amino acids", "Regulates genes"}, 1, 5});
-    questions.append({"Extra chromosome 21 disorder?", {"Turner", "Down", "Cystic fibrosis", "Sickle cell"}, 1, 5});
-    questions.append({"Incomplete dominance?", {"One hides", "Both show", "Blend occurs", "Neither shows"}, 2, 5});
-    questions.append({"Gametes are?", {"Body", "Muscle", "Sex", "Nerve"}, 2, 5});
-    questions.append({"Chance of recessive trait?", {"25%", "50%", "75%", "100%"}, 0, 5});
-    questions.append({"Meiosis does what?", {"Cell repair", "Growth", "Makes gametes", "Protein synthesis"}, 2, 5});
-    questions.append({"Trait from multiple genes?", {"Single gene", "Polygenic", "Mutation", "Codominance"}, 1, 5});
-    questions.append({"Base pairing with guanine?", {"A", "T", "C", "U"}, 2, 5});
-    questions.append({"DNA to RNA process?", {"Replication", "Transcription", "Translation", "Mutation"}, 1, 5});
-    questions.append({"Red + white = pink means?", {"Codominance", "Incomplete dominance", "Dominant", "Recessive"}, 1, 5});
+    if (userGrade == 8) {
+        // Easy Level (3 points)
+        questions.append({"What is a gene?", {"DNA unit", "Protein", "Lipid", "Sugar"}, 0, 3});
+        questions.append({"DNA is made of?", {"Amino acids", "Nucleotides", "Fats", "Carbs"}, 1, 3});
+        questions.append({"Who discovered genetics?", {"Mendel", "Darwin", "Watson", "Crick"}, 0, 3});
+        questions.append({"Where is DNA found?", {"Cytoplasm", "Nucleus", "Ribosome", "Membrane"}, 1, 3});
+        questions.append({"What is heredity?", {"Trait passing", "Cell growth", "Mutation", "DNA repair"}, 0, 3});
+        questions.append({"Human chromosome count?", {"23", "46", "44", "48"}, 1, 3});
+        questions.append({"What is a mutation?", {"Gene change", "New cell", "Extra organ", "DNA repair"}, 0, 3});
+        questions.append({"Ribosomes make?", {"DNA", "Proteins", "Lipids", "Carbs"}, 1, 3});
+        questions.append({"Recessive traits need?", {"1 allele", "2 alleles", "3 alleles", "4 alleles"}, 1, 3});
+        questions.append({"What is a dominant trait?", {"Always expressed", "Never expressed", "Only in males", "Only in females"}, 0, 3});
 
-    // Hard (7 points)
-    questions.append({"RNA to protein process?", {"Replication", "Transcription", "Translation", "Mutation"}, 2, 7});
-    questions.append({"Carrier parents disorder chance?", {"25%", "50%", "75%", "100%"}, 0, 7});
-    questions.append({"Holds chromatids together?", {"Centromere", "Histone", "Nucleosome", "Spindle"}, 0, 7});
-    questions.append({"tRNA function?", {"Carries amino acids", "Copies DNA", "Builds RNA", "Regulates genes"}, 0, 7});
-    questions.append({"Crossing over increases?", {"Variation", "Mutations", "Replication", "Mitosis"}, 0, 7});
-    questions.append({"Which cells pass mutations?", {"Skin", "Blood", "Gametes", "Nerve"}, 2, 7});
-    questions.append({"RNA carrying genetic code?", {"mRNA", "tRNA", "rRNA", "DNA"}, 0, 7});
-    questions.append({"Epigenetics studies?", {"Mutations", "Gene expression", "Chromosomes", "Protein folding"}, 1, 7});
-    questions.append({"Carrier mother, son disorder risk?", {"25%", "50%", "75%", "100%"}, 1, 7});
-    questions.append({"Unzips DNA?", {"Polymerase", "Ligase", "Helicase", "Primase"}, 2, 7});
-    questions.append({"Failed chromosome separation?", {"Point mutation", "Nondisjunction", "Frameshift", "Crossing over"}, 1, 7});
-    questions.append({"Sickle cell affects?", {"Insulin", "Hemoglobin", "Collagen", "Myosin"}, 1, 7});
-    questions.append({"Protects chromosome ends?", {"Centromere", "Telomere", "Chromatin", "Exon"}, 1, 7});
-    questions.append({"Pedigree chart shows?", {"Mutations", "Proteins", "Traits", "Chromosomes"}, 2, 7});
-    questions.append({"Heterozygous chance?", {"25%", "50%", "75%", "100%"}, 1, 7});
+        // Medium (5 points)
+        questions.append({"What is a substitution mutation?", {"Base swap", "Base loss", "Extra base", "Reversed genes"}, 0, 5});
+        questions.append({"Homologous chromosomes are?", {"Paired", "Mutated", "Haploid", "Identical"}, 0, 5});
+        questions.append({"Homozygous means?", {"Same alleles", "Different alleles", "Only dominant", "Only recessive"}, 0, 5});
+        questions.append({"What does a karyotype show?", {"Chromosomes", "DNA strands", "Proteins", "Mutations"}, 0, 5});
+        questions.append({"Who found DNA’s structure?", {"Franklin", "Mendel", "Watson & Crick", "Darwin"}, 2, 5});
+        questions.append({"mRNA does what?", {"Copies DNA", "Builds proteins", "Transports genes", "Mutates DNA"}, 0, 5});
+        questions.append({"RNA base replacing thymine?", {"A", "C", "G", "U"}, 3, 5});
+
+
+        // Hard (7 points)
+        questions.append({"RNA to protein process?", {"Replication", "Transcription", "Translation", "Mutation"}, 2, 7});
+        questions.append({"Carrier parents disorder chance?", {"25%", "50%", "75%", "100%"}, 0, 7});
+        questions.append({"Holds chromatids together?", {"Centromere", "Histone", "Nucleosome", "Spindle"}, 0, 7});
+        questions.append({"tRNA function?", {"Carries amino acids", "Copies DNA", "Builds RNA", "Regulates genes"}, 0, 7});
+        questions.append({"Crossing over increases?", {"Variation", "Mutations", "Replication", "Mitosis"}, 0, 7});
+        questions.append({"Why use Punnett squares?", {"Predict traits", "Copy DNA", "Make proteins", "Change genes"}, 0, 7});
+        questions.append({"Male sex chromosomes?", {"XX", "XY", "YY", "XZ"}, 1, 7});
+        questions.append({"What process copies DNA?", {"Replication", "Translation", "Transcription", "Mutation"}, 0, 7});
+        questions.append({"Where does transcription happen?", {"Ribosome", "Nucleus", "Mitochondria", "Cytoplasm"}, 1, 7});
+
+
+    }
+    else if(userGrade == 9) {
+        // Easy (3 points)
+        questions.append({"What is the basic unit of heredity?", {"Gene", "Chromosome", "Protein", "DNA"}, 0, 3});
+        questions.append({"Who is the father of genetics?", {"Darwin", "Mendel", "Watson", "Crick"}, 1, 3});
+        questions.append({"Where are genes found?", {"Mitochondria", "Ribosome", "Nucleus", "Cytoplasm"}, 2, 3});
+        questions.append({"What shape is DNA?", {"Single strand", "Double helix", "Triple strand", "Circular"}, 1, 3});
+        questions.append({"Which reproduction makes identical offspring?", {"Sexual", "Asexual", "Mutational", "Evolutionary"}, 1, 3});
+        questions.append({"What are different versions of a gene called?", {"Genotypes", "Alleles", "Chromatids", "Nucleotides"}, 1, 3});
+        questions.append({"What is a dominant allele?", {"Always seen", "Hidden", "Only in males", "Never expressed"}, 0, 3});
+
+        // Medium (5 points)
+        questions.append({"What happens when one DNA base changes?", {"Frameshift", "Substitution", "Deletion", "Insertion"}, 1, 5});
+        questions.append({"What are homologous chromosomes?", {"Same", "Paired", "Mutated", "Male-only"}, 1, 5});
+        questions.append({"What does heterozygous mean?", {"Same alleles", "Different alleles", "Both recessive", "Both dominant"}, 1, 5});
+        questions.append({"What does a karyotype show?", {"Genes", "DNA map", "Chromosomes", "Mutations"}, 2, 5});
+        questions.append({"Who discovered DNA’s structure?", {"Darwin", "Mendel", "Watson & Crick", "Lamarck"}, 2, 5});
+        questions.append({"What is mRNA’s job?", {"Carries amino acids", "Copies DNA", "Transports code", "Builds proteins"}, 2, 5});
+        questions.append({"What disorder is caused by an extra chromosome 21?", {"Hemophilia", "Down syndrome", "Sickle cell", "Cystic fibrosis"}, 1, 5});
+
+
+        // Hard (7 points)
+        questions.append({"What does epigenetics study?", {"Mutations", "Gene expression", "Dominance", "Chromosomes"}, 1, 7});
+        questions.append({"Carrier mother, sons inherit disorder?", {"25%", "50%", "75%", "100%"}, 1, 7});
+        questions.append({"Which enzyme unzips DNA?", {"Polymerase", "Ligase", "Helicase", "Transcriptase"}, 2, 7});
+        questions.append({"What happens in nondisjunction?", {"Proper separation", "Failed separation", "Gene mutation", "DNA error"}, 1, 7});
+        questions.append({"Which disorder affects hemoglobin?", {"Down", "Sickle cell", "Cystic fibrosis", "Hemophilia"}, 1, 7});
+        questions.append({"What protects chromosome ends?", {"Centromere", "Telomere", "Nucleosome", "Ribosome"}, 1, 7});
+        questions.append({"What does a pedigree chart show?", {"Genetics", "Chromosomes", "Proteins", "Mutations"}, 0, 7});
+        questions.append({"Chance of heterozygous child from heterozygous parents?", {"25%", "50%", "75%", "100%"}, 1, 7});
+    }
+    else if(userGrade == 10) {
+        // Easy (3 points)
+        questions.append({"What is the basic unit of life?", {"Cell", "Atom", "Molecule", "Organism"}, 0, 3});
+        questions.append({"Which organelle produces energy?", {"Mitochondrion", "Nucleus", "Ribosome", "Golgi apparatus"}, 0, 3});
+        questions.append({"What molecule carries genetic info?", {"DNA", "Protein", "RNA", "Lipids"}, 0, 3});
+        questions.append({"What process do plants use to make food?", {"Photosynthesis", "Respiration", "Digestion", "Excretion"}, 0, 3});
+        questions.append({"What is the function of the cell membrane?", {"Controls cell entry/exit", "Makes energy", "Makes proteins", "Stores DNA"}, 0, 3});
+        questions.append({"Which is a nitrogenous base in DNA?", {"Adenine", "Chlorophyll", "Glucose", "Lactic acid"}, 0, 3});
+        questions.append({"What bonds DNA strands?", {"Hydrogen bond", "Ionic bond", "Covalent bond", "Metallic bond"}, 0, 3});
+        questions.append({"Where is genetic material stored?", {"Nucleus", "Cytoplasm", "Ribosome", "Mitochondrion"}, 0, 3});
+        questions.append({"What builds proteins?", {"Amino acids", "Fatty acids", "Nucleotides", "Monosaccharides"}, 0, 3});
+        questions.append({"What absorbs sunlight in plants?", {"Chlorophyll", "Glucose", "Oxygen", "Water"}, 0, 3});
+
+        // Medium (5 points)
+        questions.append({"What type of mutation causes frame shifts?", {"Insertion/Deletion", "Substitution", "Duplication", "Translocation"}, 0, 5});
+        questions.append({"What stages are in cell division?", {"Mitosis and Cytokinesis", "Interphase and Prophase", "Mitosis and Meiosis", "G1 and G2"}, 0, 5});
+        questions.append({"What is the ribosome’s function?", {"Protein synthesis", "DNA replication", "Cell division", "Transport lipids"}, 0, 5});
+        questions.append({"What’s the difference between prokaryotes and eukaryotes?", {"Prokaryotes lack a nucleus", "Eukaryotes lack membranes", "Prokaryotes have mitochondria", "Eukaryotes are unicellular"}, 0, 5});
+        questions.append({"What is transcription?", {"RNA synthesis from DNA", "Protein synthesis from RNA", "DNA replication", "Cell division"}, 0, 5});
+        questions.append({"What phase involves DNA replication?", {"S phase", "M phase", "G1 phase", "G2 phase"}, 0, 5});
+        questions.append({"What is a genotype?", {"Genetic makeup", "Physical appearance", "Environment", "Survival rate"}, 0, 5});
+        questions.append({"Where does translation happen?", {"Ribosome", "Nucleus", "Mitochondrion", "Cytoplasm"}, 0, 5});
+        questions.append({"What produces four haploid cells?", {"Meiosis", "Mitosis", "Binary fission", "Fertilization"}, 0, 5});
+        questions.append({"What are homologous chromosomes?", {"Same genes, different alleles", "Identical chromosomes", "Same function", "Only in females"}, 0, 5});
+
+
+        // Hard (7 points)
+        questions.append({"Difference between mitosis and meiosis?", {"Mitosis: 2 diploid, Meiosis: 4 haploid", "Mitosis: 4 haploid, Meiosis: 2 diploid", "They are identical", "Meiosis: 2 diploid, Mitosis: 4 haploid"}, 0, 7});
+        questions.append({"What does the telomere do?", {"Protects chromosome ends", "Synthesizes proteins", "Regulates division", "Repairs DNA"}, 0, 7});
+        questions.append({"What causes sickle cell disease?", {"Point mutation", "Frame-shift mutation", "Chromosomal inversion", "Duplication"}, 0, 7});
+        questions.append({"What does helicase do?", {"Unwinds DNA", "Synthesizes RNA primers", "Seals Okazaki fragments", "Joins nucleotides"}, 0, 7});
+        questions.append({"What converts mRNA to protein?", {"Translation", "Transcription", "Replication", "Splicing"}, 0, 7});
+        questions.append({"Which RNAs are in protein synthesis?", {"mRNA, tRNA, rRNA", "mRNA, DNA, tRNA", "rRNA, tRNA, mRNA", "mRNA, rRNA, dRNA"}, 0, 7});
+        questions.append({"Which mutation affects protein function most?", {"Frame-shift", "Point mutation", "Silent mutation", "Missense mutation"}, 0, 7});
+        questions.append({"What is a Barr body?", {"Inactivated X chromosome", "Mutated gene", "Autosome", "Cell organelle"}, 0, 7});
+        questions.append({"Why is crossing over important?", {"Increases variation", "Equal distribution", "Regulates expression", "Prevents mutations"}, 0, 7});
+        questions.append({"What does Hardy-Weinberg describe?", {"Genetic variation", "New species", "Dominant traits", "Mutation rates"}, 0, 7});
+        questions.append({"What is PCR used for?", {"Amplifying DNA", "Editing genes", "Sequencing RNA", "Injecting genes"}, 0, 7});
+
+    }
 }
 
 void geneticsExam2::displayRandomQuestion() {

@@ -42,7 +42,6 @@ void cellBiologyExam2::loadQuestions() {
     int userGrade = UserSession::getInstance()->getGrade();
 
     if (userGrade == 8) {
-        if (userGrade == 8) {
             // Easy Level (3 points)
             questions.append({"What is the main function of mitochondria?", {"Make proteins", "Produce energy", "Control cell functions", "Store DNA"}, 1, 3});
             questions.append({"What is the cell membrane's main job?", {"Protect the cell", "Control cell growth", "Help in protein production", "Produce energy"}, 0, 3});
@@ -77,7 +76,6 @@ void cellBiologyExam2::loadQuestions() {
             questions.append({"What is a key difference between aerobic and anaerobic respiration?", {"Aerobic requires oxygen, anaerobic does not", "Anaerobic produces more ATP", "Aerobic occurs in the cytoplasm", "Anaerobic produces glucose"}, 0, 7});
             questions.append({"What is the primary function of the Golgi apparatus?", {"Transport proteins", "Package and distribute proteins", "Produce energy", "Synthesize DNA"}, 1, 7});
             questions.append({"What is the role of enzymes in metabolism?", {"To speed up chemical reactions", "To slow down chemical reactions", "To provide energy", "To break down glucose"}, 0, 7});
-        }
     }
     else if(userGrade == 9) {
         questions.append({"Animal cells lack?", {"Membrane", "Wall", "Ribosome", "Mitochondria"}, 1, 3});

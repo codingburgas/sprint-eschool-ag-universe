@@ -42,7 +42,6 @@ void cellBiologyExam3::loadQuestions() {
     int userGrade = UserSession::getInstance()->getGrade();
 
     if (userGrade == 8) {
-        if (userGrade == 8) {
             // Easy Level (3 points)
             questions.append({"What is the basic unit of life?", {"Tissue", "Organ", "Cell", "Molecule"}, 2, 3});
             questions.append({"What does the cell membrane do?", {"Make ATP", "Control entry/exit", "Break glucose", "Store DNA"}, 1, 3});
@@ -72,7 +71,6 @@ void cellBiologyExam3::loadQuestions() {
             questions.append({"Which structure has its own DNA?", {"Mitochondria", "Golgi", "Ribosome", "Nucleus"}, 0, 7});
             questions.append({"Which step makes the most ATP?", {"Glycolysis", "Krebs cycle", "Electron transport", "Fermentation"}, 2, 7});
         }
-    }
     else if(userGrade == 9) {
         // Easy Level (3 points)
         questions.append({"Which moves molecules without energy?", {"Active transport", "Osmosis", "Diffusion", "Endocytosis"}, 2, 3});

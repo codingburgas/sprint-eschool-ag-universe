@@ -4,6 +4,7 @@
 #include <QRandomGenerator>
 #include <QMessageBox>
 #include "fontutils.h"
+#include "../dataAccessLayer/userSession.h"
 
 vocabularyExam2::vocabularyExam2(QWidget *parent)
     : QWidget(parent)
@@ -39,41 +40,121 @@ vocabularyExam2::~vocabularyExam2()
 }
 
 void vocabularyExam2::loadQuestions() {
-    // Easy (3 points)
-    questions.append({"What does 'gentle' mean?", {"Harsh", "Calm", "Loud", "Strong"}, 1, 3});
-    questions.append({"Which word is a synonym for 'fast'?", {"Slow", "Quick", "Lazy", "Heavy"}, 1, 3});
-    questions.append({"What does 'brave' mean?", {"Scared", "Courageous", "Weak", "Quiet"}, 1, 3});
-    questions.append({"Which word means 'to laugh'?", {"Cry", "Smile", "Frown", "Giggle"}, 3, 3});
-    questions.append({"What does 'quiet' mean?", {"Loud", "Silent", "Happy", "Angry"}, 1, 3});
-    questions.append({"Which word is a synonym for 'sad'?", {"Happy", "Angry", "Unhappy", "Excited"}, 2, 3});
-    questions.append({"What does 'strong' mean?", {"Weak", "Powerful", "Tired", "Small"}, 1, 3});
-    questions.append({"Which word means 'to help'?", {"Harm", "Assist", "Ignore", "Fight"}, 1, 3});
-    questions.append({"What does 'delicious' mean?", {"Tasty", "Bitter", "Sour", "Salty"}, 0, 3});
-    questions.append({"Which word is a synonym for 'friendly'?", {"Angry", "Kind", "Mean", "Rude"}, 1, 3});
+    int userGrade = UserSession::getInstance()->getGrade();
+    if(userGrade == 8)
+    {
+        // Easy (3 points)
+        questions.append({"Which word means 'large'?", {"Tiny", "Huge", "Narrow", "Short"}, 1, 3});
+        questions.append({"What does 'eager' mean?", {"Excited", "Tired", "Bored", "Lazy"}, 0, 3});
+        questions.append({"Choose the antonym of 'strong'.", {"Weak", "Tough", "Firm", "Heavy"}, 0, 3});
+        questions.append({"What does 'vanish' mean?", {"Appear", "Grow", "Disappear", "Change"}, 2, 3});
+        questions.append({"Which word means 'kind'?", {"Rude", "Mean", "Generous", "Loud"}, 2, 3});
+        questions.append({"What does 'fragile' mean?", {"Hard", "Soft", "Breakable", "Heavy"}, 2, 3});
+        questions.append({"Which word means 'to talk a lot'?", {"Silent", "Chatty", "Shy", "Calm"}, 1, 3});
+        questions.append({"Which word fits: 'The dog is very ____'?", {"Happy", "Sad", "Confused", "Tired"}, 0, 3});
+        questions.append({"What does 'disguise' mean?", {"Reveal", "Hide", "Show", "Explain"}, 1, 3});
+        questions.append({"Which word is a synonym for 'fast'?", {"Slow", "Quick", "Lazy", "Calm"}, 1, 3});
 
-    // Medium (5 points)
-    questions.append({"What does 'optimistic' mean?", {"Pessimistic", "Cheerful", "Sad", "Angry"}, 1, 5});
-    questions.append({"Which word is closest in meaning to 'generous'?", {"Greedy", "Giving", "Selfish", "Poor"}, 1, 5});
-    questions.append({"What does 'bitter' mean?", {"Sweet", "Sour", "Pleasant", "Harsh"}, 3, 5});
-    questions.append({"Which word is a synonym for 'bold'?", {"Shy", "Fearless", "Quiet", "Gentle"}, 1, 5});
-    questions.append({"What does 'loyal' mean?", {"Dishonest", "Faithful", "Rude", "Untrustworthy"}, 1, 5});
-    questions.append({"Which word means 'to jump'?", {"Stumble", "Hop", "Crawl", "Walk"}, 1, 5});
-    questions.append({"What does 'peaceful' mean?", {"Chaotic", "Calm", "Angry", "Noisy"}, 1, 5});
-    questions.append({"Which word is closest in meaning to 'confident'?", {"Nervous", "Sure", "Timid", "Doubtful"}, 1, 5});
-    questions.append({"What does 'tolerant' mean?", {"Intolerant", "Understanding", "Angry", "Confused"}, 1, 5});
-    questions.append({"Which word means 'to talk'?", {"Silence", "Whisper", "Shout", "Speak"}, 3, 5});
+        // Medium (5 points)
+        questions.append({"What does 'hesitate' mean?", {"Rush", "Pause", "Run", "Sleep"}, 1, 5});
+        questions.append({"Choose a word for 'secretive'.", {"Open", "Candid", "Stealthy", "Friendly"}, 2, 5});
+        questions.append({"What does 'reliable' mean?", {"Dishonest", "Trustworthy", "Loud", "Forgetful"}, 1, 5});
+        questions.append({"Which word means 'to see quickly'?", {"Ignore", "Glimpse", "Stare", "Forget"}, 1, 5});
+        questions.append({"What does 'scarce' mean?", {"Plentiful", "Rare", "Overflowing", "Common"}, 1, 5});
+        questions.append({"Which word fits: 'He was ____ about his test'?", {"Excited", "Nervous", "Happy", "Relaxed"}, 1, 5});
+        questions.append({"What does 'interpret' mean?", {"Explain", "Forget", "Ignore", "Skip"}, 0, 5});
+        questions.append({"Choose the best synonym for 'mysterious'.", {"Simple", "Strange", "Clear", "Obvious"}, 1, 5});
+        questions.append({"What does 'hesitant' mean?", {"Confident", "Doubtful", "Quick", "Proud"}, 1, 5});
+        questions.append({"Which word fits: 'The storm caused great ____'?", {"Joy", "Damage", "Fun", "Growth"}, 1, 5});
 
-    // Hard (7 points)
-    questions.append({"What does 'lucid' mean?", {"Clear", "Confusing", "Dark", "Shiny"}, 0, 7});
-    questions.append({"Which word best represents 'meticulous'?", {"Careless", "Precise", "Messy", "Quick"}, 1, 7});
-    questions.append({"What does 'serene' mean?", {"Calm", "Stormy", "Angry", "Confused"}, 0, 7});
-    questions.append({"Which word describes someone who is 'curious'?", {"Indifferent", "Interested", "Disinterested", "Bored"}, 1, 7});
-    questions.append({"What does 'reliable' mean?", {"Untrustworthy", "Consistent", "Lazy", "Forgetful"}, 1, 7});
-    questions.append({"Which word best represents 'ephemeral'?", {"Permanent", "Fleeting", "Constant", "Long-lasting"}, 1, 7});
-    questions.append({"What does 'exuberant' mean?", {"Quiet", "Excited", "Tired", "Reserved"}, 1, 7});
-    questions.append({"Which word is closest to 'abundant'?", {"Scarce", "Plenty", "Empty", "Rare"}, 1, 7});
-    questions.append({"What does 'benevolent' mean?", {"Unkind", "Generous", "Greedy", "Angry"}, 1, 7});
-    questions.append({"What does 'insightful' mean?", {"Shallow", "Thoughtful", "Confused", "Unaware"}, 1, 7});
+        // Hard (7 points)
+        questions.append({"Which word means 'very strong'?", {"Weak", "Resilient", "Careful", "Lazy"}, 1, 7});
+        questions.append({"What does 'impeccable' mean?", {"Perfect", "Messy", "Wrong", "Dull"}, 0, 7});
+        questions.append({"Choose a synonym for 'stubborn'.", {"Flexible", "Firm", "Gentle", "Soft"}, 1, 7});
+        questions.append({"What does 'scrutinize' mean?", {"Ignore", "Examine", "Forget", "Change"}, 1, 7});
+        questions.append({"Which word describes a hopeful person?", {"Optimistic", "Pessimistic", "Fearful", "Quiet"}, 0, 7});
+        questions.append({"What does 'underestimate' mean?", {"Guess too low", "Guess too high", "Ignore", "Explain"}, 0, 7});
+        questions.append({"Which word fits: 'The scientist made an ____ discovery'?", {"Ordinary", "Amazing", "Boring", "Small"}, 1, 7});
+        questions.append({"What does 'meticulous' mean?", {"Careless", "Detail-focused", "Messy", "Fast"}, 1, 7});
+        questions.append({"What does 'diligent' mean?", {"Lazy", "Hardworking", "Slow", "Forgetful"}, 1, 7});
+        questions.append({"Choose the best antonym for 'calm'.", {"Peaceful", "Nervous", "Quiet", "Relaxed"}, 1, 7});
+
+
+    }else if(userGrade == 9)
+    {
+        // Easy (3 points)
+        questions.append({"What does 'gentle' mean?", {"Harsh", "Calm", "Loud", "Strong"}, 1, 3});
+        questions.append({"Which word is a synonym for 'fast'?", {"Slow", "Quick", "Lazy", "Heavy"}, 1, 3});
+        questions.append({"What does 'brave' mean?", {"Scared", "Courageous", "Weak", "Quiet"}, 1, 3});
+        questions.append({"Which word means 'to laugh'?", {"Cry", "Smile", "Frown", "Giggle"}, 3, 3});
+        questions.append({"What does 'quiet' mean?", {"Loud", "Silent", "Happy", "Angry"}, 1, 3});
+        questions.append({"Which word is a synonym for 'sad'?", {"Happy", "Angry", "Unhappy", "Excited"}, 2, 3});
+        questions.append({"What does 'strong' mean?", {"Weak", "Powerful", "Tired", "Small"}, 1, 3});
+        questions.append({"Which word means 'to help'?", {"Harm", "Assist", "Ignore", "Fight"}, 1, 3});
+        questions.append({"What does 'delicious' mean?", {"Tasty", "Bitter", "Sour", "Salty"}, 0, 3});
+        questions.append({"Which word is a synonym for 'friendly'?", {"Angry", "Kind", "Mean", "Rude"}, 1, 3});
+
+        // Medium (5 points)
+        questions.append({"What does 'optimistic' mean?", {"Pessimistic", "Cheerful", "Sad", "Angry"}, 1, 5});
+        questions.append({"Which word is closest in meaning to 'generous'?", {"Greedy", "Giving", "Selfish", "Poor"}, 1, 5});
+        questions.append({"What does 'bitter' mean?", {"Sweet", "Sour", "Pleasant", "Harsh"}, 3, 5});
+        questions.append({"Which word is a synonym for 'bold'?", {"Shy", "Fearless", "Quiet", "Gentle"}, 1, 5});
+        questions.append({"What does 'loyal' mean?", {"Dishonest", "Faithful", "Rude", "Untrustworthy"}, 1, 5});
+        questions.append({"Which word means 'to jump'?", {"Stumble", "Hop", "Crawl", "Walk"}, 1, 5});
+        questions.append({"What does 'peaceful' mean?", {"Chaotic", "Calm", "Angry", "Noisy"}, 1, 5});
+        questions.append({"Which word is closest in meaning to 'confident'?", {"Nervous", "Sure", "Timid", "Doubtful"}, 1, 5});
+        questions.append({"What does 'tolerant' mean?", {"Intolerant", "Understanding", "Angry", "Confused"}, 1, 5});
+        questions.append({"Which word means 'to talk'?", {"Silence", "Whisper", "Shout", "Speak"}, 3, 5});
+
+        // Hard (7 points)
+        questions.append({"What does 'lucid' mean?", {"Clear", "Confusing", "Dark", "Shiny"}, 0, 7});
+        questions.append({"Which word best represents 'meticulous'?", {"Careless", "Precise", "Messy", "Quick"}, 1, 7});
+        questions.append({"What does 'serene' mean?", {"Calm", "Stormy", "Angry", "Confused"}, 0, 7});
+        questions.append({"Which word describes someone who is 'curious'?", {"Indifferent", "Interested", "Disinterested", "Bored"}, 1, 7});
+        questions.append({"What does 'reliable' mean?", {"Untrustworthy", "Consistent", "Lazy", "Forgetful"}, 1, 7});
+        questions.append({"Which word best represents 'ephemeral'?", {"Permanent", "Fleeting", "Constant", "Long-lasting"}, 1, 7});
+        questions.append({"What does 'exuberant' mean?", {"Quiet", "Excited", "Tired", "Reserved"}, 1, 7});
+        questions.append({"Which word is closest to 'abundant'?", {"Scarce", "Plenty", "Empty", "Rare"}, 1, 7});
+        questions.append({"What does 'benevolent' mean?", {"Unkind", "Generous", "Greedy", "Angry"}, 1, 7});
+        questions.append({"What does 'insightful' mean?", {"Shallow", "Thoughtful", "Confused", "Unaware"}, 1, 7});
+    }else if(userGrade == 10)
+    {
+        // Easy (3 points)
+        questions.append({"Which word means 'honest'?", {"Deceptive", "Sincere", "Foolish", "Weak"}, 1, 3});
+        questions.append({"What does 'adapt' mean?", {"Resist", "Adjust", "Avoid", "Ignore"}, 1, 3});
+        questions.append({"Which word is a synonym for 'difficult'?", {"Simple", "Challenging", "Fast", "Weak"}, 1, 3});
+        questions.append({"What does 'prosper' mean?", {"Fail", "Succeed", "Lose", "Stop"}, 1, 3});
+        questions.append({"Which word means 'extremely cold'?", {"Mild", "Frigid", "Warm", "Cool"}, 1, 3});
+        questions.append({"What does 'eliminate' mean?", {"Keep", "Remove", "Create", "Build"}, 1, 3});
+        questions.append({"Choose the antonym of 'generous'.", {"Selfish", "Kind", "Helpful", "Friendly"}, 0, 3});
+        questions.append({"What does 'vivid' mean?", {"Dull", "Bright", "Faint", "Weak"}, 1, 3});
+        questions.append({"Which word means 'to confirm'?", {"Deny", "Verify", "Refuse", "Doubt"}, 1, 3});
+        questions.append({"What does 'precise' mean?", {"Exact", "Rough", "Wrong", "Large"}, 0, 3});
+
+        // Medium (5 points)
+        questions.append({"What does 'obscure' mean?", {"Clear", "Unknown", "Famous", "Obvious"}, 1, 5});
+        questions.append({"Which word is a synonym for 'courageous'?", {"Fearless", "Timid", "Weak", "Careful"}, 0, 5});
+        questions.append({"What does 'negligent' mean?", {"Careless", "Attentive", "Strict", "Aware"}, 0, 5});
+        questions.append({"Which word means 'to guess'?", {"Analyze", "Estimate", "Prove", "Decide"}, 1, 5});
+        questions.append({"What does 'diverse' mean?", {"Different", "Identical", "Simple", "Limited"}, 0, 5});
+        questions.append({"Which word means 'to decrease in strength'?", {"Weaken", "Expand", "Boost", "Increase"}, 0, 5});
+        questions.append({"What does 'scrupulous' mean?", {"Lazy", "Careful", "Dishonest", "Casual"}, 1, 5});
+        questions.append({"Which word fits: 'His speech was very ____'?", {"Confusing", "Eloquent", "Slow", "Boring"}, 1, 5});
+        questions.append({"What does 'indifferent' mean?", {"Interested", "Unconcerned", "Passionate", "Excited"}, 1, 5});
+        questions.append({"Choose the best antonym for 'accelerate'.", {"Hurry", "Slow down", "Rush", "Speed up"}, 1, 5});
+
+        // Hard (7 points)
+        questions.append({"Which word means 'unpredictable'?", {"Stable", "Erratic", "Logical", "Consistent"}, 1, 7});
+        questions.append({"What does 'transient' mean?", {"Temporary", "Endless", "Permanent", "Steady"}, 0, 7});
+        questions.append({"Which word is a synonym for 'subtle'?", {"Obvious", "Delicate", "Loud", "Clear"}, 1, 7});
+        questions.append({"What does 'arbitrary' mean?", {"Planned", "Random", "Logical", "Necessary"}, 1, 7});
+        questions.append({"Which word describes someone who speaks little?", {"Talkative", "Taciturn", "Lively", "Social"}, 1, 7});
+        questions.append({"What does 'scrutinize' mean?", {"Ignore", "Examine", "Forget", "Change"}, 1, 7});
+        questions.append({"Which word means 'extremely dry'?", {"Moist", "Arid", "Soggy", "Damp"}, 1, 7});
+        questions.append({"What does 'vindicate' mean?", {"Blame", "Justify", "Punish", "Ignore"}, 1, 7});
+        questions.append({"Which word fits: 'His actions were ____ to his words'?", {"Contrary", "Similar", "Equal", "Matching"}, 0, 7});
+        questions.append({"What does 'perceptive' mean?", {"Slow", "Observant", "Ignorant", "Dull"}, 1, 7});
+    }
 }
 
 

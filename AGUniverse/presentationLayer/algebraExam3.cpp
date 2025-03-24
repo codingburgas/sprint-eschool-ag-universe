@@ -4,6 +4,7 @@
 #include <QRandomGenerator>
 #include <QMessageBox>
 #include "fontutils.h"
+#include "../dataAccessLayer/userSession.h"
 
 algebraExam3::algebraExam3(QWidget *parent)
     : QWidget(parent)
@@ -39,44 +40,127 @@ algebraExam3::~algebraExam3()
 }
 
 void algebraExam3::loadQuestions() {
-    // Easy (3 points)
-    questions.append({"What is 6 + (-4)?", {"2", "-2", "10", "4"}, 0, 3});
-    questions.append({"Simplify: 5(x + 1)", {"5x + 1", "5x + 5", "x + 5", "6x"}, 1, 3});
-    questions.append({"Solve for x: 3x = 18", {"4", "5", "6", "8"}, 2, 3});
-    questions.append({"Expand: (x + 3)(x - 2)", {"x^2 + x - 6", "x^2 - 5x + 6", "x^2 + 5x - 6", "x^2 - x - 6"}, 0, 3});
-    questions.append({"What is the slope of y = -4x + 2?", {"-4", "2", "6", "1/4"}, 0, 3});
-    questions.append({"What is 10 - (-3)?", {"7", "13", "-13", "-7"}, 1, 3});
-    questions.append({"Find the value of 8 × (2 + 1)", {"24", "16", "10", "20"}, 0, 3});
-    questions.append({"Solve for x: x/3 = 4", {"12", "8", "10", "3"}, 0, 3});
-    questions.append({"What is the sum of interior angles in a pentagon?", {"180°", "540°", "360°", "270°"}, 1, 3});
-    questions.append({"What is 5 squared?", {"10", "25", "20", "30"}, 1, 3});
-    questions.append({"Find the next number in the pattern: 1, 4, 7, 10, ?", {"11", "13", "15", "12"}, 1, 3});
-    questions.append({"Convert 0.8 to a fraction", {"4/5", "1/2", "3/4", "2/3"}, 0, 3});
-    questions.append({"Find the area of a rectangle with width 6 and height 9", {"54", "48", "36", "45"}, 0, 3});
-    questions.append({"Which number is greater: -4 or -9?", {"-4", "-9", "They are equal", "Can't determine"}, 0, 3});
-    questions.append({"What is the square root of 81?", {"8", "9", "10", "11"}, 1, 3});
+    int userGrade = UserSession::getInstance()->getGrade();
 
-    // Medium (5 points)
-    questions.append({"Factorize: x^2 - 49", {"(x - 7)(x + 7)", "(x - 9)(x + 2)", "(x - 4)(x + 8)", "(x - 49)(x + 1)"}, 0, 5});
-    questions.append({"Solve: 4x - 7 = 9", {"4", "6", "3", "5"}, 1, 5});
-    questions.append({"Find the y-intercept of y = 5x - 8", {"5", "-8", "0", "8"}, 1, 5});
-    questions.append({"Simplify: (x^5 * x^2)", {"x^7", "x^6", "x^3", "x^2"}, 0, 5});
-    questions.append({"Solve for x: x^2 - 64 = 0", {"8, -8", "64, -64", "0, 8", "-8, 0"}, 0, 5});
-    questions.append({"Find the solution to 5x + 4 = 19", {"3", "2", "5", "4"}, 0, 5});
-    questions.append({"Expand: (x - 2)(x + 7)", {"x^2 + 5x - 14", "x^2 - 9x + 14", "x^2 - 14", "x^2 + 9x + 14"}, 0, 5});
-    questions.append({"Solve for x: 4(x + 2) = 20", {"2", "4", "5", "3"}, 2, 5});
-    questions.append({"Find the slope of the line passing through (3,5) and (6,11)", {"2", "3", "1", "4"}, 0, 5});
-    questions.append({"Solve for x in 7x - 3 = 5x + 9", {"x = 6", "x = 3", "x = 5", "x = 4"}, 3, 5});
+    if (userGrade == 8) {
+        // Easy (3 points)
+        questions.append({"What is 4 + 6?", {"10", "9", "7", "6"}, 0, 3});
+        questions.append({"Simplify: 3(x + 4)", {"3x + 12", "3x + 7", "9x + 4", "3x + 3"}, 0, 3});
+        questions.append({"Solve for x: 5x = 25", {"5", "4", "3", "6"}, 0, 3});
+        questions.append({"Expand: (x + 3)(x + 5)", {"x^2 + 8x + 15", "x^2 + 6x + 15", "x^2 + 8x + 10", "x^2 + 6x + 10"}, 0, 3});
+        questions.append({"What is the slope of y = 2x + 4?", {"2", "4", "1", "-2"}, 0, 3});
+        questions.append({"What is 10 - (-2)?", {"12", "8", "9", "7"}, 0, 3});
+        questions.append({"Find the value of 4 × (3 + 2)", {"20", "18", "16", "22"}, 0, 3});
+        questions.append({"Solve for x: x/4 = 5", {"20", "3", "6", "4"}, 0, 3});
+        questions.append({"What is the sum of interior angles in a rectangle?", {"360°", "180°", "90°", "270°"}, 0, 3});
+        questions.append({"What is 3 squared?", {"9", "12", "6", "3"}, 0, 3});
+        questions.append({"Find the next number in the pattern: 3, 6, 9, 12, ?", {"15", "13", "14", "16"}, 0, 3});
+        questions.append({"Convert 0.75 to a fraction", {"3/4", "2/3", "5/6", "1/2"}, 0, 3});
+        questions.append({"Find the area of a rectangle with width 5 and height 4", {"20", "22", "18", "24"}, 0, 3});
+        questions.append({"Which number is greater: -4 or -8?", {"-4", "-8", "They are equal", "Can't determine"}, 0, 3});
+        questions.append({"What is the square root of 16?", {"4", "3", "5", "6"}, 0, 3});
 
-    // Hard (7 points)
-    questions.append({"Solve for x: 2x^2 - 10x + 12 = 0", {"x = 2, 3", "x = 1, 5", "x = 2, 4", "x = 0, 4"}, 0, 7});
-    questions.append({"Find the determinant of the matrix |4 3| |2 7|", {"22", "23", "24", "25"}, 0, 7});
-    questions.append({"Find the roots of x^2 - 7x - 8 = 0", {"x = 8, -1", "x = 6, -2", "x = 5, -3", "x = 7, -4"}, 0, 7});
-    questions.append({"Convert 4x - 3y = 12 to slope-intercept form", {"y = 4/3x - 4", "y = 3/4x - 3", "y = -4/3x + 4", "y = -3/4x + 3"}, 2, 7});
-    questions.append({"Find the inverse of the matrix |3 4| |2 5|", {"|-5 4| |2 -3|", "|5 -4| |-2 3|", "|3 -4| |-2 5|", "|-3 4| |2 -5|"}, 3, 7});
-    questions.append({"Solve for x: x^2 - 8x + 15 = 0", {"x = 3, 5", "x = 2, 6", "x = 1, 7", "x = -2, 3"}, 0, 7});
-    questions.append({"Find the intersection of y = x + 2 and y = -2x + 8", {"(2,4)", "(3,3)", "(1,5)", "(4,2)"}, 0, 7});
-    questions.append({"Find the cube root of 125", {"5", "4", "3", "6"}, 0, 7});
+        // Medium (5 points)
+        questions.append({"Factorize: x^2 - 9", {"(x - 3)(x + 3)", "(x - 4)(x + 4)", "(x - 2)(x + 5)", "(x - 1)(x + 9)"}, 0, 5});
+        questions.append({"Solve: 4x + 6 = 18", {"3", "4", "2", "5"}, 1, 5});
+        questions.append({"Find the y-intercept of y = 3x - 7", {"-7", "7", "3", "0"}, 0, 5});
+        questions.append({"Simplify: (x^2 * x^3)", {"x^5", "x^4", "x^6", "x^3"}, 0, 5});
+        questions.append({"Solve for x: x^2 - 25 = 0", {"5, -5", "-5, 5", "10, -10", "-10, 10"}, 0, 5});
+        questions.append({"Find the solution to 3x + 9 = 18", {"3", "4", "2", "6"}, 1, 5});
+        questions.append({"Expand: (x - 3)(x + 5)", {"x^2 + 2x - 15", "x^2 - 2x - 15", "x^2 + 5x - 15", "x^2 - 3x + 15"}, 0, 5});
+        questions.append({"Solve for x: 2(x + 3) = 14", {"4", "5", "7", "6"}, 1, 5});
+        questions.append({"Find the slope of the line passing through (1, 3) and (4, 7)", {"4/3", "2", "1/3", "3/4"}, 1, 5});
+        questions.append({"Solve for x in 6x - 4 = 18", {"x = 3", "x = 2", "x = 4", "x = 6"}, 1, 5});
+        questions.append({"Solve: 5x - 3 = 4x + 7", {"x = 10", "x = 4", "x = -10", "x = -4"}, 1, 5});
+        questions.append({"Find the y-intercept of y = 2x - 4", {"-4", "4", "2", "0"}, 0, 5});
+        questions.append({"Simplify: 3(x^2 + 2x)", {"3x^2 + 6x", "3x^2 + 5x", "2x^2 + 6x", "x^2 + 2x"}, 0, 5});
+        questions.append({"Solve for x: 5x - 2 = 3x + 6", {"x = 4", "x = 3", "x = 2", "x = 5"}, 1, 5});
+        questions.append({"Expand: (x + 7)(x + 2)", {"x^2 + 9x + 14", "x^2 + 7x + 14", "x^2 + 10x + 14", "x^2 + 9x + 15"}, 0, 5});
+        questions.append({"Find the slope of the line passing through (2, 1) and (6, 5)", {"1", "4/3", "1/3", "2"}, 0, 5});
+        questions.append({"Solve for x in 7x - 4 = 3x + 12", {"x = 4", "x = 3", "x = 2", "x = 5"}, 1, 5});
+
+        // Hard (7 points)
+        questions.append({"Solve for x: x^2 - 8x + 16 = 0", {"x = 4", "x = -4", "x = 8", "x = -8"}, 0, 7});
+        questions.append({"Find the determinant of the matrix |2 3| |5 6|", {"-1", "2", "12", "15"}, 1, 7});
+        questions.append({"Find the roots of x^2 - 6x + 9 = 0", {"x = 3", "x = -3", "x = 2", "x = -2"}, 0, 7});
+        questions.append({"Convert 2x + 3y = 7 to slope-intercept form", {"y = -2/3x + 7/3", "y = 3/2x - 7", "y = -3/2x + 7", "y = 2x + 3"}, 0, 7});
+        questions.append({"Find the inverse of the matrix |1 2| |3 4|", {"|4 -2| |-3 1|", "|4 -3| |-2 1|", "|3 -1| |-4 2|", "|2 -1| |-3 4|"}, 2, 7});
+        questions.append({"Solve for x: x^2 - 9x + 20 = 0", {"x = 5, -4", "x = -5, 4", "x = 2, -10", "x = -2, 10"}, 0, 7});
+        questions.append({"Find the intersection of y = 4x + 3 and y = -x + 5", {"(1, 5)", "(2, 4)", "(3, 2)", "(4, 1)"}, 0, 7});
+        questions.append({"Find the cube root of 125", {"5", "4", "3", "6"}, 0, 7});
+        questions.append({"Find the roots of x^2 - 5x - 14 = 0", {"x = 7, -2", "x = -7, 2", "x = -5, 14", "x = 5, -14"}, 0, 7});
+        questions.append({"Convert 3x + 2y = 10 to slope-intercept form", {"y = -3/2x + 5", "y = 3/2x - 10", "y = -2/3x + 5", "y = 2x + 3"}, 0, 7});
+        questions.append({"Find the inverse of the matrix |2 4| |3 5|", {"|5 -4| |-3 2|", "|5 -3| |-4 2|", "|3 -5| |-2 4|", "|4 -2| |-5 3|"}, 3, 7});
+        questions.append({"Solve for x: x^2 + 4x - 12 = 0", {"x = 2, -6", "x = -2, 6", "x = 6, -2", "x = -6, 2"}, 0, 7});
+        questions.append({"Find the intersection of y = 5x - 2 and y = -x + 7", {"(1, 3)", "(2, 4)", "(3, 5)", "(0, 7)"}, 0, 7});
+    }
+    else if(userGrade == 9) {
+        // Easy (3 points)
+        questions.append({"What is 9 + (-4)?", {"5", "6", "3", "8"}, 0, 3});
+        questions.append({"Simplify: 2(x - 3)", {"2x - 6", "2x + 6", "3x - 6", "2x - 9"}, 0, 3});
+        questions.append({"Solve for x: 5x = 20", {"4", "5", "3", "6"}, 1, 3});
+        questions.append({"Expand: (x + 2)(x - 5)", {"x^2 - 3x - 10", "x^2 - 3x + 10", "x^2 - 7x + 10", "x^2 + 7x - 10"}, 0, 3});
+        questions.append({"What is the slope of the line y = -2x + 4?", {"-2", "2", "-4", "4"}, 0, 3});
+        questions.append({"What is 10 - (-5)?", {"15", "5", "10", "20"}, 0, 3});
+        questions.append({"Find the value of 3 × (4 + 2)", {"18", "12", "10", "14"}, 0, 3});
+        questions.append({"Solve for x: x/5 = 8", {"40", "35", "45", "50"}, 0, 3});
+        questions.append({"What is the sum of interior angles in a pentagon?", {"540°", "360°", "720°", "180°"}, 0, 3});
+        questions.append({"What is 7 squared?", {"49", "56", "42", "56"}, 0, 3});
+        questions.append({"Find the next number in the pattern: 1, 3, 5, 7, ?", {"9", "10", "8", "11"}, 0, 3});
+
+        // Medium (5 points)
+        questions.append({"Factorize: x^2 - 25", {"(x - 5)(x + 5)", "(x - 10)(x + 2)", "(x - 2)(x + 2)", "(x - 7)(x + 7)"}, 0, 5});
+        questions.append({"Solve: 4x - 7 = 9", {"4", "5", "6", "3"}, 0, 5});
+        questions.append({"Find the y-intercept of y = -3x + 5", {"5", "-3", "3", "-5"}, 0, 5});
+        questions.append({"Simplify: (x^2 * x^3)", {"x^5", "x^6", "x^3", "x^4"}, 0, 5});
+        questions.append({"Solve for x: x^2 - 49 = 0", {"7, -7", "49, -49", "14, -14", "-7, 7"}, 0, 5});
+        questions.append({"Find the solution to 3x + 4 = 13", {"3", "4", "5", "6"}, 0, 5});
+        questions.append({"Expand: (x - 4)(x + 7)", {"x^2 + 3x - 28", "x^2 - 3x - 28", "x^2 + 3x + 28", "x^2 - 3x + 28"}, 0, 5});
+        questions.append({"Solve for x: 4(x + 3) = 20", {"2", "3", "4", "5"}, 1, 5});
+        questions.append({"Find the slope of the line passing through (1, 2) and (4, 8)", {"2", "3", "1", "5"}, 0, 5});
+        questions.append({"Solve for x in 7x + 2 = 23", {"3", "4", "5", "6"}, 1, 5});
+
+        // Hard (7 points)
+        questions.append({"Solve for x: x^2 - 12x + 36 = 0", {"x = 6", "x = -6", "x = 12", "x = -12"}, 0, 7});
+        questions.append({"Find the determinant of the matrix |2 4| |5 3|", {"-14", "5", "7", "3"}, 0, 7});
+        questions.append({"Find the roots of x^2 - 4x - 5 = 0", {"x = -1, 5", "x = 1, -5", "x = -5, 1", "x = 5, -1"}, 0, 7});
+        questions.append({"Convert 2x + 3y = 12 to slope-intercept form", {"y = -2/3x + 4", "y = 2/3x + 4", "y = -2x + 4", "y = 2x + 4"}, 0, 7});
+        questions.append({"Find the inverse of the matrix |1 2| |3 5|", {"|5 -2| |-3 1|", "|5 -3| |-2 1|", "|3 -1| |-5 2|", "|2 -1| |-3 1|"}, 2, 7});
+        questions.append({"Solve for x: x^2 - 10x + 25 = 0", {"x = 5", "x = -5", "x = 0", "x = 10"}, 0, 7});
+        questions.append({"Find the intersection of y = 4x - 1 and y = -x + 6", {"(1, 3)", "(2, 4)", "(3, 5)", "(0, 4)"}, 0, 7});
+        questions.append({"Find the cube root of 64", {"4", "2", "3", "5"}, 0, 7});
+    }
+    else if(userGrade == 10) {
+        // Easy (3 points)
+        questions.append({"Solve for x: 2x - 5 = 9", {"7", "6", "5", "4"}, 0, 3});
+        questions.append({"Simplify: 6(x + 1) - 4(x - 2)", {"2x + 14", "3x + 12", "4x + 12", "2x + 10"}, 0, 3});
+        questions.append({"What is the value of f(x) if f(x) = 2x - 3 when x = 4?", {"5", "7", "8", "6"}, 0, 3});
+        questions.append({"Expand: (x + 2)(x - 5)", {"x^2 - 3x - 10", "x^2 - 7x + 10", "x^2 + 3x - 10", "x^2 + x - 10"}, 0, 3});
+        questions.append({"Find the roots of x^2 - 16 = 0", {"4, -4", "-4, 4", "8, -8", "2, -2"}, 0, 3});
+        questions.append({"Solve for x: 3x - 4 = 11", {"5", "6", "7", "8"}, 0, 3});
+        questions.append({"What is the slope of the line y = 2x + 3?", {"2", "-2", "3", "1"}, 0, 3});
+        questions.append({"Solve for x: 4(x + 5) = 24", {"3", "4", "5", "6"}, 1, 3});
+        questions.append({"Find the area of a rectangle with width 7 and height 9", {"63", "56", "72", "60"}, 0, 3});
+        questions.append({"What is the square root of 81?", {"9", "8", "7", "10"}, 1, 3});
+
+        // Medium (5 points)
+        questions.append({"Solve for x: x^2 + 3x - 10 = 0", {"2, -5", "5, -2", "-5, 2", "10, -1"}, 0, 5});
+        questions.append({"Find the discriminant of the quadratic equation x^2 - 4x + 4 = 0", {"16", "4", "0", "8"}, 0, 5});
+        questions.append({"Simplify: 3(x^2 - 4x + 3)", {"3x^2 - 12x + 9", "3x^2 - 12x + 6", "3x^2 - 6x + 6", "3x^2 + 12x + 9"}, 0, 5});
+        questions.append({"Solve the system of equations: y = 2x + 1 and y = -x + 6", {"(2, 5)", "(1, 4)", "(3, 7)", "(0, 1)"}, 1, 5});
+        questions.append({"Factorize: x^2 - 10x + 25", {"(x - 5)^2", "(x - 2)^2", "(x - 10)(x + 10)", "(x - 3)(x + 3)"}, 0, 5});
+        questions.append({"Solve for x: 4x^2 + 8x - 12 = 0", {"x = -3/2, 1", "x = -1/2, 3", "x = 1, -3", "x = 3/2, -1"}, 1, 5});
+        questions.append({"Simplify: (x^3 + 4x^2 - x) - (x^3 - 3x^2 + 5x)", {"7x^2 - 6x", "x^2 + 6x", "7x^2 - 4x", "7x^2 + 4x"}, 0, 5});
+        questions.append({"Solve for x: x^2 + 6x - 9 = 0", {"3, -3", "-3, 3", "1, -9", "-1, 9"}, 0, 5});
+        questions.append({"Find the equation of the line that passes through the points (0, 2) and (4, 6)", {"y = x + 2", "y = 2x + 2", "y = 2x - 2", "y = x + 1"}, 0, 5});
+
+        // Hard (7 points)
+        questions.append({"Solve for x: 2x^2 + 6x - 8 = 0", {"x = 1, -4", "x = 2, -3", "x = -2, 3", "x = 3, -2"}, 0, 7});
+        questions.append({"Find the determinant of the matrix |1 3| |2 5|", {"-1", "1", "3", "5"}, 0, 7});
+        questions.append({"Solve the system of equations: 3x - 4y = 10 and x + 2y = 7", {"(4, 2)", "(5, 1)", "(2, 3)", "(1, 4)"}, 0, 7});
+        questions.append({"Convert 3x - 5y = 15 to slope-intercept form", {"y = 3/5x - 3", "y = 5/3x - 3", "y = -3x + 5", "y = 5x + 3"}, 0, 7});
+        questions.append({"Find the inverse of the matrix |1 4| |2 3|", {"|3 -4| |-2 1|", "|3 -2| |-4 1|", "|2 -4| |-3 1|", "|1 -3| |-4 2|"}, 2, 7});
+    }
 }
 
 

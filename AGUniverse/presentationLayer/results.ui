@@ -616,13 +616,13 @@ border-radius:35px;</string>
     <bool>true</bool>
    </property>
   </widget>
+  <zorder>englishBox</zorder>
   <zorder>frame_2</zorder>
   <zorder>resultsTitle</zorder>
   <zorder>mathsBox</zorder>
   <zorder>biologyBox</zorder>
   <zorder>biologyTitle</zorder>
   <zorder>englishButton</zorder>
-  <zorder>englishBox</zorder>
   <zorder>biology_Icon</zorder>
   <zorder>maths_Icon</zorder>
   <zorder>mathsTitle</zorder>

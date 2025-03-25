@@ -15,6 +15,9 @@ public:
     explicit englishResults(QWidget *parent = nullptr);
     ~englishResults();
 
+private slots:
+    void loadResults();
+
 private:
     Ui::englishResults *ui;
 };

@@ -10,6 +10,7 @@
   <img src="https://img.shields.io/github/languages/count/codingburgas/sprint-eschool-ag-universe?color=blue" alt="Languages">
   <img src="https://img.shields.io/github/last-commit/codingburgas/sprint-eschool-ag-universe?color=red" alt="Last Commit">
   <img src="https://img.shields.io/github/issues-closed/codingburgas/sprint-eschool-ag-universe?color=gold" alt="Closed Issues">
+  <img alt="GitHub commit activity (branch)" src="https://img.shields.io/github/commit-activity/t/codingburgas/sprint-eschool-ag-universe">
 </p>
 
 

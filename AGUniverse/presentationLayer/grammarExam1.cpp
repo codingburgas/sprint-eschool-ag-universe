@@ -5,6 +5,8 @@
 #include <QMessageBox>
 #include "fontutils.h"
 #include "../dataAccessLayer/userSession.h"
+#include <QDateTime>
+#include <QFile>
 
 grammarExam1::grammarExam1(QWidget *parent)
     : QWidget(parent)
@@ -278,5 +280,20 @@ void grammarExam1::quizFinished() {
     usedIndices.clear();  // Reset for a new session
     grammar *mainMenu = new grammar();
     mainMenu->show();
+    QString userUsername = UserSession::getInstance()->getUsername();
+    QString examName = "grammarExam1";
+
+    QFile file("../../dataAccessLayer/english_results.txt");
+
+    if (file.open(QIODevice::Append | QIODevice::Text)) {
+        QTextStream out(&file);
+        QString resultLine = userUsername + "," + examName + "," + QString::number(percentageGRE1) + ","
+                             + QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss") + "\n";
+        out  << resultLine;
+        return;
+    }
+
+
+    file.close();
     this->close();
 }

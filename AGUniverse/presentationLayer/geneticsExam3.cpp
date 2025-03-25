@@ -5,6 +5,8 @@
 #include "fontutils.h"
 #include "genetics.h"
 #include "../dataAccessLayer/userSession.h"
+#include <QDateTime>
+#include <QFile>
 
 geneticsExam3::geneticsExam3(QWidget *parent)
     : QWidget(parent)
@@ -229,5 +231,20 @@ void geneticsExam3::quizFinished() {
     usedIndices.clear();  // Reset for a new session
     class genetics *mainMenu = new class genetics();
     mainMenu->show();
+    QString userUsername = UserSession::getInstance()->getUsername();
+    QString examName = "geneticsExam3";
+
+    QFile file("../../dataAccessLayer/biology_results.txt");
+
+    if (file.open(QIODevice::Append | QIODevice::Text)) {
+        QTextStream out(&file);
+        QString resultLine = userUsername + "," + examName + "," + QString::number(percentageGE3) + ","
+                             + QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss") + "\n";
+        out  << resultLine;
+        return;
+    }
+
+
+    file.close();
     this->close();
 }

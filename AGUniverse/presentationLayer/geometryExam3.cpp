@@ -5,6 +5,8 @@
 #include "fontutils.h"
 #include "geometry.h"
 #include "../dataAccessLayer/userSession.h"
+#include <QDateTime>
+#include <QFile>
 
 geometryExam3::geometryExam3(QWidget *parent)
     : QWidget(parent)
@@ -278,5 +280,20 @@ void geometryExam3::quizFinished() {
     usedIndices.clear();  // Reset for a new session
     class geometry *mainMenu = new class geometry();
     mainMenu->show();
+    QString userUsername = UserSession::getInstance()->getUsername();
+    QString examName = "geometryExam3";
+
+    QFile file("../../dataAccessLayer/math_results.txt");
+
+    if (file.open(QIODevice::Append | QIODevice::Text)) {
+        QTextStream out(&file);
+        QString resultLine = userUsername + "," + examName + "," + QString::number(percentageGEE3) + ","
+                             + QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss") + "\n";
+        out  << resultLine;
+        return;
+    }
+
+
+    file.close();
     this->close();
 }

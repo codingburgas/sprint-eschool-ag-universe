@@ -5,6 +5,8 @@
 #include <QMessageBox>
 #include "fontutils.h"
 #include "../dataAccessLayer/userSession.h"
+#include <QFile>
+#include <QDateTime>
 
 algebraExam3::algebraExam3(QWidget *parent)
     : QWidget(parent)
@@ -253,5 +255,20 @@ void algebraExam3::quizFinished() {
     usedIndices.clear();  // Reset for a new session
     algebra *mainMenu = new algebra();
     mainMenu->show();
+    QString userUsername = UserSession::getInstance()->getUsername();
+    QString examName = "algebraExam3";
+
+    QFile file("../../dataAccessLayer/math_results.txt");
+
+    if (file.open(QIODevice::Append | QIODevice::Text)) {
+        QTextStream out(&file);
+        QString resultLine = userUsername + "," + examName + "," + QString::number(percentageAE3) + ","
+                             + QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss") + "\n";
+        out  << resultLine;
+        return;
+    }
+
+
+    file.close();
     this->close();
 }

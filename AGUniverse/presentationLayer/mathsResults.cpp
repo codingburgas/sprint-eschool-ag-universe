@@ -1,5 +1,5 @@
 #include "mathsResults.h"
-#include "ui_mathsResults.h"
+#include "presentationLayer/ui_mathsResults.h"
 
 #include <QFile>
 #include <QTextStream>

@@ -182,6 +182,9 @@ qt_add_executable(AGUniverse
     dataAccessLayer/database.h
     dataAccessLayer/users.txt
     dataAccessLayer/feedback.txt
+    dataAccessLayer/math_results.txt
+    dataAccessLayer/biology_results.txt
+    dataAccessLayer/english_results.txt
 
     dataAccessLayer/userSession.cpp
     dataAccessLayer/userSession.h

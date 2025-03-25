@@ -5,6 +5,8 @@
 #include "fontutils.h"
 #include "cellBiology.h"
 #include "../dataAccessLayer/userSession.h"
+#include <QDateTime>
+#include <QFile>
 
 cellBiologyExam2::cellBiologyExam2(QWidget *parent)
     : QWidget(parent)
@@ -226,5 +228,20 @@ void cellBiologyExam2::quizFinished() {
     usedIndices.clear();  // Reset for a new session
     class cellBiology *mainMenu = new class cellBiology();
     mainMenu->show();
+    QString userUsername = UserSession::getInstance()->getUsername();
+    QString examName = "cellBiologyExam2";
+
+    QFile file("../../dataAccessLayer/biology_results.txt");
+
+    if (file.open(QIODevice::Append | QIODevice::Text)) {
+        QTextStream out(&file);
+        QString resultLine = userUsername + "," + examName + "," + QString::number(percentageCBE2) + ","
+                             + QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss") + "\n";
+        out  << resultLine;
+        return;
+    }
+
+
+    file.close();
     this->close();
 }

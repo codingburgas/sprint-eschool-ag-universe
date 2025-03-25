@@ -5,6 +5,8 @@
 #include <QMessageBox>
 #include "fontutils.h"
 #include "../dataAccessLayer/userSession.h"
+#include <QDateTime>
+#include <QFile>
 
 vocabularyExam2::vocabularyExam2(QWidget *parent)
     : QWidget(parent)
@@ -247,5 +249,20 @@ void vocabularyExam2::quizFinished() {
     usedIndices.clear();  // Reset for a new session
     vocabulary *mainMenu = new vocabulary();
     mainMenu->show();
+    QString userUsername = UserSession::getInstance()->getUsername();
+    QString examName = "vocabularyExam2";
+
+    QFile file("../../dataAccessLayer/english_results.txt");
+
+    if (file.open(QIODevice::Append | QIODevice::Text)) {
+        QTextStream out(&file);
+        QString resultLine = userUsername + "," + examName + "," + QString::number(percentageVE2) + ","
+                             + QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss") + "\n";
+        out  << resultLine;
+        return;
+    }
+
+
+    file.close();
     this->close();
 }

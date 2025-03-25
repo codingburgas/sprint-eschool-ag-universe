@@ -5,6 +5,8 @@
 #include <QMessageBox>
 #include "fontutils.h"
 #include "../dataAccessLayer/userSession.h"
+#include <QDateTime>
+#include <QFile>
 
 algebraExam1::algebraExam1(QWidget *parent)
     : QWidget(parent)
@@ -32,6 +34,7 @@ algebraExam1::algebraExam1(QWidget *parent)
     setCustomFontAura(ui->answer_3, 32);
     setCustomFontAura(ui->answer_4, 32);
     setCustomFontAura(ui->next, 32);
+
 }
 
 algebraExam1::~algebraExam1()
@@ -264,9 +267,25 @@ void algebraExam1::showResults() {
     quizFinished();
 }
 
+
 void algebraExam1::quizFinished() {
     usedIndices.clear();  // Reset for a new session
     algebra *mainMenu = new algebra();
     mainMenu->show();
+    QString userUsername = UserSession::getInstance()->getUsername();
+    QString examName = "algebraExam1";
+
+    QFile file("../../dataAccessLayer/math_results.txt");
+
+    if (file.open(QIODevice::Append | QIODevice::Text)) {
+        QTextStream out(&file);
+        QString resultLine = userUsername + "," + examName + "," + QString::number(percentageAE1) + ","
+                             + QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss") + "\n";
+        out  << resultLine;
+        return;
+    }
+
+
+    file.close();
     this->close();
 }

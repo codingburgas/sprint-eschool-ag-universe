@@ -50,12 +50,6 @@ exams::exams(QWidget *parent)
     setCustomFontAura(ui->biologyTitle, 50);
     setCustomFontCT(ui->label, 12);
 
-    connect(ui->examsButton, &QPushButton::clicked, this, &exams::on_examsButton_clicked);
-    connect(ui->resultsButton, &QPushButton::clicked, this, &exams::on_resultsButton_clicked);
-    connect(ui->programButton, &QPushButton::clicked, this, &exams::on_programButton_clicked);
-    connect(ui->inboxButton, &QPushButton::clicked, this, &exams::on_inboxButton_clicked);
-    connect(ui->profileButton, &QPushButton::clicked, this, &exams::on_profileButton_clicked);
-    connect(ui->logoutButton, &QPushButton::clicked, this, &exams::on_logoutButton_clicked);
 }
 
 exams::~exams()

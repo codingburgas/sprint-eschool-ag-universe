@@ -144,6 +144,18 @@ qt_add_executable(AGUniverse
     presentationLayer/results.h
     presentationLayer/results.ui
 
+    presentationLayer/mathsResults.cpp
+    presentationLayer/mathsResults.h
+    presentationLayer/mathsResults.ui
+
+    presentationLayer/englishResults.cpp
+    presentationLayer/englishResults.h
+    presentationLayer/englishResults.ui
+
+    presentationLayer/biologyResults.cpp
+    presentationLayer/biologyResults.h
+    presentationLayer/biologyResults.ui
+
     presentationLayer/program.cpp
     presentationLayer/program.h
     presentationLayer/program.ui

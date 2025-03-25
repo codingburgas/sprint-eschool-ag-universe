@@ -17,7 +17,7 @@
 
  ---
 
-## 📌 ${\color{blue}Table \ of\ contents}$
+## 📌 Table of contents
 - [About the Project](#about)
 - [Documentation](#docs)
 - [Installation & Setup](#install)
@@ -26,18 +26,18 @@
 
 ---
 
-## 🔍 ${\color{green}Description}$ <a name="about"></a>
+## 🔍 Description <a name="about"></a>
 Our idea is to create an E-School platform that has multiple exams in the Mathematics, Biology and English fields that you can complete for a grade. It also has a timetable, events, customisable profile and more, that can help you ease up on your school experience!
 
 ---
 
-## 📃 ${\color{red}Documentation \ and \  Presentation }$  <a name="docs"></a>
+## 📃 Documentation and  Presentation   <a name="docs"></a>
 - 📜 [Documentation](https://codingburgas-my.sharepoint.com/:w:/g/personal/dhpapazian23_codingburgas_bg/EcTNIidnRXhEqHABsMUO8BIB0NiLelUMLXQizeLQBf1Qfg?e=9i1p57)
 - 🎤 [Presentation](https://codingburgas-my.sharepoint.com/:p:/g/personal/dhpapazian23_codingburgas_bg/ETMPw1Us7qlHjt47fed5NNUBoC1rrFlWbWB5GLTFpnWHaQ?rtime=9B8paMdr3Ug)
 
 ---
 
-## 🚀 $${\color{lightblue}Installation \ and \ Setup}$$ <a name="install"></a> 
+## 🚀 Installation  and  Setup <a name="install"></a> 
 
 1️⃣ **Clone our project:**
 ```sh
@@ -47,7 +47,7 @@ Our idea is to create an E-School platform that has multiple exams in the Mathem
 
 ---
 
-## 💻 $${\color{lightgreen}Tech \ Stack}$$ <a name="technologies"></a>
+## 💻Tech Stack <a name="technologies"></a>
 
 ###  Tools:
 <p>
@@ -62,17 +62,24 @@ Our idea is to create an E-School platform that has multiple exams in the Mathem
   <img src="AGUniverse/assets/readme/C++.png" alt="C++ Icon" width=75px>
 </p>
 
-###  Programs for documentation, communication and design: :
+### Comunication: 
+<img src="AGUniverse/assets/readme/teams.png" alt="Teams Icon" width=75px>
+
+### Documentation: 
 <p>
-  <img src="AGUniverse/assets/readme/teams.png" alt="Teams Icon" width=75px>
   <img src="AGUniverse/assets/readme/Word.png" alt="Word Icon" width=75px>
   <img src="AGUniverse/assets/readme/Powerpoint.png" alt="Powerpoint Icon" width=75px>
-  <img src="AGUniverse/assets/readme/Photoshop.jpg" alt="Photoshop Icon" width=75px>
+</p>
+
+### Design: 
+
+<p>
+  <img src="AGUniverse/assets/readme/Photoshop.png" alt="Photoshop Icon" width=75px>
   <img src="AGUniverse/assets/readme/figma.png" alt="Figma Icon" width=75px>
 </p>
 
 ---
- ## 👥 ${\color{green}Team}$ <a name="team"></a>
+ ## 👥 Team <a name="team"></a>
 
 | Name | Role | Grade |
 | :---:   | :---: | :---: |

@@ -2,3 +2,5 @@ GZPavlov23,grammarExam1,42.2222,2025-03-25 19:25:33
 GZPavlov23,vocabularyExam2,0,2025-03-25 19:30:11
 GZPavlov23,grammarExam1,13.9535,2025-03-25 19:50:14
 GZPavlov23,grammarExam3,8.10811,2025-03-25 19:53:16
+GZPavlov23,vocabularyExam3,34.6939,2025-03-25 20:48:10
+GZPavlov23,vocabularyExam2,27.451,2025-03-25 20:48:18

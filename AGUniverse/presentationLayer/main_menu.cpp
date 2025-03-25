@@ -1,7 +1,7 @@
 #include "main_menu.h"
 #include "presentationLayer/ui_main_menu.h"
 #include "login.h"
-#include "feedback.h"//;
+#include "feedback.h"
 #include "profile.h"
 #include "fontutils.h"
 #include <QPixmap>

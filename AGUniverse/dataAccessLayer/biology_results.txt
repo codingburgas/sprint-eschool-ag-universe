@@ -1,2 +1,10 @@
 GZPavlov23,cellBiologyExam1,38.4615,2025-03-25 19:20:14
 GZPavlov23,cellBiologyExam1,35.7143,2025-03-25 19:20:38
+GZPavlov23,cellBiologyExam3,6.66667,2025-03-25 21:00:30
+GZPavlov23,cellBiologyExam2,38.4615,2025-03-25 21:00:39
+GZPavlov23,geneticsExam1,33.3333,2025-03-25 21:00:51
+GZPavlov23,geneticsExam2,26.6667,2025-03-25 21:00:59
+GZPavlov23,geneticsExam2,11.6279,2025-03-25 21:01:06
+GZPavlov23,geneticsExam1,0,2025-03-25 21:01:15
+GZPavlov23,geneticsExam3,16.2791,2025-03-25 21:01:29
+DHPapazian23,geneticsExam1,7.31707,2025-03-25 21:13:25

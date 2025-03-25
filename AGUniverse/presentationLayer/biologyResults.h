@@ -14,6 +14,15 @@ class biologyResults : public QWidget
 public:
     explicit biologyResults(QWidget *parent = nullptr);
     ~biologyResults();
+private slots:
+    void loadResults();
+    void on_examsButton_clicked();
+    void on_resultsButton_clicked();
+    void on_programButton_clicked();
+    void on_inboxButton_clicked();
+    void on_profileButton_clicked();
+    void on_logoutButton_clicked();
+    void on_lessonsButton_clicked();
 
 private:
     Ui::biologyResults *ui;

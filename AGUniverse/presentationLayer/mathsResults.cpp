@@ -13,6 +13,7 @@ mathsResults::mathsResults(QWidget *parent)
     , ui(new Ui::mathsResults)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Maths Results");
     loadResults();
 
     QPixmap logoIcon(":/assets/images/Logo1.png");

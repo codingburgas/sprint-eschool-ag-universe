@@ -14,7 +14,7 @@ english::english(QWidget *parent)
     , ui(new Ui::english)
 {
     ui->setupUi(this);
-    this->setWindowTitle("English Page");
+    this->setWindowTitle("English Exams");
     QPixmap logoIcon(":/assets/images/Logo1.png");
     QPixmap examIcon(":/assets/images/exams_icon.png");
     QPixmap programIcon(":/assets/images/program_icon.png");

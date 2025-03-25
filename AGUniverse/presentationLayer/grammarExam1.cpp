@@ -17,6 +17,7 @@ grammarExam1::grammarExam1(QWidget *parent)
     , selectedAnswerIndex(-1)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Grammar Exam 1");
     loadQuestions();
     displayRandomQuestion();
 

@@ -15,7 +15,7 @@ algebra::algebra(QWidget *parent)
 // Constructor for the algebra class
 {
     ui->setupUi(this);
-    this->setWindowTitle("Algebra exams"); // Set window title
+    this->setWindowTitle("Algebra Exams"); // Set window title
 
     // Load images for page
     QPixmap logoIcon(":/assets/images/Logo1.png");

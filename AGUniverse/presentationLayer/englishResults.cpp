@@ -13,6 +13,7 @@ englishResults::englishResults(QWidget *parent)
     , ui(new Ui::englishResults)
 {
     ui->setupUi(this);
+    this->setWindowTitle("English Results");
     loadResults();
 
     QPixmap logoIcon(":/assets/images/Logo1.png");

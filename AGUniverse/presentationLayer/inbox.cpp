@@ -11,7 +11,7 @@ inbox::inbox(QWidget *parent)
     , ui(new Ui::inbox)
 {
     ui->setupUi(this);
-    this->setWindowTitle("Inbox Page");
+    this->setWindowTitle("Inbox");
     QPixmap logoIcon(":/assets/images/Logo1.png");
     QPixmap examIcon(":/assets/images/exams_icon.png");
     QPixmap programIcon(":/assets/images/program_icon.png");

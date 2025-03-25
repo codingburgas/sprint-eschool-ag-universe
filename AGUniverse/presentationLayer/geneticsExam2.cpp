@@ -17,6 +17,7 @@ geneticsExam2::geneticsExam2(QWidget *parent)
     , selectedAnswerIndex(-1)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Genetics and Heredity Exam 2");
     loadQuestions();
     displayRandomQuestion();
 

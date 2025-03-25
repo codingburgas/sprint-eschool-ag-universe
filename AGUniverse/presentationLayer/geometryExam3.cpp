@@ -17,6 +17,7 @@ geometryExam3::geometryExam3(QWidget *parent)
     , selectedAnswerIndex(-1)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Geometry Exam 3");
     loadQuestions();
     displayRandomQuestion();
 

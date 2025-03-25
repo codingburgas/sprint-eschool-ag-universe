@@ -15,7 +15,7 @@ geometry::geometry(QWidget *parent)
 {
 
     ui->setupUi(this);
-    this->setWindowTitle("Geometry exams");
+    this->setWindowTitle("Geometry Exams");
     QPixmap logoIcon(":/assets/images/Logo1.png");
     QPixmap examIcon(":/assets/images/exams_icon.png");
     QPixmap programIcon(":/assets/images/program_icon.png");

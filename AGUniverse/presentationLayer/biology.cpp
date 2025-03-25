@@ -16,7 +16,7 @@ biology::biology(QWidget *parent)
 // Constructor for the biology class
 {
     ui->setupUi(this); // Set up the UI
-    this->setWindowTitle("Biology Page"); // Set the window title
+    this->setWindowTitle("Biology Exams"); // Set the window title
 
     // Load images for the label and buttons in the UI
     QPixmap logoIcon(":/assets/images/Logo1.png");

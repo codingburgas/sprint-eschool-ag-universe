@@ -14,7 +14,7 @@ genetics::genetics(QWidget *parent)
     , ui(new Ui::genetics)
 {
     ui->setupUi(this);
-    this->setWindowTitle("Genetics and Heredity exams");
+    this->setWindowTitle("Genetics and Heredity Exams");
     QPixmap logoIcon(":/assets/images/Logo1.png");
     QPixmap examIcon(":/assets/images/exams_icon.png");
     QPixmap programIcon(":/assets/images/program_icon.png");

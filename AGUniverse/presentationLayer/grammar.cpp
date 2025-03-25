@@ -14,7 +14,7 @@ grammar::grammar(QWidget *parent)
     , ui(new Ui::grammar)
 {
     ui->setupUi(this);
-    this->setWindowTitle("Grammar exams");
+    this->setWindowTitle("Grammar Exams");
     QPixmap logoIcon(":/assets/images/Logo1.png");
     QPixmap examIcon(":/assets/images/exams_icon.png");
     QPixmap programIcon(":/assets/images/program_icon.png");
@@ -110,9 +110,6 @@ void grammar::on_grammarButton1_clicked()
     grammarExam1 *grammarExam1Window = new grammarExam1();
     grammarExam1Window->show();
 }
-
-
-
 
 void grammar::on_grammarButton2_clicked()
 {

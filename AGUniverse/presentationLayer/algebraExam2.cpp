@@ -17,6 +17,7 @@ algebraExam2::algebraExam2(QWidget *parent)
     , selectedAnswerIndex(-1)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Algebra Exam 2");
     loadQuestions();
     displayRandomQuestion();
 

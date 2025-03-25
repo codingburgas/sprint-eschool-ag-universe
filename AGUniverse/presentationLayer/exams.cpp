@@ -14,7 +14,7 @@ exams::exams(QWidget *parent)
     , ui(new Ui::exams)
 {
     ui->setupUi(this);
-    this->setWindowTitle("Exams Page");
+    this->setWindowTitle("Exams");
     QPixmap logoIcon(":/assets/images/Logo1.png");
     QPixmap examIcon(":/assets/images/exams_icon.png");
     QPixmap programIcon(":/assets/images/program_icon.png");

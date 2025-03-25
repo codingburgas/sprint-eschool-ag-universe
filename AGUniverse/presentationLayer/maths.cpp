@@ -14,7 +14,7 @@ maths::maths(QWidget *parent)
     , ui(new Ui::maths)
 {
     ui->setupUi(this);
-    this->setWindowTitle("Maths Page");
+    this->setWindowTitle("Maths Exams");
     QPixmap logoIcon(":/assets/images/Logo1.png");
     QPixmap examIcon(":/assets/images/exams_icon.png");
     QPixmap programIcon(":/assets/images/program_icon.png");

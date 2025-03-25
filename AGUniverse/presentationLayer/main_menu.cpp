@@ -11,7 +11,7 @@ main_menu::main_menu(QWidget *parent)
     , ui(new Ui::main_menu)
 {
     ui->setupUi(this);
-    this->setWindowTitle("Main Menu Page");
+    this->setWindowTitle("Main Menu");
     QPixmap logoIcon(":/assets/images/Logo1.png");
     QPixmap examIcon(":/assets/images/exams_icon.png");
     QPixmap programIcon(":/assets/images/program_icon.png");

@@ -17,6 +17,7 @@ cellBiologyExam1::cellBiologyExam1(QWidget *parent)
     , selectedAnswerIndex(-1)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Cell Biology and Metabolism Exam 1");
     loadQuestions();
     displayRandomQuestion();
 

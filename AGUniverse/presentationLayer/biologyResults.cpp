@@ -13,6 +13,7 @@ biologyResults::biologyResults(QWidget *parent)
     , ui(new Ui::biologyResults)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Biology Results");
     loadResults();
 
     QPixmap logoIcon(":/assets/images/Logo1.png");

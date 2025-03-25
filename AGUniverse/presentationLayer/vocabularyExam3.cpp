@@ -17,6 +17,7 @@ vocabularyExam3::vocabularyExam3(QWidget *parent)
     , selectedAnswerIndex(-1)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Vocabulary Exam 3");
     loadQuestions();
     displayRandomQuestion();
 

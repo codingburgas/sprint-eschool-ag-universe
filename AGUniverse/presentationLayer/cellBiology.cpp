@@ -14,7 +14,8 @@ cellBiology::cellBiology(QWidget *parent)
     , ui(new Ui::cellBiology)
 {
     ui->setupUi(this);
-    this->setWindowTitle("Cell Biology and Metabolism exams");
+    this->setWindowTitle("Cell Biology and Metabolism Exams");
+
     QPixmap logoIcon(":/assets/images/Logo1.png");
     QPixmap examIcon(":/assets/images/exams_icon.png");
     QPixmap programIcon(":/assets/images/program_icon.png");

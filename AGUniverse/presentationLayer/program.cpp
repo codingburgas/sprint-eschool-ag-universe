@@ -9,7 +9,7 @@ program::program(QWidget *parent)
     , ui(new Ui::program)
 {
     ui->setupUi(this);
-    this->setWindowTitle("Program Page");
+    this->setWindowTitle("Program");
     QPixmap logoIcon(":/assets/images/Logo1.png");
     QPixmap examIcon(":/assets/images/exams_icon.png");
     QPixmap programIcon(":/assets/images/program_icon.png");

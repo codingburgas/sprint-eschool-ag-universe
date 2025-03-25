@@ -131,7 +131,7 @@ void grammar::on_grammarButton3_clicked()
 
 void grammar::on_mainMenuButton_clicked()
 {
-    this->close(); // Close the current window
+    this->close();
 
     main_menu *main_menuWindow = new main_menu();
     main_menuWindow->show();

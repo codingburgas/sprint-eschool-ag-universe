@@ -141,7 +141,10 @@ void registerPage::on_pushButton_clicked()
                              "QPushButton { background-color: #4486c3; color: white; padding: 5px; border-radius: 5px; }"
                              "QPushButton:hover { background-color: #3a76b2; }");
         msgBox.exec();
-        this->close();  // Close the register page after successful registration
+        this->close();
+
+        MainWindow *loginWindow = new MainWindow();
+        loginWindow->show();
     } else {
         QMessageBox msgBox;
         msgBox.setWindowTitle("Error");

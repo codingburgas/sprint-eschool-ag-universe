@@ -23,6 +23,7 @@ private slots:
     void on_inboxButton_clicked();
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
+    void on_feedbackButton_clicked();
 
 
     void on_lessonsButton_clicked();

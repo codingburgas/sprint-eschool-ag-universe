@@ -1,6 +1,7 @@
 #include "main_menu.h"
 #include "presentationLayer/ui_main_menu.h"
 #include "login.h"
+#include "feedback.h"//;
 #include "profile.h"
 #include "fontutils.h"
 #include <QPixmap>
@@ -43,6 +44,7 @@ main_menu::main_menu(QWidget *parent)
     setCustomFontAllerta(ui->inboxButton, 15);
     setCustomFontAllerta(ui->profileButton, 15);
     setCustomFontAllerta(ui->logoutButton, 15);
+    setCustomFontAllerta(ui->feedbackButton, 15);
     setCustomFontAura(ui->titleLabel, 75);
     setCustomFontCT(ui->logoTitle, 42);
 }
@@ -107,4 +109,10 @@ void main_menu::on_lessonsButton_clicked()
     lessons *lessonsWindow = new lessons();
     lessonsWindow->show();
 }
+void main_menu::on_feedbackButton_clicked()
+{
+    this->close();
 
+    feedback *feedbackWindow = new feedback();
+    feedbackWindow->show();
+}

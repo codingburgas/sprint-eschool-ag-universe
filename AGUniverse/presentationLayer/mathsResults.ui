@@ -36,11 +36,11 @@ border-radius: 20px;</string>
    <property name="frameShadow">
     <enum>QFrame::Shadow::Raised</enum>
    </property>
-   <widget class="QLabel" name="mathsTitle">
+   <widget class="QLabel" name="algebraTitle">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>0</y>
+      <y>10</y>
       <width>241</width>
       <height>61</height>
      </rect>
@@ -57,7 +57,7 @@ font: 32pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>70</y>
+      <y>100</y>
       <width>241</width>
       <height>41</height>
      </rect>
@@ -74,7 +74,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>120</y>
+      <y>180</y>
       <width>241</width>
       <height>41</height>
      </rect>
@@ -91,7 +91,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>10</y>
+      <y>20</y>
       <width>181</width>
       <height>41</height>
      </rect>
@@ -108,7 +108,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>10</y>
+      <y>20</y>
       <width>181</width>
       <height>41</height>
      </rect>
@@ -125,7 +125,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>580</x>
-      <y>10</y>
+      <y>20</y>
       <width>181</width>
       <height>41</height>
      </rect>
@@ -142,7 +142,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>70</y>
+      <y>100</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -159,7 +159,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>120</y>
+      <y>180</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -176,7 +176,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>450</x>
-      <y>70</y>
+      <y>100</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -193,7 +193,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>450</x>
-      <y>120</y>
+      <y>180</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -210,7 +210,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>620</x>
-      <y>70</y>
+      <y>100</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -227,7 +227,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>620</x>
-      <y>120</y>
+      <y>180</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -636,11 +636,11 @@ border-radius: 20px;</string>
    <property name="frameShadow">
     <enum>QFrame::Shadow::Raised</enum>
    </property>
-   <widget class="QLabel" name="mathsTitle_2">
+   <widget class="QLabel" name="geometryTitle">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>0</y>
+      <y>10</y>
       <width>241</width>
       <height>61</height>
      </rect>
@@ -657,7 +657,7 @@ font: 32pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>70</y>
+      <y>100</y>
       <width>241</width>
       <height>41</height>
      </rect>
@@ -674,7 +674,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>120</y>
+      <y>180</y>
       <width>241</width>
       <height>41</height>
      </rect>
@@ -691,7 +691,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>10</y>
+      <y>20</y>
       <width>181</width>
       <height>41</height>
      </rect>
@@ -708,7 +708,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>10</y>
+      <y>20</y>
       <width>181</width>
       <height>41</height>
      </rect>
@@ -725,7 +725,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>580</x>
-      <y>10</y>
+      <y>20</y>
       <width>181</width>
       <height>41</height>
      </rect>
@@ -742,7 +742,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>70</y>
+      <y>100</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -759,7 +759,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>120</y>
+      <y>180</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -776,7 +776,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>450</x>
-      <y>70</y>
+      <y>100</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -793,7 +793,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>450</x>
-      <y>120</y>
+      <y>180</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -810,7 +810,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>620</x>
-      <y>70</y>
+      <y>100</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -827,7 +827,7 @@ font: 20pt &quot;Aura&quot;;</string>
     <property name="geometry">
      <rect>
       <x>620</x>
-      <y>120</y>
+      <y>180</y>
       <width>91</width>
       <height>41</height>
      </rect>

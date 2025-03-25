@@ -18,10 +18,6 @@ vocabularyExam1::vocabularyExam1(QWidget *parent)
     loadQuestions();
     displayRandomQuestion();
 
-    connect(ui->answer_1Button, &QPushButton::clicked, this, [=]() { checkAnswer(0); });
-    connect(ui->answer_2Button, &QPushButton::clicked, this, [=]() { checkAnswer(1); });
-    connect(ui->answer_3Button, &QPushButton::clicked, this, [=]() { checkAnswer(2); });
-    connect(ui->answer_4Button, &QPushButton::clicked, this, [=]() { checkAnswer(3); });
 
     connect(ui->nextButton, &QPushButton::clicked, this, &vocabularyExam1::onNextQuestion);
 

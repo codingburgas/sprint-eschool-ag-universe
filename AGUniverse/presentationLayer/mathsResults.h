@@ -17,6 +17,8 @@ public:
 
 private:
     Ui::mathsResults *ui;
+
+    void loadMathsResults();
 };
 
 #endif // MATHSRESULTS_H

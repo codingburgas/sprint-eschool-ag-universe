@@ -8,3 +8,4 @@ GZPavlov23,algebraExam1,0,2025-03-25 19:12:13
 GZPavlov23,algebraExam1,9.67742,2025-03-25 19:13:12
 GZPavlov23,algebraExam2,18.6047,2025-03-25 19:14:19
 GZPavlov23,geometryExam1,9.80392,2025-03-25 19:17:46
+GZPavlov23,geometryExam1,6.38298,2025-03-25 22:30:15

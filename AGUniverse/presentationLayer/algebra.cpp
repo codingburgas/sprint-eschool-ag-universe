@@ -53,7 +53,7 @@ algebra::algebra(QWidget *parent)
 // Destructor
 algebra::~algebra()
 {
-    delete ui; // Closing this window = free memory
+    delete ui;
 }
 
 // Slot function triggered when the "Exams" button is clicked
@@ -65,31 +65,30 @@ void algebra::on_examsButton_clicked()
     examsWindow->show(); // Show the new window when clicked
 }
 
-// Slot function triggered when the "Results" button is clicked
+
 void algebra::on_resultsButton_clicked()
 {
-    this->close(); // Close the current window
+    this->close();
 
-    results *resultsWindow = new results(); // Create a new results window
-    resultsWindow->show(); // Show the new window when cliced
+    results *resultsWindow = new results();
+    resultsWindow->show();
 }
 
-// Slot function triggered when the "Program" button is clicked
+
 void algebra::on_programButton_clicked()
 {
-    this->close(); // Close the current window
+    this->close();
 
-    program *programWindow = new program(); // Create a new program window
-    programWindow->show(); // Show the new window whenc licked
+    program *programWindow = new program();
+    programWindow->show();
 }
 
-// Slot function triggered when the "Inbox" button is clicked
 void algebra::on_inboxButton_clicked()
 {
-    this->close(); // Close the current window
+    this->close();
 
-    inbox *inboxWindow = new inbox(); // Create a new inbox window
-    inboxWindow->show(); // Show the new window when clicked
+    inbox *inboxWindow = new inbox();
+    inboxWindow->show();
 }
 
 void algebra::on_lessonsButton_clicked()
@@ -100,56 +99,54 @@ void algebra::on_lessonsButton_clicked()
     lessonsWindow->show();
 }
 
-// Slot function triggered when the "Profile" button is clicked
 void algebra::on_profileButton_clicked()
 {
-    this->close(); // Close the current window
+    this->close();
 
-    profile *profileWindow = new profile(); // Create a new profile window
-    profileWindow->show(); // Show the new window
+    profile *profileWindow = new profile();
+    profileWindow->show();
 }
 
-// Slot function triggered when the "Logout" button is clicked
 void algebra::on_logoutButton_clicked()
 {
-    this->close(); // Close the current window
+    this->close();
 
-    MainWindow *loginWindow = new MainWindow(); // Return to the login screen
-    loginWindow->show(); // Show the login window
+    MainWindow *loginWindow = new MainWindow();
+    loginWindow->show();
 }
 
 void algebra::on_algebraButton1_clicked()
 {
-    this->close(); // Close the current window
+    this->close();
 
-    algebraExam1 *algebraExam1Window = new algebraExam1(); // Create a new algebra exam window
-    algebraExam1Window->show(); // Show the algebra exam window
+    algebraExam1 *algebraExam1Window = new algebraExam1();
+    algebraExam1Window->show();
 }
 
 
 void algebra::on_algebraButton2_clicked()
 {
-    this->close(); // Close the current window
+    this->close();
 
-    algebraExam2 *algebraExam2Window = new algebraExam2(); // Create a new algebra exam window
+    algebraExam2 *algebraExam2Window = new algebraExam2();
     algebraExam2Window->show();
 }
 
 
 void algebra::on_algebraButton3_clicked()
 {
-    this->close(); // Close the current window
+    this->close();
 
-    algebraExam3 *algebraExam3Window = new algebraExam3(); // Create a new algebra exam window
+    algebraExam3 *algebraExam3Window = new algebraExam3();
     algebraExam3Window->show();
 }
 
 
 void algebra::on_mainMenuButton_clicked()
 {
-    this->close(); // Close the current window
+    this->close();
 
-    main_menu *main_menuWindow = new main_menu(); // Create a new algebra exam window
+    main_menu *main_menuWindow = new main_menu();
     main_menuWindow->show();
 }
 

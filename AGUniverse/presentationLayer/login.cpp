@@ -143,6 +143,6 @@ void MainWindow::loginButtonClicked()
 void MainWindow::on_pushButton_2_clicked()
 {
 
-    registerPage->show();  // Show register page
-    this->close();  // Close login window (optional)
+    registerPage->show();
+    this->close();
 }

@@ -278,7 +278,7 @@ void grammarExam1::showResults() {
 }
 
 void grammarExam1::quizFinished() {
-    usedIndices.clear();  // Reset for a new session
+    usedIndices.clear();
     grammar *mainMenu = new grammar();
     mainMenu->show();
     QString userUsername = UserSession::getInstance()->getUsername();

@@ -270,7 +270,7 @@ void algebraExam1::showResults() {
 
 
 void algebraExam1::quizFinished() {
-    usedIndices.clear();  // Reset for a new session
+    usedIndices.clear();
     algebra *mainMenu = new algebra();
     mainMenu->show();
     QString userUsername = UserSession::getInstance()->getUsername();

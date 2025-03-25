@@ -52,7 +52,7 @@ void registerPage::on_pushButton_clicked()
     QString username = ui->lineEdit->text();
     QString password = ui->lineEdit_2->text();
     QString cpassword = ui->lineEdit_3->text();
-    QString grade = ui->comboBox->currentText();   // Get selected grade
+    QString grade = ui->comboBox->currentText();
     QString studentClass = ui->comboBox2->currentText();
 
     if (username.isEmpty() || password.isEmpty() || cpassword.isEmpty() || grade.isEmpty() || studentClass.isEmpty()) {
@@ -160,6 +160,6 @@ void registerPage::on_pushButton_clicked()
 void registerPage::on_pushButton_2_clicked()
 {
 
-    (new MainWindow)->show();  // Show register page
+    (new MainWindow)->show();
     this->close();
 }

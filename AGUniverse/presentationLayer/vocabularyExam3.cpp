@@ -243,7 +243,7 @@ void vocabularyExam3::showResults() {
 }
 
 void vocabularyExam3::quizFinished() {
-    usedIndices.clear();  // Reset for a new session
+    usedIndices.clear();
     vocabulary *mainMenu = new vocabulary();
     mainMenu->show();
     QString userUsername = UserSession::getInstance()->getUsername();

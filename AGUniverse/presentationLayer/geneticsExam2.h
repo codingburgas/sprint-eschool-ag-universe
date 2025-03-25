@@ -30,7 +30,7 @@ private:
     Ui::geneticsExam2 *ui;
     QVector<Question> questions;
     Question currentQuestion;
-    QSet<int> usedIndices;  // Added to track used questions
+    QSet<int> usedIndices;
     int questionsAnswered;
     int selectedAnswerIndex;
 

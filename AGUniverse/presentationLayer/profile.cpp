@@ -52,14 +52,13 @@ profile::profile(QWidget *parent)
     QString userUsername = UserSession::getInstance()->getUsername();
     QString userGrade = QString::number(UserSession::getInstance()->getGrade());
     QString userClass = UserSession::getInstance()->getStudentClass();
-    QString userBio = getUserBio(userUsername);  // Load bio
+    QString userBio = getUserBio(userUsername);
 
     ui->name->setText(userUsername);
     ui->grade->setText(userGrade);
     ui->gradeClass->setText(userClass);
-    ui->textEdit->setText(userBio);  // Display bio
+    ui->textEdit->setText(userBio);
 
-    // Manually connect the button signal to slot
     connect(ui->change_bio, &QPushButton::clicked, this, &profile::on_change_bio_clicked);
 }
 
@@ -102,7 +101,7 @@ void profile::updateUserBio(const QString& username, const QString& newBio) {
 
         if (details.size() >= 1 && details[0] == username) {
             while (details.size() < 5) {
-                details.append("");  // Ensure there is a space for bio
+                details.append("");
             }
             details[4] = newBio;  // Update bio
             userFound = true;
@@ -191,7 +190,7 @@ void profile::on_logoutButton_clicked()
 
 void profile::on_mainMenuButton_clicked()
 {
-    this->close(); // Close the current window
+    this->close();
 
     main_menu *main_menuWindow = new main_menu();
     main_menuWindow->show();

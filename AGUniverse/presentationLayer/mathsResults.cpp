@@ -77,38 +77,38 @@ void mathsResults::loadResults()
     }
 
     QTextStream in(&file);
-    QMap<QString, double> bestResults;  // Stores best score for each test
-    QMap<QString, double> latestResults; // Stores latest score for each test
+    QMap<QString, double> bestResults;
+    QMap<QString, double> latestResults;
 
-    QString userUsername = UserSession::getInstance()->getUsername(); // Get current user
+    QString userUsername = UserSession::getInstance()->getUsername();
 
     while (!in.atEnd()) {
         QString line = in.readLine();
         QStringList parts = line.split(',');
 
         if (parts.size() != 4) {
-            continue; // Skip invalid lines
+            continue;
         }
 
         QString user = parts[0];
         QString test = parts[1];
         double score = parts[2].toDouble();
 
-        // Ensure the results belong to the current user
+
         if (user != userUsername) {
             continue;
         }
 
-        // Track best result per test
+
         if (!bestResults.contains(test) || bestResults[test] < score) {
             bestResults[test] = score;
         }
 
-        // Track latest result per test
+
         latestResults[test] = score;
     }
 
-    // --- Grammar Results ---
+
     if (bestResults.contains("algebraExam1")) {
         ui->bestAlgebraExam1->setText(QString::number(bestResults["algebraExam1"], 'f', 2) + "%");
     }
@@ -130,7 +130,7 @@ void mathsResults::loadResults()
         ui->latestAlgebraExam3->setText(QString::number(latestResults["algebraExam3"], 'f', 2) + "%");
     }
 
-    // --- Vocabulary Results ---
+
     if (bestResults.contains("geometryExam1")) {
         ui->bestGeometryExam1->setText(QString::number(bestResults["geometryExam1"], 'f', 2) + "%");
     }
@@ -210,7 +210,7 @@ void mathsResults::on_lessonsButton_clicked()
 
 void mathsResults::on_mainMenuButton_clicked()
 {
-    this->close(); // Close the current window
+    this->close();
 
     main_menu *main_menuWindow = new main_menu();
     main_menuWindow->show();

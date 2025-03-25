@@ -24,13 +24,13 @@ public:
     int maxScoreVE2;
 
 private slots:
-    void onNextQuestion();  // Moved to slots for proper Qt signal handling
+    void onNextQuestion();
 
 private:
     Ui::vocabularyExam2 *ui;
     QVector<Question> questions;
     Question currentQuestion;
-    QSet<int> usedIndices;  // Added to track used questions
+    QSet<int> usedIndices;
     int questionsAnswered;
     int selectedAnswerIndex;
 

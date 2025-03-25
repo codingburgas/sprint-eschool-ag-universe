@@ -40,14 +40,14 @@ border-radius: 20px;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>4</y>
       <width>291</width>
       <height>61</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">color:white;
-font: 32pt &quot;Aura&quot;;</string>
+font: 37pt &quot;Aura&quot;;</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;LESSONS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -391,125 +391,346 @@ text-align:left;</string>
     </property>
    </widget>
   </widget>
-  <widget class="QLabel" name="mathsBox">
+  <widget class="QLabel" name="algebraIcon">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>294</x>
      <y>110</y>
-     <width>801</width>
-     <height>71</height>
+     <width>221</width>
+     <height>211</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(155, 192, 226);
-border:7px solid #3F7DB5;
-border-radius:35px;</string>
+    <string notr="true">background-color:none;</string>
    </property>
    <property name="text">
     <string/>
    </property>
+   <property name="pixmap">
+    <pixmap resource="../resources.qrc">:/assets/images/file-icon.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
   </widget>
-  <widget class="QLabel" name="mathsLabel">
+  <widget class="QLabel" name="algebraTitle">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>130</y>
-     <width>741</width>
-     <height>31</height>
+     <x>260</x>
+     <y>320</y>
+     <width>291</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(155, 192, 226);
-color:white;
-font: 21pt &quot;Aura&quot;;</string>
+    <string notr="true">color:white;
+font: 32pt &quot;Aura&quot;;
+background-color:none;</string>
    </property>
    <property name="text">
-    <string>MATHS:</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;ALGEBRA&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QLabel" name="englishBox">
+  <widget class="QLabel" name="cellBiologyIcon">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>200</y>
-     <width>801</width>
-     <height>71</height>
+     <x>584</x>
+     <y>110</y>
+     <width>221</width>
+     <height>211</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(155, 192, 226);
-border:7px solid #3F7DB5;
-border-radius:35px;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="biologyBox">
-   <property name="geometry">
-    <rect>
-     <x>270</x>
-     <y>290</y>
-     <width>801</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(155, 192, 226);
-border:7px solid #3F7DB5;
-border-radius:35px;</string>
+    <string notr="true">background-color:none;</string>
    </property>
    <property name="text">
     <string/>
    </property>
+   <property name="pixmap">
+    <pixmap resource="../resources.qrc">:/assets/images/file-icon.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
   </widget>
-  <widget class="QLabel" name="englishLabel">
+  <widget class="QLabel" name="cellBiologyTitle">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>220</y>
-     <width>741</width>
-     <height>31</height>
+     <x>550</x>
+     <y>320</y>
+     <width>291</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(155, 192, 226);
-color:white;
-font: 21pt &quot;Aura&quot;;</string>
+    <string notr="true">color:white;
+font: 32pt &quot;Aura&quot;;
+background-color:none;</string>
    </property>
    <property name="text">
-    <string>ENGLISH:</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;CELL BIOLOGY&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QLabel" name="biologyLabel">
+  <widget class="QLabel" name="grammarIcon">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>310</y>
-     <width>741</width>
-     <height>31</height>
+     <x>854</x>
+     <y>110</y>
+     <width>221</width>
+     <height>211</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(155, 192, 226);
-color:white;
-font: 21pt &quot;Aura&quot;;</string>
+    <string notr="true">background-color:none;</string>
    </property>
    <property name="text">
-    <string>BIOLOGY:</string>
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../resources.qrc">:/assets/images/file-icon.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="btnOpenPDF">
+  <widget class="QLabel" name="grammarTitle">
    <property name="geometry">
     <rect>
-     <x>500</x>
+     <x>820</x>
+     <y>320</y>
+     <width>291</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font: 32pt &quot;Aura&quot;;
+background-color:none;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;GRAMMAR&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="geometryIcon">
+   <property name="geometry">
+    <rect>
+     <x>294</x>
      <y>400</y>
-     <width>231</width>
-     <height>111</height>
+     <width>221</width>
+     <height>211</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:none;</string>
+   </property>
    <property name="text">
-    <string>PushButton</string>
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../resources.qrc">:/assets/images/file-icon.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="geometryTitle">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>610</y>
+     <width>291</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font: 32pt &quot;Aura&quot;;
+background-color:none;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;GEOMETRY&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="geneticsTitle">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>610</y>
+     <width>291</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font: 32pt &quot;Aura&quot;;
+background-color:none;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;GENETICS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="geneticsIcon">
+   <property name="geometry">
+    <rect>
+     <x>584</x>
+     <y>400</y>
+     <width>221</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:none;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../resources.qrc">:/assets/images/file-icon.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="vocabularyTitle">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>610</y>
+     <width>291</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font: 32pt &quot;Aura&quot;;
+background-color:none;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;VOCABULARY&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="vocabularyIcon">
+   <property name="geometry">
+    <rect>
+     <x>854</x>
+     <y>400</y>
+     <width>221</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:none;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../resources.qrc">:/assets/images/file-icon.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="algebraButton">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>120</y>
+     <width>161</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cellBiologyButton">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>120</y>
+     <width>161</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="grammarButton">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>120</y>
+     <width>161</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="geometryButton">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>410</y>
+     <width>161</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="geneticsButton">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>410</y>
+     <width>161</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="vocabularyButton">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>410</y>
+     <width>161</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgba(0, 0, 0, 0);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

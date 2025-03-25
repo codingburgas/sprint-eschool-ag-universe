@@ -2,8 +2,9 @@
 #include "presentationLayer/ui_lessons.h"
 #include "login.h"
 #include "fontutils.h"
+#include "../dataAccessLayer/userSession.h"
 #include <QPixmap>
-#include <QCoreApplication>
+#include <QDir>
 #include <QDesktopServices>
 #include <QUrl>
 
@@ -41,7 +42,7 @@ lessons::lessons(QWidget *parent)
     setCustomFontAllerta(ui->profileButton, 15);
     setCustomFontAllerta(ui->logoutButton, 15);
 
-    connect(ui->btnOpenPDF, &QPushButton::clicked, this, &lessons::openPDF);
+    userGrade = QString::number(UserSession::getInstance()->getGrade());
 }
 
 lessons::~lessons()
@@ -97,7 +98,77 @@ void lessons::on_logoutButton_clicked()
     loginWindow->show();
 }
 
-void lessons::openPDF() {
-    QString pdfPath = QCoreApplication::applicationDirPath() + "../../../dataAccessLayer/users.txt";
-    QDesktopServices::openUrl(QUrl::fromLocalFile(pdfPath));
+void lessons::on_algebraButton_clicked()
+{
+    if(userGrade == "8") {
+        algebraPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/8th-grade/Algebra8th.pdf";
+    } else if(userGrade == "9") {
+        algebraPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/9th-grade/Algebra9th.pdf";
+    } else if(userGrade == "10") {
+        algebraPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/10th-grade/Algebra10th.pdf";
+    }
+    QDesktopServices::openUrl(QUrl::fromLocalFile(algebraPdfPath));
 }
+
+void lessons::on_geometryButton_clicked()
+{
+    if(userGrade == "8") {
+        geometryPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/8th-grade/Geometry8th.pdf";
+    } else if(userGrade == "9") {
+        geometryPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/9th-grade/Geometry9th.pdf";
+    } else if(userGrade == "10") {
+        geometryPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/10th-grade/Geometry10th.pdf";
+    }
+    QDesktopServices::openUrl(QUrl::fromLocalFile(geometryPdfPath));
+}
+
+void lessons::on_cellBiologyButton_clicked()
+{
+    if(userGrade == "8") {
+        cellBiologyPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/8th-grade/Cell Biology and Metabolism8th.pdf";
+    } else if(userGrade == "9") {
+        cellBiologyPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/9th-grade/Cell Biology and Metabolism9th.pdf";
+    } else if(userGrade == "10") {
+        cellBiologyPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/10th-grade/Cell Biology and Metabolism10th.pdf";
+    }
+    QDesktopServices::openUrl(QUrl::fromLocalFile(cellBiologyPdfPath));
+}
+
+
+void lessons::on_grammarButton_clicked()
+{
+    if(userGrade == "8") {
+        grammarPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/8th-grade/Grammar8th.pdf";
+    } else if(userGrade == "9") {
+        grammarPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/9th-grade/Grammar9th.pdf";
+    } else if(userGrade == "10") {
+        grammarPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/10th-grade/Grammar10th.pdf";
+    }
+    QDesktopServices::openUrl(QUrl::fromLocalFile(grammarPdfPath));
+}
+
+void lessons::on_geneticsButton_clicked()
+{
+    if(userGrade == "8") {
+        geneticsPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/8th-grade/Genetics and Heredity8th.pdf";
+    } else if(userGrade == "9") {
+        geneticsPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/9th-grade/Genetics and Heredity9th.pdf";
+    } else if(userGrade == "10") {
+        geneticsPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/10th-grade/Genetics and Heredity10th.pdf";
+    }
+    QDesktopServices::openUrl(QUrl::fromLocalFile(geneticsPdfPath));
+}
+
+
+void lessons::on_vocabularyButton_clicked()
+{
+    if(userGrade == "8") {
+        vocabularyPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/8th-grade/Vocabulary8th.pdf";
+    } else if(userGrade == "9") {
+        vocabularyPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/9th-grade/Vocabulary9th.pdf";
+    } else if(userGrade == "10") {
+        vocabularyPdfPath = QCoreApplication::applicationDirPath() + "../../../assets/lessonPdfs/10th-grade/Vocabulary10th.pdf";
+    }
+    QDesktopServices::openUrl(QUrl::fromLocalFile(vocabularyPdfPath));
+}
+

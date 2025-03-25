@@ -24,11 +24,27 @@ private slots:
     void on_inboxButton_clicked();
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
-    void openPDF();
+    void on_algebraButton_clicked();
 
+    void on_cellBiologyButton_clicked();
+
+    void on_grammarButton_clicked();
+
+    void on_geometryButton_clicked();
+
+    void on_geneticsButton_clicked();
+
+    void on_vocabularyButton_clicked();
 
 private:
     Ui::lessons *ui;
+    QString userGrade;
+    QString algebraPdfPath;
+    QString geometryPdfPath;
+    QString cellBiologyPdfPath;
+    QString geneticsPdfPath;
+    QString grammarPdfPath;
+    QString vocabularyPdfPath;
 };
 
 #endif // LESSONS_H

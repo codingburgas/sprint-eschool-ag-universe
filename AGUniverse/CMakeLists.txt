@@ -205,6 +205,7 @@ target_link_libraries(AGUniverse
 include(GNUInstallDirs)
 
 set(AGUniverse_resource_files
+    # Images
     "assets/images/exams_icon.png"
     "assets/images/results_icon.png"
     "assets/images/program_icon.png"
@@ -225,9 +226,14 @@ set(AGUniverse_resource_files
     "assets/images/cell_biology_and_metabolism_icon.png"
     "assets/images/genetics_and_heredity_icon.png"
     "assets/images/table.png"
+    "assets/images/file-icon.png"
+
+
+    # Fonts
     "assets/fonts/Aura Regular.ttf"
     "assets/fonts/CrimsonText-SemiBold.ttf"
     "assets/fonts/Allerta-Regular.ttf"
+
 )
 
 qt_add_resources(AGUniverse "AGUniverse"

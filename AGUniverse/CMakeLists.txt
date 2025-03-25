@@ -190,7 +190,7 @@ qt_add_executable(AGUniverse
     dataAccessLayer/userSession.h
 
     resources.qrc
-    presentationLayer/test.ui
+
 
 )
 
@@ -227,6 +227,7 @@ set(AGUniverse_resource_files
     "assets/images/genetics_and_heredity_icon.png"
     "assets/images/table.png"
     "assets/images/file-icon.png"
+    "assets/images/feedback-icon.png"
 
 
     # Fonts

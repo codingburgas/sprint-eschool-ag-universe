@@ -24,6 +24,7 @@ private slots:
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
     void on_change_bio_clicked();  // Slot for saving bio changes
+    void on_mainMenuButton_clicked();
 
 private:
     Ui::profile *ui;

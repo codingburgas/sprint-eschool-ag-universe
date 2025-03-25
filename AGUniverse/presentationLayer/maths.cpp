@@ -126,3 +126,12 @@ void maths::on_algebraButton_clicked()
     algebraWindow->show();
 }
 
+
+void maths::on_mainMenuButton_clicked()
+{
+    this->close(); // Close the current window
+
+    main_menu *main_menuWindow = new main_menu();
+    main_menuWindow->show();
+}
+

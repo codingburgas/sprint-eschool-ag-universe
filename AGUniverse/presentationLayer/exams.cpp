@@ -137,3 +137,12 @@ void exams::on_logoutButton_clicked()
     loginWindow->show();
 }
 
+
+void exams::on_mainMenuButton_clicked()
+{
+    this->close(); // Close the current window
+
+    main_menu *main_menuWindow = new main_menu();
+    main_menuWindow->show();
+}
+

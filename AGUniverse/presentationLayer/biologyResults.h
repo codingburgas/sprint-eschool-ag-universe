@@ -24,6 +24,8 @@ private slots:
     void on_logoutButton_clicked();
     void on_lessonsButton_clicked();
 
+    void on_mainMenuButton_clicked();
+
 private:
     Ui::biologyResults *ui;
 };

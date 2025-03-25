@@ -125,3 +125,12 @@ void geometry::on_geometryButton3_clicked()
     geometryExam3 *geometryExam3Window = new geometryExam3();
     geometryExam3Window->show();
 }
+
+void geometry::on_mainMenuButton_clicked()
+{
+    this->close(); // Close the current window
+
+    main_menu *main_menuWindow = new main_menu();
+    main_menuWindow->show();
+}
+

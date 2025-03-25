@@ -1,5 +1,5 @@
 #include "algebra.h"
-#include "ui_algebra.h"
+#include "presentationLayer/ui_algebra.h"
 #include "fontutils.h"
 #include "login.h"
 #include "results.h"
@@ -142,5 +142,14 @@ void algebra::on_algebraButton3_clicked()
 
     algebraExam3 *algebraExam3Window = new algebraExam3(); // Create a new algebra exam window
     algebraExam3Window->show();
+}
+
+
+void algebra::on_mainMenuButton_clicked()
+{
+    this->close(); // Close the current window
+
+    main_menu *main_menuWindow = new main_menu(); // Create a new algebra exam window
+    main_menuWindow->show();
 }
 

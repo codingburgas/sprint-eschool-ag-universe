@@ -124,3 +124,12 @@ void genetics::on_geneticsButton3_clicked()
     geneticsExam3 *geneticsExam3Window = new geneticsExam3();
     geneticsExam3Window->show();
 }
+
+void genetics::on_mainMenuButton_clicked()
+{
+    this->close(); // Close the current window
+
+    main_menu *main_menuWindow = new main_menu();
+    main_menuWindow->show();
+}
+

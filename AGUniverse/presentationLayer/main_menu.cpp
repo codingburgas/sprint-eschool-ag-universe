@@ -21,7 +21,9 @@ main_menu::main_menu(QWidget *parent)
     QPixmap profileIcon(":/assets/images/profile.icon.png");
     QPixmap logoutIcon(":/assets/images/log_out_icon.png");
     QPixmap logo(":/assets/images/Test_logo_2.png");
+    QPixmap feedbackIcon(":/assets/images/feedback-icon.png");
 
+    ui->feedback_Icon->setPixmap(feedbackIcon);
     ui->logoIcon->setPixmap(logoIcon);
     ui->exams_Icon->setPixmap(examIcon);
     ui->program_Icon->setPixmap(programIcon);

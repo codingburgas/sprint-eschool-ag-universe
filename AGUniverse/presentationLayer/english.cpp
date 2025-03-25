@@ -126,3 +126,12 @@ void english::on_vocabularyButton_clicked()
     vocabularyWindow->show();
 }
 
+
+void english::on_mainMenuButton_clicked()
+{
+    this->close(); // Close the current window
+
+    main_menu *main_menuWindow = new main_menu();
+    main_menuWindow->show();
+}
+

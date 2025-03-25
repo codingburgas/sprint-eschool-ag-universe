@@ -30,6 +30,8 @@ private slots:
 
     void on_grammarButton3_clicked();
 
+    void on_mainMenuButton_clicked();
+
 private:
     Ui::grammar *ui;
 };

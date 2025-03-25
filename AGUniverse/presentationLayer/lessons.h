@@ -36,6 +36,8 @@ private slots:
 
     void on_vocabularyButton_clicked();
 
+    void on_mainMenuButton_clicked();
+
 private:
     Ui::lessons *ui;
     QString userGrade;

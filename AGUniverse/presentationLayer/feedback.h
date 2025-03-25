@@ -27,6 +27,8 @@ private slots:
 
     void on_lessonsButton_clicked();
 
+    void on_mainMenuButton_clicked();
+
 private:
     Ui::feedback *ui;
 };

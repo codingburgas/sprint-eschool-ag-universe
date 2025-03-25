@@ -27,6 +27,8 @@ private slots:
 
     void on_algebraButton_clicked();
 
+    void on_mainMenuButton_clicked();
+
 private:
     Ui::maths *ui;
 };

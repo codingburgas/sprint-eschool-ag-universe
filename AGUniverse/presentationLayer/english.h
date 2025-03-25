@@ -26,6 +26,8 @@ private slots:
     void on_grammarButton_clicked();
     void on_vocabularyButton_clicked();
 
+    void on_mainMenuButton_clicked();
+
 private:
     Ui::english *ui;
 };

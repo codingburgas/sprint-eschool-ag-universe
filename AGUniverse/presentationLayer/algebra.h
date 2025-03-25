@@ -30,6 +30,8 @@ private slots:
 
     void on_algebraButton3_clicked();
 
+    void on_mainMenuButton_clicked();
+
 private:
     Ui::algebra *ui;
 

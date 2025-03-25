@@ -30,6 +30,8 @@ private slots:
 
     void on_vocabularyButton3_clicked();
 
+    void on_mainMenuButton_clicked();
+
 private:
     Ui::vocabulary *ui;
 };

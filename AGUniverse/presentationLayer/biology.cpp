@@ -138,3 +138,12 @@ void biology::on_geneticsButton_clicked()
     genetics *geneticsWindow = new genetics(); // Open the Genetics section
     geneticsWindow->show(); // Show the Genetics window
 }
+
+void biology::on_mainMenuButton_clicked()
+{
+    this->close(); // Close the current window
+
+    main_menu *main_menuWindow = new main_menu();
+    main_menuWindow->show();
+}
+

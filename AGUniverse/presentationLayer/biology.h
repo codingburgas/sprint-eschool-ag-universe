@@ -28,6 +28,8 @@ private slots:
 
     void on_geneticsButton_clicked();
 
+    void on_mainMenuButton_clicked();
+
 private:
     Ui::biology *ui;
 };

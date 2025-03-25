@@ -99,3 +99,12 @@ void program::on_logoutButton_clicked()
     MainWindow *loginWindow = new MainWindow();
     loginWindow->show();
 }
+
+void program::on_mainMenuButton_clicked()
+{
+    this->close(); // Close the current window
+
+    main_menu *main_menuWindow = new main_menu();
+    main_menuWindow->show();
+}
+

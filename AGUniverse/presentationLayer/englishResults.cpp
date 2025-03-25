@@ -205,3 +205,12 @@ void englishResults::on_lessonsButton_clicked()
     lessons *lessonsWindow = new lessons();
     lessonsWindow->show();
 }
+
+void englishResults::on_mainMenuButton_clicked()
+{
+    this->close(); // Close the current window
+
+    main_menu *main_menuWindow = new main_menu();
+    main_menuWindow->show();
+}
+

@@ -28,6 +28,8 @@ private slots:
     void on_geometryButton2_clicked();
     void on_geometryButton3_clicked();
 
+    void on_mainMenuButton_clicked();
+
 private:
     Ui::geometry *ui;
 };

@@ -26,6 +26,8 @@ private slots:
     void on_profileButton_clicked();
     void on_logoutButton_clicked();
 
+    void on_mainMenuButton_clicked();
+
 private:
     Ui::results *ui;
 };

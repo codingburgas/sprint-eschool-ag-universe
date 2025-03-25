@@ -482,7 +482,7 @@ border-radius: 20px;</string>
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>10</y>
+      <y>7</y>
       <width>161</width>
       <height>41</height>
      </rect>
@@ -494,6 +494,25 @@ text-align:left;</string>
     </property>
     <property name="text">
      <string>Feedback</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="feedback_Icon">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>16</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../resources.qrc">:/assets/images/feedback-icon.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>

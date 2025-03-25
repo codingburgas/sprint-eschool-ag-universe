@@ -499,6 +499,19 @@ font: 21pt &quot;Aura&quot;;</string>
     <string>BIOLOGY:</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="btnOpenPDF">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>400</y>
+     <width>231</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PushButton</string>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="../resources.qrc"/>

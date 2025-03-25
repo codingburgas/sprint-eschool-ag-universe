@@ -3,6 +3,9 @@
 #include "login.h"
 #include "fontutils.h"
 #include <QPixmap>
+#include <QCoreApplication>
+#include <QDesktopServices>
+#include <QUrl>
 
 lessons::lessons(QWidget *parent)
     : QWidget(parent)
@@ -37,6 +40,8 @@ lessons::lessons(QWidget *parent)
     setCustomFontAllerta(ui->inboxButton, 15);
     setCustomFontAllerta(ui->profileButton, 15);
     setCustomFontAllerta(ui->logoutButton, 15);
+
+    connect(ui->btnOpenPDF, &QPushButton::clicked, this, &lessons::openPDF);
 }
 
 lessons::~lessons()
@@ -90,4 +95,9 @@ void lessons::on_logoutButton_clicked()
 
     MainWindow *loginWindow = new MainWindow();
     loginWindow->show();
+}
+
+void lessons::openPDF() {
+    QString pdfPath = QCoreApplication::applicationDirPath() + "../../../dataAccessLayer/users.txt";
+    QDesktopServices::openUrl(QUrl::fromLocalFile(pdfPath));
 }
